@@ -25,6 +25,7 @@ var keyA = false,
 	keyD = false,
 	keyS = false,
 	keyW = false;
+	keyEnter = false;
 	
 /////////////////////////
 // Global Containers   //
