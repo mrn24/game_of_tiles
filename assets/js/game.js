@@ -1,27 +1,63 @@
-// Tutorial code from Dr. Palmer's YouTube video : https://www.youtube.com/watch?v=grlg4I-Bt24
 var gameport = document.getElementById("gameport");
-
-var renderer = PIXI.autoDetectRenderer(400, 400, {backgroundColor: 0x3344ee});
+var width = 600,
+	height = 600,
+	renderer = PIXI.autoDetectRenderer(width, height, {backgroundColor: 0xFFFFFF});
 gameport.appendChild(renderer.view);
+document.addEventListener("keydown", checkKeyPressed, false);
+document.addEventListener("keyup", checkKeyReleased, false);
+/////////////////////////////////////////////
+// Map Stuff                               //
+/////////////////////////////////////////////
+var world;
+var tu;
+var controlling;
+var colliders;
+PIXI.loader
+  .add('map_json', './assets/Plains/Map/Map.json')
+  .add('tileset', './assets/Plains/Tileset/16SpriteSet.png')
+  .load(Ready);
+function Ready() {
+	tu = new TileUtilities(PIXI);
+	world = tu.makeTiledWorld("map_json", "./assets/Plains/Tileset/16SpriteSet.png");
+	mapContainer.addChild(world);
+	mapContainer.position.x = -20;
+	mapContainer.position.y = -20;
+	LoadCharacter();
+	mapContainer.addChild(mainCharacter);
+	controlling = setInterval(mainCharacterController, 30);
+	colliders = world.getObject("Environment").data;
+	DisplayGameScreen();
+}
+var collisionsIndex = [];
+function MapStuff() {
+	stage.addChild(mapContainer);
+	mapContainer.scale.x = mapScale;
+	mapContainer.scale.y = mapScale;
+	
+	//Creating collisions array
+	for (var i = 0; i < colliders.length; i++) {
+		if (colliders[i] == 2) {
+			collisionsIndex.push(i);
+		}
+	}
+}
 
-var stage = new PIXI.Container();
-
-var texture = PIXI.Texture.fromImage("./assets/img/cs413.png");
-
-var sprite = new PIXI.Sprite(texture);
-
-sprite.anchor.x = 0.5;
-sprite.anchor.y = 0.5;
-
-sprite.position.x = 200;
-sprite.position.y = 200;
-
-stage.addChild(sprite);
+/////////////////////////////////////////////
+// Display Game Screen                     //
+/////////////////////////////////////////////
+function DisplayGameScreen() {
+	MapStuff();
+	gameScreenContainer.visible = true;
+	stage.addChild(gameScreenContainer);
+}
 
 function animate() {
   requestAnimationFrame(animate);
-  sprite.rotation += 0.1;
   renderer.render(stage);
 }
-
 animate();
+
+function Start() {
+	//DisplayGameScreen();
+}
+Start();
