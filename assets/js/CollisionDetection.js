@@ -6,7 +6,17 @@
 function CollisionDetection(index, collisionsIndex) {
 	for (var i = 0; i < collisionsIndex.length; i++) {
 		if (index == collisionsIndex[i]) {
-			console.log("Collision " + index + " " + i);
+			//console.log("Collision " + index + " " + i);
+			return true;
+		}
+	}
+	return false;
+}
+
+function CharacterCollisionDetection(index, collisionsIndex) {
+	for (var i = 0; i < collisionsIndex.length; i++) {
+		if (index == charactersIndex[i]) {
+			//console.log("Collision " + index + " " + i);
 			return true;
 		}
 	}

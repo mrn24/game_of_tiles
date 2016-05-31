@@ -25,21 +25,24 @@ function Ready() {
 	LoadCharacter();
 	mapContainer.addChild(mainCharacter);
 	controlling = setInterval(mainCharacterController, 30);
-	colliders = world.getObject("Environment").data;
 	DisplayGameScreen();
 }
-var collisionsIndex = [];
+
 function MapStuff() {
 	stage.addChild(mapContainer);
-	mapContainer.scale.x = mapScale;
-	mapContainer.scale.y = mapScale;
-	
-	//Creating collisions array
+	mapArray = world.getObject("Environment").data;
+	colliders = world.getObject("Mountains").data;
+	//Creating collisionsIndex array
 	for (var i = 0; i < colliders.length; i++) {
-		if (colliders[i] == 2) {
+		if (colliders[i] != 0) {
 			collisionsIndex.push(i);
 		}
 	}
+	mapContainer.scale.x = mapScale;
+	mapContainer.scale.y = mapScale;
+	LoadNPC(50, 2, "./assets/Characters/NPCs/Enemy", 4);
+	mapContainer.addChild(npcArray[0]);
+	NPCMovement();
 }
 
 /////////////////////////////////////////////
