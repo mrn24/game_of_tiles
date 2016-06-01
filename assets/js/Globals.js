@@ -65,3 +65,6 @@ var width = 600,
 ///////////////////////////////////////
 var currentMap,
 	previousMap;
+var forest;
+var desert;
+var plains;

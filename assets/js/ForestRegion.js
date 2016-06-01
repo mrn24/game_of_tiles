@@ -35,6 +35,7 @@ function ForestLoader(){
   ///////////////////////////////////
   collisionsIndex = forestCollisions;
   mapArray = forestMap;
+  currentMap = forest;
   var characterLayer = forest.getObject("CharacterLayer");
   LoadCharacter();
   characterLayer.addChild(mainCharacter);

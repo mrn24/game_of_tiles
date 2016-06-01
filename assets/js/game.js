@@ -7,8 +7,6 @@ document.addEventListener("keyup", checkKeyReleased, false);
 // Map Stuff                               //
 /////////////////////////////////////////////
 var world;
-var forest;
-var desert;
 var tu;
 var controlling;
 var colliders;
