@@ -3,6 +3,7 @@ var desertCollisions = [];
 var desertEntranceChecking;
 var desertMapWidth = 40;
 var desertMap;
+var Fountain;
 
 function FirstDesertLoader(){
   var desertMap = desert.getObject("CollisionLayer").data;
@@ -19,6 +20,18 @@ function FirstDesertLoader(){
       desertEntrances.push(i);
     }
   }
+
+  var FountainArray = [];
+  FountainArray.push(PIXI.Texture.fromImage('./assets/Desert/Sprites/Fountain1.png'));
+  FountainArray.push(PIXI.Texture.fromImage('./assets/Desert/Sprites/Fountain2.png'));
+  FountainArray.push(PIXI.Texture.fromImage('./assets/Desert/Sprites/Fountain3.png'));
+  Fountain = new PIXI.extras.MovieClip(FountainArray);
+  Fountain.animationSpeed = 0.1;
+  Fountain.x = 640;
+  Fountain.y = 181;
+  Fountain.play();
+  desertContainer.addChild(Fountain);
+
   //call loadnpc with map.
   mapContainer.addChild(desertContainer);
   desertContainer.visible = false;
