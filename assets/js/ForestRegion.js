@@ -35,10 +35,24 @@ function ForestLoader(){
   ///////////////////////////////////
   collisionsIndex = forestCollisions;
   mapArray = forestMap;
+
+  previousMap = desert;
   currentMap = forest;
+
+  switch(previousMap){
+    case desert:
+      startX = 48;
+      startY = 391;
+      break;
+    case plains:
+      startX = 496;
+      startY = 903;
+      break;
+  }
   var characterLayer = forest.getObject("CharacterLayer");
   LoadCharacter();
   characterLayer.addChild(mainCharacter);
+  SetPosition();
   //Use passed in parameter to load character in the right spot
   forestEntranceChecking = setInterval(ForestEntranceChecker, 500);
 }
@@ -47,6 +61,17 @@ function ForestEntranceChecker(){
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), forestEntrances)){
     clearInterval(forestEntranceChecking);
     console.log("Found Entrance!")
+    characterLayer.removeChild(mainCharacter);
     //Which entrance?, send to transition function
+    switch(mainCharacter.x){
+      case 496:
+        console.log("Going to plains");
+        MapTransition(plains);
+        break;
+      case 16:
+        console.log("going to desert");
+        MapTransition(desert);
+        break;
+    }
   }
 }
