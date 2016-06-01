@@ -7,6 +7,7 @@ var tileHeight = 32,
 	mapHeight = 15,
 	mapScale = 2,
 	collisionsIndex = [],
+	entrances = [],
 	mapArray = [];
 ///////////////////////////
 // Globals For Character() //
@@ -28,15 +29,19 @@ var keyA = false,
 	keyEnter = false,
 	moving = true, // set to false to stop character from moving
 	facing;  // 1 up, 2 right, 3 down, 4 left
-	
+
 /////////////////////////
 // Global Containers   //
 /////////////////////////
 var stage = new PIXI.Container(),
 	gameScreenContainer = new PIXI.Container(),
 	mapContainer = new PIXI.Container(),
-	fontContainer = new PIXI.Container();
-	
+	fontContainer = new PIXI.Container(),
+	forestContainer = new PIXI.Container(),
+	desertContainer = new PIXI.Container(),
+	plainsContainer = new PIXI.Container(),
+	dungeonContainer = new PIXI.Container();
+
 /////////////////////////////
 // Globals for LoadNPC()   //
 /////////////////////////////
@@ -54,3 +59,9 @@ var text;
 
 var width = 600,
 	height = 600;
+
+///////////////////////////////////////
+// Globals for map transitions      //
+///////////////////////////////////////
+var currentMap,
+	previousMap;

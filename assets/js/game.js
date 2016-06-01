@@ -15,19 +15,26 @@ PIXI.loader
   .add('map_json', './assets/Plains/Map/Map.json')
   .add('tileset', './assets/Plains/Tileset/16SpriteSet.png')
   .add('./assets/Font/myfont.fnt')
+  .add('Forest_json', './assets/Forest/img/forest.json')
+  .add('ForestTileset', './assets/Forest/img/forest_tileset.png')
   .load(Ready);
 function Ready() {
 
 	tu = new TileUtilities(PIXI);
 	world = tu.makeTiledWorld("map_json", "./assets/Plains/Tileset/16SpriteSet.png");
-
+  forest = tu.makeTiledWorld("Forest_json", "./assets/Forest/img/forest_tileset.png");
+  FirstForestLoader();
+  //desert =
+  //first desert loader
+  //dungeon =
+  //first dungeon loader
 	mapContainer.addChild(world);
 	mapContainer.position.x = -20;
 	mapContainer.position.y = -20;
 	LoadCharacter();
 	mapContainer.addChild(mainCharacter);
 
-	textHandler("hello world", 12);
+	//textHandler("hello world", 12);
 
 	controlling = setInterval(mainCharacterController, 30);
 	DisplayGameScreen();
