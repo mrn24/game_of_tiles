@@ -6,7 +6,7 @@
         <key>texturePackerVersion</key>
         <string>4.2.1</string>
         <key>fileName</key>
-        <string>C:/Users/cblazer/Desktop/Desert/test.tps</string>
+        <string>C:/Users/cb/Desktop/desert/Desert.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -141,7 +141,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename></filename>
+                <filename>Desert.json</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -170,7 +170,7 @@
             <key>scaleMode</key>
             <enum type="ScaleMode">Smooth</enum>
             <key>extrude</key>
-            <uint>1</uint>
+            <uint>0</uint>
             <key>trimThreshold</key>
             <uint>1</uint>
             <key>trimMargin</key>
@@ -202,6 +202,8 @@
             <key type="filename">BasicDesert7.png</key>
             <key type="filename">BasicDesert8.png</key>
             <key type="filename">BasicDesert9.png</key>
+            <key type="filename">Bones1.png</key>
+            <key type="filename">Bones2.png</key>
             <key type="filename">Cactus1.png</key>
             <key type="filename">Cactus2.png</key>
             <key type="filename">Cactus3.png</key>
@@ -216,9 +218,6 @@
             <key type="filename">Canyon7.png</key>
             <key type="filename">Canyon8.png</key>
             <key type="filename">Canyon9.png</key>
-            <key type="filename">Fountain1.png</key>
-            <key type="filename">Fountain2.png</key>
-            <key type="filename">Fountain3.png</key>
             <key type="filename">House1.png</key>
             <key type="filename">House2.png</key>
             <key type="filename">House3.png</key>
@@ -232,6 +231,10 @@
             <key type="filename">Mountains2.png</key>
             <key type="filename">Mountains3.png</key>
             <key type="filename">Mountains4.png</key>
+            <key type="filename">Oasis1.png</key>
+            <key type="filename">Oasis2.png</key>
+            <key type="filename">Oasis3.png</key>
+            <key type="filename">Oasis4.png</key>
             <key type="filename">Palm.png</key>
             <key type="filename">Pillar1.png</key>
             <key type="filename">Pillar2.png</key>
@@ -241,12 +244,6 @@
             <key type="filename">Pillar6.png</key>
             <key type="filename">Pillar7.png</key>
             <key type="filename">Pillar8.png</key>
-            <key type="filename">bones1.png</key>
-            <key type="filename">bones2.png</key>
-            <key type="filename">oasis1.png</key>
-            <key type="filename">oasis2.png</key>
-            <key type="filename">oasis3.png</key>
-            <key type="filename">oasis4.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -254,9 +251,14 @@
         </map>
         <key>fileList</key>
         <array>
-            <filename>Pillar6.png</filename>
-            <filename>Pillar7.png</filename>
-            <filename>Pillar8.png</filename>
+            <filename>Canyon4.png</filename>
+            <filename>Canyon5.png</filename>
+            <filename>Canyon6.png</filename>
+            <filename>Canyon7.png</filename>
+            <filename>Canyon8.png</filename>
+            <filename>Canyon9.png</filename>
+            <filename>Canyon10.png</filename>
+            <filename>Canyon11.png</filename>
             <filename>BasicDesert.png</filename>
             <filename>BasicDesert1.png</filename>
             <filename>BasicDesert2.png</filename>
@@ -271,25 +273,18 @@
             <filename>BasicDesert11.png</filename>
             <filename>BasicDesert12.png</filename>
             <filename>BasicDesert13.png</filename>
-            <filename>bones1.png</filename>
-            <filename>bones2.png</filename>
+            <filename>Bones1.png</filename>
+            <filename>Bones2.png</filename>
             <filename>Cactus1.png</filename>
             <filename>Cactus2.png</filename>
             <filename>Cactus3.png</filename>
             <filename>Canyon1.png</filename>
             <filename>Canyon2.png</filename>
             <filename>Canyon3.png</filename>
-            <filename>Canyon4.png</filename>
-            <filename>Canyon5.png</filename>
-            <filename>Canyon6.png</filename>
-            <filename>Canyon7.png</filename>
-            <filename>Canyon8.png</filename>
-            <filename>Canyon9.png</filename>
-            <filename>Canyon10.png</filename>
-            <filename>Canyon11.png</filename>
-            <filename>Fountain1.png</filename>
-            <filename>Fountain2.png</filename>
-            <filename>Fountain3.png</filename>
+            <filename>Pillar5.png</filename>
+            <filename>Pillar6.png</filename>
+            <filename>Pillar7.png</filename>
+            <filename>Pillar8.png</filename>
             <filename>House1.png</filename>
             <filename>House2.png</filename>
             <filename>House3.png</filename>
@@ -303,16 +298,15 @@
             <filename>Mountains2.png</filename>
             <filename>Mountains3.png</filename>
             <filename>Mountains4.png</filename>
-            <filename>oasis1.png</filename>
-            <filename>oasis2.png</filename>
-            <filename>oasis3.png</filename>
-            <filename>oasis4.png</filename>
+            <filename>Oasis1.png</filename>
+            <filename>Oasis2.png</filename>
+            <filename>Oasis3.png</filename>
+            <filename>Oasis4.png</filename>
             <filename>Palm.png</filename>
             <filename>Pillar1.png</filename>
             <filename>Pillar2.png</filename>
             <filename>Pillar3.png</filename>
             <filename>Pillar4.png</filename>
-            <filename>Pillar5.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
