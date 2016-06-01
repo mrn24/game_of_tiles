@@ -22,16 +22,13 @@ function Ready() {
 	tu = new TileUtilities(PIXI);
 	world = tu.makeTiledWorld("map_json", "./assets/Plains/Tileset/16SpriteSet.png");
 
-	
-  
-
 	mapContainer.addChild(world);
 	mapContainer.position.x = -20;
 	mapContainer.position.y = -20;
 	LoadCharacter();
 	mapContainer.addChild(mainCharacter);
 
-	addText("Hello world", 80);
+	addText("y'all niggaz is gay", 12);
 
 	controlling = setInterval(mainCharacterController, 30);
 	DisplayGameScreen();
