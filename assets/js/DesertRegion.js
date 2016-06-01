@@ -1,7 +1,8 @@
 var desertEntrances = [];
 var desertCollisions = [];
 var desertEntranceChecking;
-var desertMapWidth = 30;
+var desertMapWidth = 40;
+var desertMap;
 
 function FirstDesertLoader(){
   var desertMap = desert.getObject("CollisionLayer").data;
@@ -19,7 +20,7 @@ function FirstDesertLoader(){
     }
   }
   //call loadnpc with map.
-  stage.addChild(desertContainer);
+  mapContainer.addChild(desertContainer);
   desertContainer.visible = false;
 }
 
@@ -32,8 +33,18 @@ function DesertLoader(){
   ///////////////////////////////////
   collisionsIndex = desertCollisions;
   mapWidth = desertMapWidth;
+
+  mapArray = desertMap;
+  currentmap = desert;
+  var characterLayer = desert.getObject("CharacterLayer");
+  LoadCharacter();
+  characterLayer.addChild(mainCharacter);
+
+
+
+
   //Use passed in parameter to load character in the right spot
-  desertEntranceChecking = setInverval(DesertEntranceChecker, 500);
+  desertEntranceChecking = setInterval(DesertEntranceChecker, 500);
 }
 
 function DesertEntranceChecker(){

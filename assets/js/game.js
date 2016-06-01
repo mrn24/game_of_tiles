@@ -17,20 +17,24 @@ PIXI.loader
   .add('./assets/Font/myfont.fnt')
   .add('Forest_json', './assets/Forest/img/forest.json')
   .add('ForestTileset', './assets/Forest/img/forest_tileset.png')
+  .add('Desert_json', './assets/Desert/DesertMap.json')
+  .add('DesertTileset', './assets/Desert/DesertTileset.png')
   .load(Ready);
 function Ready() {
-  stage.addChild(mapContainer);
-  mapContainer.scale.x = mapScale;
-  mapContainer.scale.y = mapScale;
+	stage.addChild(mapContainer);
+	mapContainer.scale.x = mapScale;
+	mapContainer.scale.y = mapScale;
 	tu = new TileUtilities(PIXI);
 	world = tu.makeTiledWorld("map_json", "./assets/Plains/Tileset/16SpriteSet.png");
-  forest = tu.makeTiledWorld("Forest_json", "./assets/Forest/img/forest_tileset.png");
-  forestContainer.addChild(forest);
-  FirstForestLoader();
-  //desert =
-  //first desert loader
-  //dungeon =
-  //first dungeon loader
+	forest = tu.makeTiledWorld("Forest_json", "./assets/Forest/img/forest_tileset.png");
+	forestContainer.addChild(forest);
+	FirstForestLoader();
+	desert = tu.makeTiledWorld("Desert_json", "./assets/Desert/DesertTileset.png");
+	desertContainer.addChild(desert);
+	FirstDesertLoader();
+
+	//dungeon =
+	//first dungeon loader
 
 
 	mapContainer.position.x = -20;
@@ -40,7 +44,8 @@ function Ready() {
 	//textHandler("hello world", 12);
 
 	controlling = setInterval(mainCharacterController, 30);
-	ForestLoader();
+	//ForestLoader();
+	DesertLoader();
 }
 
 /*
