@@ -8,7 +8,7 @@ window.addEventListener("keydown", function (e) {
 
 function textHandler(inputText, inputSize){
 	moving = false;
-	TextBackgroundTex = new PIXI.Texture.fromImage("./assets/font/TextBackground.png");
+	TextBackgroundTex = new PIXI.Texture.fromImage("./assets/Font/TextBackground.png");
 	TextBackground = new PIXI.Sprite(TextBackgroundTex);
 	TextBackground.position.x = 20;
 	TextBackground.position.y = 200;
