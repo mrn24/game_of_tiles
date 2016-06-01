@@ -12,6 +12,7 @@ var world;
 var tu;
 var controlling;
 var colliders;
+
 PIXI.loader
   .add('map_json', './assets/Plains/Map/Map.json')
   .add('tileset', './assets/Plains/Tileset/16SpriteSet.png')

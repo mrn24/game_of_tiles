@@ -159,6 +159,5 @@ function mainCharacterController() {
 				}
 			}
 		}
-		console.log(facing);
 	}
 }
