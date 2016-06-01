@@ -2,7 +2,7 @@ var forestEntrances = [];
 var forestCollisions = [];
 var forestEntranceChecking;
 var forestMapWidth = 30;
-var forestMap
+var forestMap;
 
 function FirstForestLoader(){
   forestMap = forest.getObject("CollisionLayer").data;
