@@ -2,17 +2,20 @@ window.addEventListener("keydown", function (e) {
     e.preventDefault();
     if(e.keyCode == 13){
     	keyEnter = true;
-    	console.log('enter');
     }
 
 });
 
 function textHandler(inputText, inputSize){
 	moving = false;
-	text = new PIXI.extras.BitmapText(inputText, {font: inputSize + "px WLM Carton"});
-	world.addChild(text);
-	text.position.x = 100;
-	text.position.y = 100;
+	TextBackgroundTex = new PIXI.Texture.fromImage("./assets/font/TextBackground.png");
+	TextBackground = new PIXI.Sprite(TextBackgroundTex);
+	TextBackground.position.x = 20;
+	TextBackground.position.y = 200;
+	world.addChild(TextBackground);
+	text = new PIXI.extras.BitmapText(inputText, {font: inputSize + "px myfont"});
+	text.position.x = 30;
+	text.position.y = 210;
 	fontContainer.addChild(text);
 	world.addChild(fontContainer);
 	waitForUser();
@@ -24,6 +27,7 @@ function waitForUser(){
 	}
 	else{
 		fontContainer.removeChild(text);
+		world.removeChild(TextBackground);
 		moving = true;
 		keyEnter = false;
 	}

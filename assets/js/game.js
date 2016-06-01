@@ -1,7 +1,5 @@
 var gameport = document.getElementById("gameport");
-var width = 600,
-	height = 600,
-	renderer = PIXI.autoDetectRenderer(width, height, {backgroundColor: 0xFFFFFF});
+var	renderer = PIXI.autoDetectRenderer(width, height, {backgroundColor: 0xFFFFFF});
 gameport.appendChild(renderer.view);
 document.addEventListener("keydown", checkKeyPressed, false);
 document.addEventListener("keyup", checkKeyReleased, false);

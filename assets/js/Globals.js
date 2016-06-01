@@ -51,3 +51,6 @@ var npcArray = [],
 /////////////////////////////
 
 var text;
+
+var width = 600,
+	height = 600;
