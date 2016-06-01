@@ -15,15 +15,21 @@ var colliders;
 PIXI.loader
   .add('map_json', './assets/Plains/Map/Map.json')
   .add('tileset', './assets/Plains/Tileset/16SpriteSet.png')
+  .add('./assets/Font/myfont.fnt')
   .load(Ready);
 function Ready() {
+
 	tu = new TileUtilities(PIXI);
 	world = tu.makeTiledWorld("map_json", "./assets/Plains/Tileset/16SpriteSet.png");
+
 	mapContainer.addChild(world);
 	mapContainer.position.x = -20;
 	mapContainer.position.y = -20;
 	LoadCharacter();
 	mapContainer.addChild(mainCharacter);
+
+	addText("y'all niggaz is gay", 12);
+
 	controlling = setInterval(mainCharacterController, 30);
 	DisplayGameScreen();
 }

@@ -32,7 +32,8 @@ var keyA = false,
 /////////////////////////
 var stage = new PIXI.Container(),
 	gameScreenContainer = new PIXI.Container(),
-	mapContainer = new PIXI.Container();
+	mapContainer = new PIXI.Container(),
+	fontContainer = new PIXI.Container();
 	
 /////////////////////////////
 // Globals for LoadNPC()   //
@@ -40,3 +41,9 @@ var stage = new PIXI.Container(),
 var npcArray = [],
 	npcStartArray = [],
 	npcRangeArray = [];
+
+
+
+
+
+var title;
