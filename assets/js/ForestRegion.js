@@ -2,9 +2,10 @@ var forestEntrances = [];
 var forestCollisions = [];
 var forestEntranceChecking;
 var forestMapWidth = 30;
+var forestMap
 
 function FirstForestLoader(){
-  var forestMap = forest.getObject("CollisionLayer").data;
+  forestMap = forest.getObject("CollisionLayer").data;
   //Loading Collisions
   for (var i = 0; i < forestMap.length; i++) {
 		if (forestMap[i] != 0) {
@@ -19,11 +20,13 @@ function FirstForestLoader(){
     }
   }
   //call loadnpc with map.
-  stage.addChild(forestContainer);
+  mapContainer.addChild(forestContainer);
   forestContainer.visible = false;
 }
 
 function ForestLoader(){
+  console.log("loading Forest!")
+  mapWidth = forestMapWidth;
   forestContainer.visible = true;
   //////////////////////////////
   //Risk! collisionsIndex is a//
@@ -31,14 +34,18 @@ function ForestLoader(){
   //Never set collisionsIndex to []//
   ///////////////////////////////////
   collisionsIndex = forestCollisions;
-  mapWidth = forestMapWidth;
+  mapArray = forestMap;
+  var characterLayer = forest.getObject("CharacterLayer");
+  LoadCharacter();
+  characterLayer.addChild(mainCharacter);
   //Use passed in parameter to load character in the right spot
-  forestEntranceChecking = setInverval(ForestEntranceChecker, 500);
+  forestEntranceChecking = setInterval(ForestEntranceChecker, 500);
 }
 
 function ForestEntranceChecker(){
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), forestEntrances)){
     clearInterval(forestEntranceChecking);
+    console.log("Found Entrance!")
     //Which entrance?, send to transition function
   }
 }

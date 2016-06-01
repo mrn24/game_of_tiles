@@ -8,6 +8,7 @@ function LoadCharacter() {
 	mainCharacter = new PIXI.extras.MovieClip(textureArray);
 	mainCharacter.anchor.x = 0.5;
 	mainCharacter.anchor.y = 0.5;
+	//var point = tu.getTile(index, mapArray, currentMap);
 	mainCharacter.position.x = startX;
 	mainCharacter.position.y = startY;
 	mainCharacter.scale.x = mainCharacterScale;
