@@ -24,8 +24,10 @@ var mainCharacter,
 var keyA = false,
 	keyD = false,
 	keyS = false,
-	keyW = false;
-	keyEnter = false;
+	keyW = false,
+	keyEnter = false,
+	moving = true, // set to false to stop character from moving
+	facing;  // 1 up, 2 right, 3 down, 4 left
 	
 /////////////////////////
 // Global Containers   //
@@ -44,6 +46,8 @@ var npcArray = [],
 
 
 
+/////////////////////////////
+// Globals for Text   //
+/////////////////////////////
 
-
-var title;
+var text;

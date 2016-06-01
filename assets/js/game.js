@@ -28,7 +28,7 @@ function Ready() {
 	LoadCharacter();
 	mapContainer.addChild(mainCharacter);
 
-	addText("y'all niggaz is gay", 12);
+	textHandler("hello world", 12);
 
 	controlling = setInterval(mainCharacterController, 30);
 	DisplayGameScreen();

@@ -1,4 +1,4 @@
-function addText(inputText, inputSize){
+function textHandler(inputText, inputSize){
 	text = new PIXI.extras.BitmapText(inputText, {font: inputSize + "px WLM Carton"});
 	world.addChild(text);
 	text.position.x = 100;
@@ -6,5 +6,8 @@ function addText(inputText, inputSize){
 	fontContainer.addChild(text);
 	world.addChild(fontContainer);
 }
+
+
+function textHandler(inputText, inputSize)
 
 
