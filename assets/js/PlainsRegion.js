@@ -22,16 +22,23 @@ function FirstPlainsLoader(){
 		  plainsEntrances.push(i);
 		}
 	}
-  //call loadnpc with map.
-  //function LoadNPC(index, range, fileLocation, numSprites) {
-	  //LoadNPC(260, 4, './assets/Desert/Sprites/DesertWoman', 4);
-	  LoadNPC(540,4,"./assets/Characters/NPCs/Enemy", 4);
-	  var characterLayer = plains.getObject("CharacterLayer");
-	  plainsNpcArray.push(npcArray[0]);
-	characterLayer.addChild(npcArray[0]);
-	  //LoadNPC(535,4,"./assets/Characters/NPCs/Enemy", 4);
-	  //LoadNPC(535,4,"./assets/Characters/NPCs/Enemy", 4);
-	  //LoadNPC(535,4,"./assets/Characters/NPCs/Enemy", 4);
+	//call loadnpc with map.
+	//function LoadNPC(index, range, fileLocation, numSprites) {
+	//LoadNPC(260, 4, './assets/Desert/Sprites/DesertWoman', 4);
+	npcArray = [];
+	var characterLayer = plains.getObject("CharacterLayer");
+	LoadNPC(314,6,"./assets/Characters/NPCs/Enemy", 4);
+	plainsNpcArray.push(npcArray[0]);
+	characterLayer.addChild(plainsNpcArray[0]);
+	LoadNPC(1552,2,"./assets/Desert/Sprites/DesertWoman", 4);
+	plainsNpcArray.push(npcArray[1]);
+	characterLayer.addChild(plainsNpcArray[1]);
+	LoadNPC(2006,8,"./assets/Characters/NPCs/Enemy", 4);
+	plainsNpcArray.push(npcArray[2]);
+	characterLayer.addChild(plainsNpcArray[2]);
+	LoadNPC(2264,0,"./assets/Forest/img/elf", 1);
+	plainsNpcArray.push(npcArray[3]);
+	characterLayer.addChild(plainsNpcArray[3]);
 	  
 	  NPCMovement();
   mapContainer.addChild(plainsContainer);
