@@ -35,9 +35,7 @@ function ForestLoader(){
   ///////////////////////////////////
   collisionsIndex = forestCollisions;
   mapArray = forestMap;
-
   
-
   switch(previousMap){
     case desert:
       startX = 48;
