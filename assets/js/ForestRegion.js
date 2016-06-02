@@ -36,15 +36,17 @@ function ForestLoader(){
   collisionsIndex = forestCollisions;
   mapArray = forestMap;
 
-  switch(previousMap){
-    case desert:
-      startX = 48;
-      startY = 391;
-      break;
-    case plains:
-      startX = 496;
-      startY = 903;
-      break;
+  if (previousMap == desert){
+    startX = 80;
+    startY = 391;
+  }else if(previousMap == plains){
+    startX = 496;
+    startY = 871;
+  }else if(previousMap == forestDungeon){
+    startX = 656;
+    startY = 839;
+  }else{
+    console.log("broken");
   }
   var characterLayer = forest.getObject("CharacterLayer");
   characterLayer.addChild(mainCharacter);
@@ -59,16 +61,22 @@ function ForestEntranceChecker(){
     clearInterval(forestEntranceChecking);
     console.log("Found Entrance!");
     //Which entrance?, send to transition function
-    switch(mainCharacter.x){
-      case 496:
-        console.log("Going to plains");
-        MapTransition(plains);
-        break;
-      case 16:
-        console.log("going to desert");
-        MapTransition(desert);
-        break;
-    }
+    //Plains leave 855
+    //Forest dungeon 770
+    //Desert 361
+    if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 361) {
+        console.log("Going to Desert");
+  	  MapTransition(desert);
+      }
+  	else if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 855) {
+  		console.log("Going to Plains");
+  		MapTransition(plains);
+  	} else if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 770) {
+  		console.log("Going to Dungeon");
+  		MapTransition(forestDungeon);
+  	} else {
+  		console.log("Dead");
+  	}
     forestContainer.visible = false;
   }
 }

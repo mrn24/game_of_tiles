@@ -12,7 +12,7 @@
          "y":0
         }, 
         {
-         "data":[31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 31, 0, 21, 0, 0, 21, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 4, 26, 26, 26, 26, 26, 26, 26, 26, 26, 10, 0, 31, 31, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 0, 0, 21, 14, 49, 50, 49, 50, 48, 49, 50, 49, 50, 20, 0, 31, 31, 0, 0, 0, 27, 32, 33, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 0, 37, 0, 0, 0, 0, 37, 0, 0, 20, 0, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 48, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 31, 31, 0, 0, 48, 0, 0, 0, 0, 0, 27, 21, 0, 21, 0, 0, 0, 0, 14, 49, 50, 0, 0, 0, 0, 0, 49, 50, 20, 0, 31, 31, 48, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 28, 0, 0, 24, 29, 29, 29, 29, 0, 29, 29, 29, 29, 30, 0, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 21, 31, 31, 21, 28, 0, 21, 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 0, 0, 31, 31, 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 31, 31, 21, 0, 32, 33, 34, 0, 0, 21, 0, 48, 0, 21, 0, 48, 0, 17, 18, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 31, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 33, 34, 0, 48, 0, 0, 5, 0, 48, 0, 21, 0, 0, 0, 21, 0, 21, 0, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 27, 0, 0, 0, 0, 0, 0, 0, 32, 33, 34, 31, 31, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 0, 31, 31, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 0, 0, 0, 5, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 31, 31, 0, 0, 0, 0, 0, 21, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 31, 0, 21, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 21, 0, 0, 27, 0, 0, 31, 31, 0, 0, 0, 27, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 0, 31, 31, 0, 0, 32, 33, 34, 0, 48, 0, 0, 0, 0, 21, 0, 0, 0, 0, 5, 48, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 31, 31, 27, 0, 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 51, 52, 53, 0, 0, 0, 32, 33, 34, 28, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 5, 0, 61, 0, 63, 0, 48, 0, 0, 0, 0, 0, 31, 31, 48, 0, 0, 48, 0, 21, 0, 0, 0, 32, 33, 34, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 31, 31, 0, 21, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 0, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31],
+         "data":[31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 31, 0, 21, 0, 0, 21, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 4, 26, 26, 26, 26, 26, 26, 26, 26, 26, 10, 0, 31, 31, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 0, 0, 21, 14, 49, 50, 49, 50, 48, 49, 50, 49, 50, 20, 0, 31, 31, 0, 0, 0, 27, 32, 33, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 0, 37, 0, 0, 0, 0, 37, 0, 0, 20, 0, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 48, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 31, 31, 0, 0, 48, 0, 0, 0, 0, 0, 27, 21, 0, 21, 0, 0, 0, 0, 14, 49, 50, 0, 0, 0, 0, 0, 49, 50, 20, 0, 31, 31, 48, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 28, 0, 0, 24, 29, 29, 29, 29, 0, 29, 29, 29, 29, 30, 0, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 21, 31, 31, 21, 28, 0, 21, 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 0, 0, 31, 31, 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 31, 31, 21, 0, 32, 33, 34, 0, 0, 21, 0, 48, 0, 21, 0, 48, 0, 17, 18, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 31, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 33, 34, 0, 48, 0, 0, 5, 0, 48, 0, 21, 0, 0, 0, 21, 0, 21, 0, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 27, 0, 0, 0, 0, 0, 0, 0, 32, 33, 34, 31, 31, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 0, 31, 31, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 0, 0, 0, 5, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 31, 31, 0, 0, 0, 0, 0, 21, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 31, 0, 21, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 21, 0, 0, 27, 0, 0, 31, 31, 0, 0, 0, 27, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 0, 31, 31, 0, 0, 32, 33, 34, 0, 48, 0, 0, 0, 0, 21, 0, 0, 0, 0, 5, 48, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 31, 31, 27, 0, 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 51, 52, 53, 0, 0, 0, 32, 33, 34, 28, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 5, 0, 61, 0, 63, 0, 48, 0, 0, 0, 0, 0, 31, 31, 48, 0, 0, 48, 0, 21, 0, 0, 0, 32, 33, 34, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 31, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 31, 31, 0, 21, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 0, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31],
          "height":30,
          "name":"CollisionLayer",
          "opacity":1,
@@ -23,7 +23,7 @@
          "y":0
         }, 
         {
-         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":30,
          "name":"EntranceLayer",
          "opacity":1,
@@ -91,227 +91,375 @@
             {
              "0":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "1":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "10":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "11":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "12":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "13":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "14":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "15":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "16":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
+                },
+             "17":
+                {
+                 "gsdf":"fasdf"
+                },
+             "18":
+                {
+                 "gsdf":"fasdf"
+                },
+             "19":
+                {
+                 "gsdf":"fasdf"
                 },
              "2":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "20":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "21":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "22":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "23":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "24":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "25":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "26":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
+                },
+             "27":
+                {
+                 "gsdf":"fasdf"
+                },
+             "28":
+                {
+                 "gsdf":"fasdf"
+                },
+             "29":
+                {
+                 "gsdf":"fasdf"
                 },
              "3":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "30":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "31":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "32":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "33":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "34":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "35":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "36":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
+                },
+             "37":
+                {
+                 "gsdf":"fasdf"
+                },
+             "38":
+                {
+                 "gsdf":"fasdf"
+                },
+             "39":
+                {
+                 "gsdf":"fasdf"
                 },
              "4":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "40":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "41":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "42":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "43":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "44":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "45":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "46":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
+                },
+             "47":
+                {
+                 "gsdf":"fasdf"
+                },
+             "48":
+                {
+                 "gsdf":"fasdf"
+                },
+             "49":
+                {
+                 "gsdf":"fasdf"
                 },
              "5":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "50":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "51":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "52":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "53":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "54":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "55":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "56":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
+                },
+             "57":
+                {
+                 "gsdf":"fasdf"
+                },
+             "58":
+                {
+                 "gsdf":"fasdf"
+                },
+             "59":
+                {
+                 "gsdf":"fasdf"
                 },
              "6":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "60":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "61":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "62":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "63":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "64":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "65":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "66":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
+                },
+             "67":
+                {
+                 "gsdf":"fasdf"
+                },
+             "68":
+                {
+                 "gsdf":"fasdf"
+                },
+             "69":
+                {
+                 "gsdf":"fasdf"
+                },
+             "7":
+                {
+                 "gsdf":"fasdf"
                 },
              "70":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "71":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "72":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "73":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "74":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "75":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
                 },
              "76":
                 {
-                 "Anything":"AnythingAgain"
+                 "Anything":"AnythingAgain",
+                 "gsdf":"fasdf"
+                },
+             "77":
+                {
+                 "gsdf":"fasdf"
+                },
+             "78":
+                {
+                 "gsdf":"fasdf"
+                },
+             "79":
+                {
+                 "gsdf":"fasdf"
+                },
+             "8":
+                {
+                 "gsdf":"fasdf"
                 },
              "80":
                 {
@@ -340,233 +488,385 @@
              "86":
                 {
                  "Anything":"AnythingAgain"
+                },
+             "9":
+                {
+                 "gsdf":"fasdf"
                 }
             },
          "tilepropertytypes":
             {
              "0":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "1":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "10":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "11":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "12":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "13":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "14":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "15":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "16":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
+                },
+             "17":
+                {
+                 "gsdf":"string"
+                },
+             "18":
+                {
+                 "gsdf":"string"
+                },
+             "19":
+                {
+                 "gsdf":"string"
                 },
              "2":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "20":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "21":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "22":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "23":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "24":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "25":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "26":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
+                },
+             "27":
+                {
+                 "gsdf":"string"
+                },
+             "28":
+                {
+                 "gsdf":"string"
+                },
+             "29":
+                {
+                 "gsdf":"string"
                 },
              "3":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "30":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "31":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "32":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "33":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "34":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "35":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "36":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
+                },
+             "37":
+                {
+                 "gsdf":"string"
+                },
+             "38":
+                {
+                 "gsdf":"string"
+                },
+             "39":
+                {
+                 "gsdf":"string"
                 },
              "4":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "40":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "41":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "42":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "43":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "44":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "45":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "46":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
+                },
+             "47":
+                {
+                 "gsdf":"string"
+                },
+             "48":
+                {
+                 "gsdf":"string"
+                },
+             "49":
+                {
+                 "gsdf":"string"
                 },
              "5":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "50":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "51":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "52":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "53":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "54":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "55":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "56":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
+                },
+             "57":
+                {
+                 "gsdf":"string"
+                },
+             "58":
+                {
+                 "gsdf":"string"
+                },
+             "59":
+                {
+                 "gsdf":"string"
                 },
              "6":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "60":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "61":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "62":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "63":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "64":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "65":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "66":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
+                },
+             "67":
+                {
+                 "gsdf":"string"
+                },
+             "68":
+                {
+                 "gsdf":"string"
+                },
+             "69":
+                {
+                 "gsdf":"string"
+                },
+             "7":
+                {
+                 "gsdf":"string"
                 },
              "70":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "71":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "72":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "73":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "74":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "75":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
                 },
              "76":
                 {
-                 "Anything":"string"
+                 "Anything":"string",
+                 "gsdf":"string"
+                },
+             "77":
+                {
+                 "gsdf":"string"
+                },
+             "78":
+                {
+                 "gsdf":"string"
+                },
+             "79":
+                {
+                 "gsdf":"string"
+                },
+             "8":
+                {
+                 "gsdf":"string"
                 },
              "80":
                 {
@@ -595,6 +895,10 @@
              "86":
                 {
                  "Anything":"string"
+                },
+             "9":
+                {
+                 "gsdf":"string"
                 }
             },
          "tilewidth":32

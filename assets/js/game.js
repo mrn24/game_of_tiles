@@ -33,21 +33,21 @@ function Ready() {
 	mapContainer.scale.x = mapScale;
 	mapContainer.scale.y = mapScale;
 	tu = new TileUtilities(PIXI);
-	
+
 	forest = tu.makeTiledWorld("Forest_json", "./assets/Forest/img/forest_tileset.png");
 	desert = tu.makeTiledWorld("Desert_json", "./assets/Desert/DesertTileset.png");
 	plains = tu.makeTiledWorld("Plains_json", "./assets/Plains/Tileset/Plains.png");
 	forestDungeon = tu.makeTiledWorld("forestdungeon",'./assets/Dungeon/forestdungeon.png' );
 	desertDungeon = tu.makeTiledWorld("desertdungeon",'./assets/Dungeon/desertdungeon.png' );
 	plainsDungeon = tu.makeTiledWorld("plainsdungeon",'./assets/Dungeon/plainsdungeon.png' );
-	
+
 	forestContainer.addChild(forest);
 	desertContainer.addChild(desert);
 	plainsContainer.addChild(plains);
 	forestDungeonContainer.addChild(forestDungeon);
 	desertDungeonContainer.addChild(desertDungeon);
 	plainsDungeonContainer.addChild(plainsDungeon);
-	
+
 	FirstForestLoader();
 	FirstDesertLoader();
 	FirstPlainsLoader()
