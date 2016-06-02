@@ -56,10 +56,10 @@ function PlainsLoader(){
 		startY = 1159;
   } else if (previousMap == desert) {
 	  	startX = 1360;
-		startY = 39;
+		startY = 71;
   } else if (previousMap == forest) {
 	  //console.log("Coming from Forest");
-	  	startX = 1552;
+	  	startX = 1422;
 		startY = 295;
   }
 
@@ -79,11 +79,11 @@ function PlainsEntranceChecker(){
 	clearInterval(plainsEntranceChecking);
 	//console.log("Found Entrance!");
     //Which entrance?, send to transition function
-	if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 499) {
+	if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 495) {
       //console.log("Going to Forest");
 	  MapTransition(forest);
     }
-	else if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 42) {
+	else if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 92) {
 		//console.log("Going to Desert");
 		MapTransition(desert);
 	} else if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 176) {

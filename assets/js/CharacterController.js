@@ -49,7 +49,7 @@ function mainCharacterController() {
 					if (index%mapWidth > 4 && index%mapWidth < mapWidth - 5) {
 						createjs.Tween.get(mapContainer).to({x: mapContainer.x + mapScale*32}, 250);
 					}
-					if (Math.floor(index/mapWidth) > 5 && Math.floor(index/mapWidth) < mapWidth - 4) {
+					if (Math.floor(index/(mapWidth)) > 4 && Math.floor(index/(mapWidth)) < (world.height/32) - 4) {
 						createjs.Tween.get(mapContainer).to({y: mapContainer.y + mapScale*32}, 250);
 					}
 					createjs.Tween.get(mainCharacter).to({x: mainCharacter.x - 32}, 250);
@@ -61,7 +61,7 @@ function mainCharacterController() {
 			else if (keyW && keyD && !keyA && !keyS) {
 				var index = tu.getIndex(mainCharacter.x + 32, mainCharacter.y - 32, 32, 32, mapWidth);
 				if (!CollisionDetection(index, collisionsIndex)) {
-					if (Math.floor(index/mapWidth) > 4 && Math.floor(index/mapWidth) < mapWidth - 5) {
+					if (Math.floor(index/(mapWidth)) > 4 && Math.floor(index/(mapWidth)) < (world.height/32) - 5) {
 						createjs.Tween.get(mapContainer).to({y: mapContainer.y + mapScale*32}, 250);
 					}
 					if (index%mapWidth > 5 && index%mapWidth < mapWidth - 4) {
@@ -79,7 +79,7 @@ function mainCharacterController() {
 					if (index%mapWidth > 5 && index%mapWidth < mapWidth - 4) {
 						createjs.Tween.get(mapContainer).to({x: mapContainer.x - mapScale*32}, 250);
 					}
-					if (Math.floor(index/mapWidth) > 5 && Math.floor(index/mapWidth) < mapWidth - 4) {
+					if (Math.floor(index/(mapWidth)) > 5 && Math.floor(index/(mapWidth)) < (world.height/32) - 4) {
 						createjs.Tween.get(mapContainer).to({y: mapContainer.y - mapScale*32}, 250);
 					}
 					createjs.Tween.get(mainCharacter).to({x: mainCharacter.position.x + 32}, 250);
@@ -91,7 +91,7 @@ function mainCharacterController() {
 			else if (keyS && keyA && !keyW && !keyD) {
 				var index = tu.getIndex(mainCharacter.x - 32, mainCharacter.y + 32, 32, 32, mapWidth);
 				if (!CollisionDetection(index, collisionsIndex)) {
-					if (Math.floor(index/mapWidth) > 5 && Math.floor(index/mapWidth) < mapWidth - 4) {
+					if (Math.floor(index/(mapWidth)) > 5 && Math.floor(index/(mapWidth)) < (world.height/32) - 4) {
 						createjs.Tween.get(mapContainer).to({y: mapContainer.y - mapScale*32}, 250);
 					}
 					if (index%mapWidth > 4 && index%mapWidth < mapWidth - 5) {
@@ -130,7 +130,7 @@ function mainCharacterController() {
 				else if (keyS) {
 					var index = tu.getIndex(mainCharacter.x, mainCharacter.y + 32, 32, 32, mapWidth);
 					if (!CollisionDetection(index, collisionsIndex)) {
-						if (Math.floor(index/mapWidth) > 5 && Math.floor(index/mapWidth) < mapWidth - 4) {
+						if (Math.floor(index/(mapWidth)) > 5 && Math.floor(index/(mapWidth)) < (world.height/32) - 4) {
 							createjs.Tween.get(mapContainer).to({y: mapContainer.y - mapScale*32}, 250);
 						}
 						createjs.Tween.get(mainCharacter).to({y: mainCharacter.y + 32}, 250);
@@ -140,7 +140,7 @@ function mainCharacterController() {
 				else if (keyW) {
 					var index = tu.getIndex(mainCharacter.x, mainCharacter.y - 32, 32, 32, mapWidth);
 					if (!CollisionDetection(index, collisionsIndex)) {
-						if (Math.floor(index/mapWidth) > 4 && Math.floor(index/mapWidth) < mapWidth - 5) {
+						if (Math.floor(index/(mapWidth)) > 4 && Math.floor(index/(mapWidth)) < (world.height/32) - 5) {
 							createjs.Tween.get(mapContainer).to({y: mapContainer.y + mapScale*32}, 250);
 						}
 						createjs.Tween.get(mainCharacter).to({y: mainCharacter.y - 32}, 250);
