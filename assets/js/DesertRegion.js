@@ -1,5 +1,6 @@
 var desertEntrances = [];
 var desertCollisions = [];
+var desertNPCArray = [];
 var desertEntranceChecking;
 var desertMapWidth = 40;
 var desertMap;
@@ -21,9 +22,7 @@ function FirstDesertLoader(){
     }
   }
 
-  LoadNPC(45, 2, './assets/Desert/Sprites/DesertWoman', 4);
-  desertContainer.addChild(npcArray[0]);
-  NPCMovement();
+  
 
   var FountainArray = [];
   FountainArray.push(PIXI.Texture.fromImage('./assets/Desert/Sprites/Fountain1.png'));
@@ -48,8 +47,40 @@ function DesertLoader(){
   //pointer to forestCollisions//
   //Never set collisionsIndex to []//
   ///////////////////////////////////
+
+  npcArray = desertNPCArray;
   collisionsIndex = desertCollisions;
   mapWidth = desertMapWidth;
+  world = desert;
+
+  LoadNPC(260, 4, './assets/Desert/Sprites/DesertWoman', 4);
+  desertContainer.addChild(npcArray[0]);
+
+  LoadNPC(340, 2, './assets/Desert/Sprites/DesertWoman', 4);
+  desertContainer.addChild(npcArray[1]);
+
+  LoadNPC(180, 0, './assets/Desert/Sprites/DesertKing', 4);
+  desertContainer.addChild(npcArray[2]);
+
+  LoadNPC(306, 1, './assets/Desert/Sprites/DesertMan', 4);
+  desertContainer.addChild(npcArray[3]);
+
+  LoadNPC(1037, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
+  desertContainer.addChild(npcArray[4]);
+
+  LoadNPC(1113, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
+  desertContainer.addChild(npcArray[5]);
+
+  LoadNPC(525, 3, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
+  desertContainer.addChild(npcArray[6]);
+
+  LoadNPC(484, 2, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
+  desertContainer.addChild(npcArray[7]);
+
+  LoadNPC(1082, 0, './assets/Dungeon/monsters/SandGolem/Roaming/SandGolem', 4);
+  desertContainer.addChild(npcArray[8]);
+
+  NPCMovement();
 
   mapArray = desertMap;
   currentmap = desert;
