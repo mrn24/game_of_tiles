@@ -2,6 +2,7 @@ var forestEntrances = [];
 var forestCollisions = [];
 var forestNpcArray = [];
 var forestRangeArray = [];
+var forestMessageArray = [];
 var forestEntranceChecking;
 var forestMapWidth = 30;
 var forestMap;
@@ -25,17 +26,18 @@ function FirstForestLoader(){
   mapWidth = forestMapWidth;
   npcArray = [];
   npcRangeArray = [];
-  LoadNPC(172, 0, "./assets/Forest/img/hoegarth", 1);
+  npcMessageArray = [];
 
   var characterLayer = forest.getObject("CharacterLayer");
-  LoadNPC(385, 4, "./assets/Forest/img/elf1", 3);
-
-  LoadNPC(193, 4, "./assets/Forest/img/elf2", 3);
-
-  LoadNPC(439, 4, "./assets/Forest/img/elf3", 3);
+  LoadNPC(172, 0, "./assets/Forest/img/hoegarth", 1, "I'm Hoegarth!");
+  LoadNPC(385, 4, "./assets/Forest/img/elf1", 3, "A chipper day we're\nhaving, eh?");
+  LoadNPC(193, 4, "./assets/Forest/img/elf2", 3, "Why are you in our\nforest?!");
+  LoadNPC(439, 4, "./assets/Forest/img/elf3", 3, "Why are you in our\nforest?!");
 
   forestRangeArray = npcRangeArray.slice(0, 4);
   forestNpcArray = npcArray.slice(0, 4);
+  forestMessageArray = npcMessageArray.slice(0, 4);
+
   characterLayer.addChild(npcArray[0]);
   characterLayer.addChild(npcArray[1]);
   characterLayer.addChild(npcArray[2]);
@@ -61,6 +63,7 @@ function ForestLoader(){
   mapArray = forestMap;
   npcArray = forestNpcArray;
   npcRangeArray = forestRangeArray;
+  npcMessageArray = forestMessageArray;
 
   if (previousMap == desert){
     startX = 144;
