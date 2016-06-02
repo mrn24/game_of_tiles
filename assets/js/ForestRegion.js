@@ -37,11 +37,11 @@ function ForestLoader(){
   mapArray = forestMap;
 
   if (previousMap == desert){
-    startX = 80;
+    startX = 144;
     startY = 391;
   }else if(previousMap == plains){
     startX = 496;
-    startY = 871;
+    startY = 807;
   }else if(previousMap == forestDungeon){
     startX = 656;
     startY = 839;
@@ -58,25 +58,27 @@ function ForestLoader(){
 
 function ForestEntranceChecker(){
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), forestEntrances)){
-    clearInterval(forestEntranceChecking);
-    console.log("Found Entrance!");
-    //Which entrance?, send to transition function
-    //Plains leave 855
-    //Forest dungeon 770
-    //Desert 361
-    if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 361) {
-        console.log("Going to Desert");
-  	  MapTransition(desert);
-      }
-  	else if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 855) {
-  		console.log("Going to Plains");
-  		MapTransition(plains);
-  	} else if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 770) {
-  		console.log("Going to Dungeon");
-  		MapTransition(forestDungeon);
-  	} else {
-  		console.log("Dead");
-  	}
-    forestContainer.visible = false;
+    if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0){
+      clearInterval(forestEntranceChecking);
+      console.log("Found Entrance!");
+      //Which entrance?, send to transition function
+      //Plains leave 855
+      //Forest dungeon 770
+      //Desert 361
+      if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 361) {
+          console.log("Going to Desert");
+    	  MapTransition(desert);
+        }
+    	else if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 855) {
+    		console.log("Going to Plains");
+    		MapTransition(plains);
+    	} else if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 770) {
+    		console.log("Going to Dungeon");
+    		MapTransition(forestDungeon);
+    	} else {
+    		console.log("Dead");
+    	}
+      forestContainer.visible = false;
+    }
   }
 }
