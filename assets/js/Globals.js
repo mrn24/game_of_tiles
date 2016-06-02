@@ -58,7 +58,7 @@ var npcArray = [],
 /////////////////////////////
 
 var text;
-
+var isText;
 var width = 600,
 	height = 600;
 
@@ -73,3 +73,10 @@ var plains;
 var desertDungeon;
 var forestDungeon;
 var plainsDungeon;
+
+///////////////////////////////////////
+// Globals for story progression    //
+///////////////////////////////////////
+var hasSword = false;
+	hasShield = false;
+	hasAmulet = false;

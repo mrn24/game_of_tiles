@@ -7,18 +7,25 @@ window.addEventListener("keydown", function (e) {
 });
 
 function textHandler(inputText, inputSize){
-	moving = false;
-	TextBackgroundTex = new PIXI.Texture.fromImage("./assets/Font/TextBackground.png");
-	TextBackground = new PIXI.Sprite(TextBackgroundTex);
-	TextBackground.position.x = 20;
-	TextBackground.position.y = 200;
-	world.addChild(TextBackground);
-	text = new PIXI.extras.BitmapText(inputText, {font: inputSize + "px myfont"});
-	text.position.x = 30;
-	text.position.y = 210;
-	fontContainer.addChild(text);
-	world.addChild(fontContainer);
-	waitForUser();
+  if(!isText){
+    isText = true;
+  	moving = false;
+  	TextBackgroundTex = new PIXI.Texture.fromImage("./assets/Font/TextBackground.png");
+  	TextBackground = new PIXI.Sprite(TextBackgroundTex);
+    //TextBackground.anchor.x = .5;
+    //TextBackground.anchor.y = 1;
+    TextBackground.scale.x = 2;
+    TextBackground.scale.y = 2;
+  	TextBackground.position.x = 16;
+  	TextBackground.position.y = 400;
+  	stage.addChild(TextBackground);
+  	text = new PIXI.extras.BitmapText(inputText, {font: inputSize + "px myfont"});
+  	text.position.x = 5;
+  	text.position.y = 5;
+  	TextBackground.addChild(text);
+  	stage.addChild(fontContainer);
+  	waitForUser();
+  }
 }
 
 function waitForUser(){
@@ -27,12 +34,9 @@ function waitForUser(){
 	}
 	else{
 		fontContainer.removeChild(text);
-		world.removeChild(TextBackground);
+		stage.removeChild(TextBackground);
 		moving = true;
 		keyEnter = false;
+    isText = false;
 	}
 }
-
-
-
-
