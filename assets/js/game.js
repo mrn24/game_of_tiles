@@ -45,7 +45,7 @@ function Ready() {
 
 	controlling = setInterval(mainCharacterController, 30);
 	//ForestLoader();
-	ForestLoader();
+	DesertLoader();
 }
 
 /*

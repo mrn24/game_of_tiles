@@ -21,6 +21,10 @@ function FirstDesertLoader(){
     }
   }
 
+  LoadNPC(45, 2, './assets/Desert/Sprites/DesertWoman', 4);
+  desertContainer.addChild(npcArray[0]);
+  NPCMovement();
+
   var FountainArray = [];
   FountainArray.push(PIXI.Texture.fromImage('./assets/Desert/Sprites/Fountain1.png'));
   FountainArray.push(PIXI.Texture.fromImage('./assets/Desert/Sprites/Fountain2.png'));
