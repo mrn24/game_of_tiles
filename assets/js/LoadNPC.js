@@ -35,13 +35,6 @@ function LoadNPC(index, range, fileLocation, numSprites) {
 
 function NPCMovement() {
 	for (var i = 0; i < npcArray.length; i++) {
-		//console.log("StartIndex " + npcStartArray[i]);
-		//console.log("range " + npcRangeArray[i]);
-		//consle.log(npcArray[i].x);
-		//console.log(npcArray[i].y);
-		//var test = tu.getIndex(npcArray[i].x, npcArray[i].y, 32, 32, mapWidth);
-		//console.log("beforeIndexX " + test%mapWidth);
-		//console.log("beforeIndexY " + Math.floor(test/mapWidth));
 		var direction = Math.floor(Math.random() * 4);
 		if (direction == 0) { //Left
 			var index = tu.getIndex(npcArray[i].x - 32, npcArray[i].y, 32, 32, mapWidth);
@@ -102,5 +95,5 @@ function NPCMovement() {
 			}
 		}
 	}
-	setTimeout(NPCMovement, 1000);
+	setTimeout(NPCMovement, 3000);
 }

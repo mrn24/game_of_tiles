@@ -24,7 +24,7 @@ function SetCharacterPosition(){
 }
 
 function SetPosition() {
-  mapContainer.x = -mainCharacter.x*mapScale + width/2 - mainCharacter.width/2*mapScale;
+  mapContainer.x = -mainCharacter.x*mapScale + width/2 - mainCharacter.width/2*mapScale + 70;
   mapContainer.y = -mainCharacter.y*mapScale + height/2 + mainCharacter.height/2*mapScale;
   mapContainer.x = -Math.max(0, Math.min(currentMap.worldWidth*mapScale - width, -mapContainer.x));
   mapContainer.y = -Math.max(0, Math.min(currentMap.worldHeight*mapScale - height, -mapContainer.y));
