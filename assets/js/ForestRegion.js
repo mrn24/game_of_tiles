@@ -29,7 +29,7 @@ function FirstForestLoader(){
   npcMessageArray = [];
 
   var characterLayer = forest.getObject("CharacterLayer");
-  LoadNPC(172, 0, "./assets/Forest/img/hoegarth", 1, "I'm Hoegarth!");
+  LoadNPC(172, 0, "./assets/Forest/img/hoegarth", 1, "There is a monster in\nthe Dungeon to the\nSouth! We need him gone\nbefore my elves can\ndrink their tea!");
   LoadNPC(385, 4, "./assets/Forest/img/elf1", 3, "A chipper day we're\nhaving, eh?");
   LoadNPC(193, 4, "./assets/Forest/img/elf2", 3, "Why are you in our\nforest?!");
   LoadNPC(439, 4, "./assets/Forest/img/elf3", 3, "Why are you in our\nforest?!");
@@ -63,6 +63,12 @@ function ForestLoader(){
   mapArray = forestMap;
   npcArray = forestNpcArray;
   npcRangeArray = forestRangeArray;
+  if(hasShield){
+    forestMessageArray[0] = "Thank you so much for\nhandling that for us!\nYou're next destination\nis the desert to the\neast!";
+    forestMessageArray[1] = "Yipee!!!";
+    forestMessageArray[2] = "You have saved us all!";
+    forestMessageArray[3] = "Thank you!";
+  }
   npcMessageArray = forestMessageArray;
 
   if (previousMap == desert){
