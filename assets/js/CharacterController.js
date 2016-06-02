@@ -1,7 +1,10 @@
 /////////////////////////////////////////////
 // Keyboard Handlers                       //
 /////////////////////////////////////////////
+var keyEnterUp = true;
 function checkKeyPressed(key) {
+	//console.log(key.keyCode);
+	//console.log(keyEnterUp);
 	key.preventDefault();
 	if (key.keyCode == 65) {
 		//console.log("A pressed");
@@ -18,6 +21,11 @@ function checkKeyPressed(key) {
 	if (key.keyCode == 83) {
 		//console.log("S pressed");
 		keyS = true;
+	}
+	if (key.keyCode == 13 && keyEnterUp) {
+		//console.log("Enter pressed");
+		keyEnter = true;
+		keyEnterUp = false;
 	}
 }
 
@@ -38,9 +46,36 @@ function checkKeyReleased(key) {
 		//console.log("S released");
 		keyS = false;
 	}
+	if (key.keyCode == 13) {
+		//console.log("Enter released");
+		keyEnter = false;
+		keyEnterUp = true;
+	}
 }
 
 function mainCharacterController() {
+	if (keyEnter) {
+		keyEnter = false;
+		//console.log("Attempt to talk");
+		//console.log("Number of NPCs " + npcArray.length);
+		var currentPosition = tu.getIndex(mainCharacter.x, mainCharacter.y, 32, 32, mapWidth);
+		//console.log("Current position: " + currentPosition);
+		var npcLocations = [];
+		var found = false;
+		for (var i = 0; i < npcArray.length; i++) {
+			//console.log(tu.getIndex(npcArray[i].x, npcArray[i].y, 32, 32, mapWidth));
+			if (currentPosition == tu.getIndex(npcArray[i].x, npcArray[i].y, 32, 32, mapWidth)) {
+				console.log("Found an NPC");
+				console.log("NPC message: " + npcMessageArray[i]);
+				textHandler(npcMessageArray[i], 20);
+				found = true;
+			} else {
+				//console.log("No Collision");
+				//console.log("Current: " + currentPosition + " NPC " + tu.getIndex(npcArray[i].x, npcArray[i].y, 32, 32, mapWidth));
+			}
+		}
+	}
+		
 	if (moving == true){
 		if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0) {
 			if (keyA && keyW && !keyD && !keyS) {
