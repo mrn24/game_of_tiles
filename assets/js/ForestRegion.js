@@ -35,7 +35,7 @@ function ForestLoader(){
   ///////////////////////////////////
   collisionsIndex = forestCollisions;
   mapArray = forestMap;
-  
+
   switch(previousMap){
     case desert:
       startX = 48;
@@ -57,7 +57,7 @@ function ForestLoader(){
 function ForestEntranceChecker(){
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), forestEntrances)){
     clearInterval(forestEntranceChecking);
-    console.log("Found Entrance!")
+    console.log("Found Entrance!");
     //Which entrance?, send to transition function
     switch(mainCharacter.x){
       case 496:
