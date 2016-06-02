@@ -18,6 +18,11 @@ function LoadCharacter() {
 	//return mainCharacter;
 }
 
+function SetCharacterPosition(){
+	mainCharacter.position.x = startX;
+	mainCharacter.position.y = startY;
+}
+
 function SetPosition() {
   mapContainer.x = -mainCharacter.x*mapScale + width/2 - mainCharacter.width/2*mapScale;
   mapContainer.y = -mainCharacter.y*mapScale + height/2 + mainCharacter.height/2*mapScale;
