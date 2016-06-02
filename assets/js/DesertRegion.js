@@ -48,6 +48,22 @@ function DesertLoader(){
   //Never set collisionsIndex to []//
   ///////////////////////////////////
 
+  previousMap = forest;
+  currentMap = desert;
+
+  switch(previousMap){
+    case plains:
+      startX = 688;
+      startY = 903;
+      break;
+    case forest:
+      startX = 1232;
+      startY = 487;
+      break;
+  }
+
+
+
   npcArray = desertNPCArray;
   collisionsIndex = desertCollisions;
   mapWidth = desertMapWidth;
@@ -85,8 +101,9 @@ function DesertLoader(){
   mapArray = desertMap;
   currentmap = desert;
   var characterLayer = desert.getObject("CharacterLayer");
-  LoadCharacter();
   characterLayer.addChild(mainCharacter);
+  SetCharacterPosition();
+  SetPosition();
 
 
 
@@ -98,6 +115,18 @@ function DesertLoader(){
 function DesertEntranceChecker(){
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), desertEntrances)){
     clearInterval(desertEntranceChecking);
-    //Which entrance?, send to transition function
+    console.log("VICTORY");
+
+    switch(mainCharacter.x){
+      case 1264:
+        console.log("going to forest");
+        MapTransition(forest);
+        break;
+      case 688:
+        console.log("going to plains");
+        MapTransition(plains);
+        break;
+    }
+    desertContainer.visible = false;
   }
 }

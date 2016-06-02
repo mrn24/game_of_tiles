@@ -17,4 +17,3 @@ function MapTransition(destination){
       break;
     }
   }
-}
