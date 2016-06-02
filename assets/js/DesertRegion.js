@@ -42,11 +42,12 @@ function FirstDesertLoader(){
   mapWidth = desertMapWidth;
   npcArray = [];
   npcRangeArray = [];
+  npcMessageArray = [];
   npcStartArray = [];
 
   var characterLayer = desert.getObject("CharacterLayer");
 
-  LoadNPC(260, 4, './assets/Desert/Sprites/DesertWoman', 4, "Have you seen the oasis to the south east?  It's beautiful but it was recently taken over by bandits.");
+  LoadNPC(260, 4, './assets/Desert/Sprites/DesertWoman', 4, "Have you seen the oasis to the south\n east?  It's beautiful but it \nwas recently taken over by bandits.");
   //desertContainer.addChild(npcArray[0]);
   desertNpcArray.push(npcArray[0]);
   desertNpcRangeArray.push(npcRangeArray[0]);
@@ -110,6 +111,7 @@ function DesertLoader(){
   mapArray = desertMap;
   npcArray = desertNpcArray;
   npcRangeArray = desertNpcRangeArray;
+  npcMessageArray = desertNpcMessageArray;
   //currentmap = desert;
 
   
