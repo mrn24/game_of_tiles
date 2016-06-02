@@ -36,8 +36,7 @@ function ForestLoader(){
   collisionsIndex = forestCollisions;
   mapArray = forestMap;
 
-  previousMap = plains;
-  currentMap = forest;
+  
 
   switch(previousMap){
     case desert:

@@ -22,7 +22,7 @@ function FirstDesertLoader(){
     }
   }
 
-  
+
 
   var FountainArray = [];
   FountainArray.push(PIXI.Texture.fromImage('./assets/Desert/Sprites/Fountain1.png'));
@@ -48,8 +48,7 @@ function DesertLoader(){
   //Never set collisionsIndex to []//
   ///////////////////////////////////
 
-  previousMap = forest;
-  currentMap = desert;
+
 
   switch(previousMap){
     case plains:

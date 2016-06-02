@@ -42,11 +42,12 @@ function Ready() {
 
 
 	//textHandler("hello world", 12);
-
+  currentMap = forest;
+  previousMap = plains;
 	controlling = setInterval(mainCharacterController, 30);
 	//ForestLoader();
   LoadCharacter();
-	DesertLoader();
+	ForestLoader();
 }
 
 /*
