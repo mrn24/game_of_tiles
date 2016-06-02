@@ -61,6 +61,7 @@ function mainCharacterController() {
 		if(!talking) {
 			//console.log("Attempting Talking");
 			keyEnter = false;
+
 			//console.log("Attempt to talk");
 			//console.log("Number of NPCs " + npcArray.length);
 			var currentPosition = tu.getIndex(mainCharacter.x, mainCharacter.y, 32, 32, mapWidth);
@@ -91,7 +92,7 @@ function mainCharacterController() {
 			talking = false;
 		}
 	}
-		
+
 	if (moving == true){
 		if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0) {
 			if (keyA && keyW && !keyD && !keyS) {
@@ -137,7 +138,7 @@ function mainCharacterController() {
 					createjs.Tween.get(mainCharacter).to({y: mainCharacter.y + 32}, 250);
 					mainCharacter.scale.x = -mainCharacterScale;
 					facing = 2;
-				}			
+				}
 			}
 			else if (keyS && keyA && !keyW && !keyD) {
 				var index = tu.getIndex(mainCharacter.x - 32, mainCharacter.y + 32, 32, 32, mapWidth);
@@ -152,7 +153,7 @@ function mainCharacterController() {
 					createjs.Tween.get(mainCharacter).to({y: mainCharacter.y + 32}, 250);
 					mainCharacter.scale.x = mainCharacterScale;
 					facing = 4;
-				}			
+				}
 			}
 			else {
 				if (keyA) {
@@ -165,7 +166,7 @@ function mainCharacterController() {
 						mainCharacter.scale.x = mainCharacterScale;
 						facing = 4;
 					}
-						
+
 				}
 				else if (keyD) {
 					var index = tu.getIndex(mainCharacter.x + 32, mainCharacter.y, 32, 32, mapWidth);

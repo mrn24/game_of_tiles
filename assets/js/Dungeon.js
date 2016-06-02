@@ -1,3 +1,9 @@
+var characterLayer;
+var shieldSprite;
+
+
+
+
 var DesertDungeonEntrances = [];
 var DesertDungeonCollisions = [];
 var DesertDungeonEntranceChecking;
@@ -36,7 +42,7 @@ function desertDungeonLoader(){
   collisionsIndex = DesertDungeonCollisions;
   mapArray = DesertDungeonMap;
 
-  var characterLayer = desertDungeon.getObject("CharacterLayer");
+  characterLayer = desertDungeon.getObject("CharacterLayer");
   characterLayer.addChild(mainCharacter);
   startX = 80;
   startY = 295;
@@ -84,6 +90,15 @@ function FirstForestDungeonLoader(){
       ForestDungeonEntrances.push(i);
     }
   }
+  //Spawning shield
+  var shield = new PIXI.Texture.fromImage("./assets/Dungeon/MainChar/Shield/shield1.png");
+  shieldSprite = new PIXI.Sprite(shield);
+  shieldSprite.position.x = 752;
+  shieldSprite.position.y = 839;
+
+  forestDungeonContainer.addChild(shieldSprite);
+
+
   //call loadnpc with map.
   mapContainer.addChild(forestDungeonContainer);
   forestDungeonContainer.visible = false;
@@ -101,7 +116,8 @@ function forestDungeonLoader(){
   collisionsIndex = ForestDungeonCollisions;
   mapArray = ForestDungeonMap;
 
-  var characterLayer = forestDungeon.getObject("CharacterLayer");
+
+  characterLayer = forestDungeon.getObject("CharacterLayer");
   characterLayer.addChild(mainCharacter);
   startX = 80;
   startY = 103;
@@ -109,9 +125,37 @@ function forestDungeonLoader(){
   SetPosition();
   //Use passed in parameter to load character in the right spot
   ForestDungeonEntranceChecking = setInterval(forestDungeonEntranceChecker, 500);
+
+  //
+  // var textureArray2 = [];
+	// for (var i = 1; i < 5; i++) {
+	// 	texture2 = new PIXI.Texture.fromImage("./assets/Dungeon/MainChar/CharSwordShield/CharacterSwordShield"+i+".png");
+	// 	textureArray2.push(texture2);
+	// }
+  //
+  //
+	// mainCharacter = new PIXI.extras.MovieClip(textureArray2);
+
+
+
 }
 
 function forestDungeonEntranceChecker(){
+
+  //Grab shield
+  if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 803 && !hasShield){
+    console.log("Grabbed shield");
+    characterLayer.removeChild(mainCharacter);
+    LoadSwordShield();
+    characterLayer = forestDungeon.getObject("CharacterLayer");
+    characterLayer.addChild(mainCharacter);
+    forestDungeonContainer.removeChild(shieldSprite);
+    hasShield = true;
+    textHandler("You've grabbed the\nshield", 20);
+  }
+
+
+
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), ForestDungeonEntrances)){
     clearInterval(ForestDungeonEntranceChecking);
     MapTransition(forest);
@@ -161,7 +205,7 @@ function plainsDungeonLoader(){
   collisionsIndex = PlainsDungeonCollisions;
   mapArray = PlainsDungeonMap;
 
-  var characterLayer = plainsDungeon.getObject("CharacterLayer");
+  characterLayer = plainsDungeon.getObject("CharacterLayer");
   characterLayer.addChild(mainCharacter);
   startY = 80;
   startX = 71;

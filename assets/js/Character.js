@@ -5,6 +5,14 @@ function LoadCharacter() {
 		texture = new PIXI.Texture.fromImage("./assets/Characters/MainCharacter/Character"+i+".png");
 		textureArray.push(texture);
 	}
+
+	var textureArray2 = [];
+	for (var i = 1; i < 5; i++) {
+		texture2 = new PIXI.Texture.fromImage("./assets/Dungeon/MainChar/CharSwordShield/CharacterSwordShield"+i+".png");
+		textureArray2.push(texture2);
+	}
+
+
 	mainCharacter = new PIXI.extras.MovieClip(textureArray);
 	mainCharacter.anchor.x = 0.5;
 	mainCharacter.anchor.y = 0.5;
@@ -17,6 +25,35 @@ function LoadCharacter() {
 	mainCharacter.animationSpeed = 0.075;
 	//return mainCharacter;
 }
+
+function LoadSwordShield() {
+
+	//mainCharacter.visible = false;
+
+	var textureArray2 = [];
+	for (var i = 1; i < 5; i++) {
+		texture2 = new PIXI.Texture.fromImage("./assets/Dungeon/MainChar/CharSwordShield/CharacterSwordShield"+i+".png");
+		textureArray2.push(texture2);
+	}
+
+
+	mainCharacter = new PIXI.extras.MovieClip(textureArray2);
+	mainCharacter.anchor.x = 0.5;
+	mainCharacter.anchor.y = 0.5;
+	//var point = tu.getTile(index, mapArray, currentMap);
+	mainCharacter.position.x = 752;
+	mainCharacter.position.y = 839;
+	mainCharacter.scale.x = mainCharacterScale;
+	mainCharacter.scale.y = mainCharacterScale;
+	mainCharacter.play();
+	mainCharacter.animationSpeed = 0.075;
+	//return mainCharacter;
+}
+
+
+
+
+
 
 function SetCharacterPosition(){
 	mainCharacter.position.x = startX;

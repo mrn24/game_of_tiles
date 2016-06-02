@@ -2,6 +2,7 @@ function textHandler(inputText, inputSize){
   if(!isText){
     isText = true;
   	moving = false;
+    talking = true;
   	TextBackgroundTex = new PIXI.Texture.fromImage("./assets/Font/TextBackground.png");
   	TextBackground = new PIXI.Sprite(TextBackgroundTex);
     //TextBackground.anchor.x = .5;
