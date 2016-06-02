@@ -19,6 +19,12 @@ PIXI.loader
   .add('ForestTileset', './assets/Forest/img/forest_tileset.png')
   .add('Desert_json', './assets/Desert/DesertMap.json')
   .add('DesertTileset', './assets/Desert/DesertTileset.png')
+  .add('desertdungeon', './assets/Dungeon/desertdungeon.json')
+  .add('desertdungeontileset', './assets/Dungeon/desertdungeon.png')
+  .add('forestdungeon', './assets/Dungeon/forestdungeon.json')
+  .add('forestdungeontileset', './assets/Dungeon/forestdungeon.png')
+  .add('plainsdungeon', './assets/Dungeon/plainsdungeon.json')
+  .add('plainsdungeontileset', './assets/Dungeon/plainsdungeon.png')
   .load(Ready);
 function Ready() {
 	stage.addChild(mapContainer);
@@ -32,6 +38,19 @@ function Ready() {
 	desert = tu.makeTiledWorld("Desert_json", "./assets/Desert/DesertTileset.png");
 	desertContainer.addChild(desert);
 	FirstDesertLoader();
+  desertDungeon = tu.makeTiledWorld("desertdungeon",'./assets/Dungeon/desertdungeon.png' );
+  desertDungeonContainer.addChild(desertDungeon);
+  FirstDesertDungeonLoader();
+  forestDungeon = tu.makeTiledWorld("forestdungeon",'./assets/Dungeon/forestdungeon.png' );
+  forestDungeonContainer.addChild(forestDungeon);
+  FirstForestDungeonLoader();
+  plainsDungeon = tu.makeTiledWorld("plainsdungeon",'./assets/Dungeon/plainsdungeon.png' );
+  plainsDungeonContainer.addChild(plainsDungeon);
+  FirstPlainsDungeonLoader();
+
+
+
+
 
 	//dungeon =
 	//first dungeon loader
@@ -47,7 +66,7 @@ function Ready() {
 	controlling = setInterval(mainCharacterController, 30);
 	//ForestLoader();
   LoadCharacter();
-	ForestLoader();
+	plainsDungeonLoader();
 }
 
 /*

@@ -40,7 +40,9 @@ var stage = new PIXI.Container(),
 	forestContainer = new PIXI.Container(),
 	desertContainer = new PIXI.Container(),
 	plainsContainer = new PIXI.Container(),
-	dungeonContainer = new PIXI.Container();
+	desertDungeonContainer = new PIXI.Container();
+	forestDungeonContainer = new PIXI.Container();
+	plainsDungeonContainer = new PIXI.Container();
 
 /////////////////////////////
 // Globals for LoadNPC()   //
@@ -68,3 +70,6 @@ var currentMap,
 var forest;
 var desert;
 var plains;
+var desertDungeon;
+var forestDungeon;
+var plainsDungeon;
