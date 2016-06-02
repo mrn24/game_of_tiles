@@ -94,16 +94,20 @@ function DesertLoader(){
 
 
 
-  switch(previousMap){
-    case plains:
-      startX = 688;
-      startY = 903;
-      break;
-    case forest:
-      startX = 1232;
-      startY = 487;
-      break;
-  }
+if (previousMap == plains){
+  startX = 688;
+  startY = 903;
+
+}
+else if (previousMap == plains){
+  startX = 1232;
+  startY = 487;
+
+}
+else if (previousMap == desertDungeon){
+  startX = 80;
+  startY = 871;
+}
 
 
 
@@ -133,18 +137,24 @@ function DesertLoader(){
 function DesertEntranceChecker(){
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), desertEntrances)){
     clearInterval(desertEntranceChecking);
-    console.log("VICTORY");
+    console.log("found entrance in desert");
 
-    switch(mainCharacter.x){
-      case 1264:
-        console.log("going to forest");
-        MapTransition(forest);
-        break;
-      case 688:
-        console.log("going to plains");
-        MapTransition(plains);
-        break;
+    if (mainCharacter.x == 1264){
+      console.log("going to forest");
+      MapTransition(forest);
+      desertContainer.visible = false;
     }
-    desertContainer.visible = false;
+
+    else if (mainCharacter.x == 688){
+      console.log("going to plains");
+      MapTransition(plains);
+      desertContainer.visible = false;
+    }
+
+    else if (mainCharacter.x == 80){
+      MapTransition(desertDungeon)
+      desertContainer.visible = false;
+    } 
+
   }
 }
