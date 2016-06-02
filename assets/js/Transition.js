@@ -7,18 +7,18 @@ function MapTransition(destination){
   currentMap = destination;
 	if (currentMap == desert) {
 	  //console.log("Transitioning to Desert");
-	  DesertLoader();
+    DesertLoader();
 	} else if (currentMap == plains) {
 	  //console.log("Transitioning to Plains");
 	  PlainsLoader();
 	} else if (currentMap == forest) {
 	  //console.log("Transitioning to Forest");
-	  ForestLoader();
+    ForestLoader();
 	} else if (currentMap == forestDungeon) {
 		forestDungeonLoader();
 	} else if (currentMap == desertDungeon) {
 		desertDungeonLoader();
 	} else if (currentMap == plainsDungeon) {
-		plainsDungeonLoader();
+    plainsDungeonLoader();
 	}
 }
