@@ -99,6 +99,7 @@ function ForestEntranceChecker(){
              forestContainer.visible = false;
            }else{
              console.log("No desert possible!");
+             createjs.Tween.get(mainCharacter).to({x: mainCharacter.position.x + 32}, 250);
              textHandler("You still need something from the Forest!", 10);
            }
         }
