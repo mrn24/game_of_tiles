@@ -39,7 +39,7 @@ function FirstPlainsLoader(){
 }
 
 function PlainsLoader(){
-  console.log("Loading Plains");
+  //console.log("Loading Plains");
   plainsContainer.visible = true;
   mapWidth = plainsMapWidth;
   world = plains;
@@ -58,7 +58,7 @@ function PlainsLoader(){
 	  	startX = 1360;
 		startY = 39;
   } else if (previousMap == forest) {
-	  console.log("Coming from Forest");
+	  //console.log("Coming from Forest");
 	  	startX = 1552;
 		startY = 295;
   }
@@ -73,21 +73,21 @@ function PlainsLoader(){
 }
 
 function PlainsEntranceChecker(){
-	console.log("Checking Entrance Collisions.");
+	//console.log("Checking Entrance Collisions.");
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), plainsEntrances)){
 	if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0){
 	clearInterval(plainsEntranceChecking);
-	console.log("Found Entrance!");
+	//console.log("Found Entrance!");
     //Which entrance?, send to transition function
 	if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 499) {
-      console.log("Going to Forest");
+      //console.log("Going to Forest");
 	  MapTransition(forest);
     }
 	else if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 42) {
-		console.log("Going to Desert");
+		//console.log("Going to Desert");
 		MapTransition(desert);
 	} else if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 176) {
-		console.log("Going to Dungeon");
+		//console.log("Going to Dungeon");
 		MapTransition(plainsDungeon);
 	} else {
 		console.log("Dead");
