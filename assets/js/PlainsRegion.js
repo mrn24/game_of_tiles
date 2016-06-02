@@ -5,6 +5,7 @@ var plainsMapWidth = 50;
 var plainsNpcArray = [];
 var plainsNpcRangeArray = [];
 var plainsNpcMessageArray = [];
+var plainsNpcStartArray = [];
 
 function FirstPlainsLoader(){
 	world = plains;
@@ -29,30 +30,48 @@ function FirstPlainsLoader(){
 	//LoadNPC(260, 4, './assets/Desert/Sprites/DesertWoman', 4);
 	npcArray = [];
 	npcRangeArray = [];
+	npcMessageArray = [];
+	npcStartArray = [];
 	
 	var characterLayer = plains.getObject("CharacterLayer");
 	
-	LoadNPC(314,6,"./assets/Characters/NPCs/Enemy", 4, "I'm NPC 1");
+	/*
+	LoadNPC(314,6,"./assets/Characters/NPCs/Enemy", 4, "I'm NPC one.");
 	plainsNpcArray.push(npcArray[0]);
 	plainsNpcRangeArray.push(npcRangeArray[0]);
 	plainsNpcMessageArray.push(npcMessageArray[0]);
 	characterLayer.addChild(plainsNpcArray[0]);
-	LoadNPC(1552,2,"./assets/Desert/Sprites/DesertWoman", 4, "I'm NPC 2");
+	*/
+	LoadNPC(1552,2,"./assets/Desert/Sprites/DesertWoman", 4, "I'm NPC two.");
+	plainsNpcArray.push(npcArray[0]);
+	plainsNpcRangeArray.push(npcRangeArray[0]);
+	plainsNpcMessageArray.push(npcMessageArray[0]);
+	plainsNpcStartArray.push(npcStartArray[0]);
+	characterLayer.addChild(plainsNpcArray[0]);
+	LoadNPC(1553,2,"./assets/Desert/Sprites/DesertWoman", 4, "I'm NPC three.");
 	plainsNpcArray.push(npcArray[1]);
 	plainsNpcRangeArray.push(npcRangeArray[1]);
 	plainsNpcMessageArray.push(npcMessageArray[1]);
+	plainsNpcStartArray.push(npcStartArray[1]);
 	characterLayer.addChild(plainsNpcArray[1]);
-	LoadNPC(2006,8,"./assets/Characters/NPCs/Enemy", 4, "I'm NPC 3");
+	LoadNPC(1551,2,"./assets/Desert/Sprites/DesertWoman", 4, "I'm NPC four.");
+	plainsNpcArray.push(npcArray[2]);
+	plainsNpcRangeArray.push(npcRangeArray[2]);
+	plainsNpcMessageArray.push(npcMessageArray[2]);
+	plainsNpcStartArray.push(npcStartArray[2]);
+	characterLayer.addChild(plainsNpcArray[2]);
+	/*
+	LoadNPC(2006,8,"./assets/Characters/NPCs/Enemy", 4, "I'm NPC three.");
 	plainsNpcArray.push(npcArray[2]);
 	plainsNpcRangeArray.push(npcRangeArray[2]);
 	plainsNpcMessageArray.push(npcMessageArray[2]);
 	characterLayer.addChild(plainsNpcArray[2]);
-	LoadNPC(2264,0,"./assets/Forest/img/elf", 1, "I'm NPC 1");
+	LoadNPC(2264,0,"./assets/Forest/img/elf", 1, "I'm NPC four.");
 	plainsNpcArray.push(npcArray[3]);
 	plainsNpcRangeArray.push(npcRangeArray[3]);
 	plainsNpcMessageArray.push(npcMessageArray[3]);
 	characterLayer.addChild(plainsNpcArray[3]);
-	
+	*/
 	NPCMovement();
   mapContainer.addChild(plainsContainer);
   plainsContainer.visible = false;
@@ -72,6 +91,9 @@ function PlainsLoader(){
   mapWidth = plainsMapWidth;
   npcArray = plainsNpcArray;
   npcRangeArray = plainsNpcRangeArray;
+  npcMessageArray = plainsNpcMessageArray;
+  npcStartArray = plainsNpcStartArray;
+  
   if (previousMap == plains) {
 	  	startX = 592;
 		startY = 1159;
@@ -82,6 +104,10 @@ function PlainsLoader(){
 	  //console.log("Coming from Forest");
 	  	startX = 1422;
 		startY = 295;
+  } else if (previousMap == plainsDungeon) {
+	  //console.log("Coming from Forest");
+	  	startX = 816;
+		startY = 103;
   }
 
 	var characterLayer = plains.getObject("CharacterLayer");

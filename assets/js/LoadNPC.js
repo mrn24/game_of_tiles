@@ -40,7 +40,7 @@ function NPCMovement() {
 		var direction = Math.floor(Math.random() * 4);
 		if (direction == 0) { //Left
 			var index = tu.getIndex(npcArray[i].x - 32, npcArray[i].y, 32, 32, mapWidth);
-			if (!CollisionDetection(index, collisionsIndex)){
+			if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, mainCharacterIndex())){
 				if (Math.abs(npcStartArray[i]%mapWidth - index%mapWidth) <= npcRangeArray[i]){
 					createjs.Tween.get(npcArray[i]).to({x: npcArray[i].x - 32}, 250);
 				}
@@ -55,7 +55,7 @@ function NPCMovement() {
 		}
 		else if (direction == 1) { //Up
 			index = tu.getIndex(npcArray[i].x, npcArray[i].y - 32, 32, 32, mapWidth);
-			if (!CollisionDetection(index, collisionsIndex)) {
+			if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, mainCharacterIndex())) {
 				if (Math.abs(Math.floor(npcStartArray[i]/mapWidth) - Math.floor(index/mapWidth)) <= npcRangeArray[i]){
 					createjs.Tween.get(npcArray[i]).to({y: npcArray[i].y - 32}, 250);
 				}
@@ -69,7 +69,7 @@ function NPCMovement() {
 		}
 		else if (direction == 2) { //Right
 		index = tu.getIndex(npcArray[i].x + 32, npcArray[i].y, 32, 32, mapWidth);
-			if (!CollisionDetection(index, collisionsIndex)) {
+			if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, mainCharacterIndex())) {
 				if (Math.abs(npcStartArray[i]%mapWidth - index%mapWidth) <= npcRangeArray[i]){
 					createjs.Tween.get(npcArray[i]).to({x: npcArray[i].x + 32}, 250);
 				}
@@ -84,7 +84,7 @@ function NPCMovement() {
 		}
 		else if (direction == 3) { //Down
 			var index = tu.getIndex(npcArray[i].x, npcArray[i].y + 32, 32, 32, mapWidth);
-			if (!CollisionDetection(index, collisionsIndex)) {
+			if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, mainCharacterIndex())) {
 				if (Math.abs(Math.floor(npcStartArray[i]/mapWidth) - Math.floor(index/mapWidth)) <= npcRangeArray[i]){
 					createjs.Tween.get(npcArray[i]).to({y: npcArray[i].y + 32}, 250);
 				}
@@ -97,5 +97,5 @@ function NPCMovement() {
 			}
 		}
 	}
-	setTimeout(NPCMovement, 3000);
+	setTimeout(NPCMovement, 7000);
 }

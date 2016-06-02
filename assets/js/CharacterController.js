@@ -2,6 +2,7 @@
 // Keyboard Handlers                       //
 /////////////////////////////////////////////
 var keyEnterUp = true;
+var talking = false;
 function checkKeyPressed(key) {
 	//console.log(key.keyCode);
 	//console.log(keyEnterUp);
@@ -55,32 +56,47 @@ function checkKeyReleased(key) {
 
 function mainCharacterController() {
 	if (keyEnter) {
-		keyEnter = false;
-		//console.log("Attempt to talk");
-		//console.log("Number of NPCs " + npcArray.length);
-		var currentPosition = tu.getIndex(mainCharacter.x, mainCharacter.y, 32, 32, mapWidth);
-		//console.log("Current position: " + currentPosition);
-		var npcLocations = [];
-		var found = false;
-		for (var i = 0; i < npcArray.length; i++) {
-			//console.log(tu.getIndex(npcArray[i].x, npcArray[i].y, 32, 32, mapWidth));
-			if (currentPosition == tu.getIndex(npcArray[i].x, npcArray[i].y, 32, 32, mapWidth)) {
-				console.log("Found an NPC");
-				console.log("NPC message: " + npcMessageArray[i]);
-				textHandler(npcMessageArray[i], 20);
-				found = true;
-			} else {
-				//console.log("No Collision");
-				//console.log("Current: " + currentPosition + " NPC " + tu.getIndex(npcArray[i].x, npcArray[i].y, 32, 32, mapWidth));
+		toIndex();
+		//console.log("Attempting talking/Exiting");
+		if(!talking) {
+			//console.log("Attempting Talking");
+			keyEnter = false;
+			//console.log("Attempt to talk");
+			//console.log("Number of NPCs " + npcArray.length);
+			var currentPosition = tu.getIndex(mainCharacter.x, mainCharacter.y, 32, 32, mapWidth);
+			//console.log("Current position: " + currentPosition);
+			for (var i = 0; i < npcArray.length; i++) {
+				//console.log(tu.getIndex(npcArray[i].x, npcArray[i].y, 32, 32, mapWidth));
+				if (currentPosition == tu.getIndex(npcArray[i].x - 32, npcArray[i].y, 32, 32, mapWidth)) {
+					//console.log("Started talking to the right.");
+					talking = true;
+					//console.log("Found an NPC");
+					//console.log("NPC message: " + npcMessageArray[i]);
+					textHandler(npcMessageArray[i], 20);
+				} else if (currentPosition == tu.getIndex(npcArray[i].x + 32, npcArray[i].y, 32, 32, mapWidth)) {
+					//console.log("Started talking to the left.");
+					//console.log("Found an NPC");
+					//console.log("NPC message: " + npcMessageArray[i]);
+					talking = true;
+					textHandler(npcMessageArray[i], 20);
+				} else {
+					//console.log("No one to talk to here.");
+					//console.log("No Collision");
+					//console.log("Current: " + currentPosition + " NPC " + tu.getIndex(npcArray[i].x, npcArray[i].y, 32, 32, mapWidth));
+				}
 			}
+		} else if(talking) {
+			//console.log("Ending Conversation");
+			keyEnter = false;
+			talking = false;
 		}
 	}
 		
 	if (moving == true){
 		if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0) {
 			if (keyA && keyW && !keyD && !keyS) {
-				var index = tu.getIndex(mainCharacter.x - 32, mainCharacter.y, 32, 32, mapWidth);
-				if (!CollisionDetection(tu.getIndex(mainCharacter.x - 32, mainCharacter.y - 32, 32, 32, mapWidth), collisionsIndex)) {
+				var index = tu.getIndex(mainCharacter.x - 32, mainCharacter.y - 32, 32, 32, mapWidth);
+				if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
 					if (index%mapWidth > 4 && index%mapWidth < mapWidth - 5) {
 						createjs.Tween.get(mapContainer).to({x: mapContainer.x + mapScale*32}, 250);
 					}
@@ -95,7 +111,7 @@ function mainCharacterController() {
 			}
 			else if (keyW && keyD && !keyA && !keyS) {
 				var index = tu.getIndex(mainCharacter.x + 32, mainCharacter.y - 32, 32, 32, mapWidth);
-				if (!CollisionDetection(index, collisionsIndex)) {
+				if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
 					if (Math.floor(index/(mapWidth)) > 4 && Math.floor(index/(mapWidth)) < (world.height/32) - 5) {
 						createjs.Tween.get(mapContainer).to({y: mapContainer.y + mapScale*32}, 250);
 					}
@@ -110,7 +126,7 @@ function mainCharacterController() {
 			}
 			else if (keyD && keyS && !keyA && !keyW) {
 				var index = tu.getIndex(mainCharacter.x + 32, mainCharacter.y + 32, 32, 32, mapWidth);
-				if (!CollisionDetection(index, collisionsIndex)) {
+				if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
 					if (index%mapWidth > 5 && index%mapWidth < mapWidth - 4) {
 						createjs.Tween.get(mapContainer).to({x: mapContainer.x - mapScale*32}, 250);
 					}
@@ -125,7 +141,7 @@ function mainCharacterController() {
 			}
 			else if (keyS && keyA && !keyW && !keyD) {
 				var index = tu.getIndex(mainCharacter.x - 32, mainCharacter.y + 32, 32, 32, mapWidth);
-				if (!CollisionDetection(index, collisionsIndex)) {
+				if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
 					if (Math.floor(index/(mapWidth)) > 5 && Math.floor(index/(mapWidth)) < (world.height/32) - 4) {
 						createjs.Tween.get(mapContainer).to({y: mapContainer.y - mapScale*32}, 250);
 					}
@@ -141,7 +157,7 @@ function mainCharacterController() {
 			else {
 				if (keyA) {
 					var index = tu.getIndex(mainCharacter.x - 32, mainCharacter.y, 32, 32, mapWidth);
-					if (!CollisionDetection(index, collisionsIndex)) {
+					if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
 						if (index%mapWidth > 4 && index%mapWidth < mapWidth - 5) {
 							createjs.Tween.get(mapContainer).to({x: mapContainer.x + mapScale*32}, 250);
 						}
@@ -153,7 +169,7 @@ function mainCharacterController() {
 				}
 				else if (keyD) {
 					var index = tu.getIndex(mainCharacter.x + 32, mainCharacter.y, 32, 32, mapWidth);
-					if (!CollisionDetection(index, collisionsIndex)) {
+					if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
 						if (index%mapWidth > 5 && index%mapWidth < mapWidth - 4) {
 							createjs.Tween.get(mapContainer).to({x: mapContainer.x - mapScale*32}, 250);
 						}
@@ -164,7 +180,7 @@ function mainCharacterController() {
 				}
 				else if (keyS) {
 					var index = tu.getIndex(mainCharacter.x, mainCharacter.y + 32, 32, 32, mapWidth);
-					if (!CollisionDetection(index, collisionsIndex)) {
+					if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
 						if (Math.floor(index/(mapWidth)) > 5 && Math.floor(index/(mapWidth)) < (world.height/32) - 4) {
 							createjs.Tween.get(mapContainer).to({y: mapContainer.y - mapScale*32}, 250);
 						}
@@ -174,7 +190,7 @@ function mainCharacterController() {
 				}
 				else if (keyW) {
 					var index = tu.getIndex(mainCharacter.x, mainCharacter.y - 32, 32, 32, mapWidth);
-					if (!CollisionDetection(index, collisionsIndex)) {
+					if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
 						if (Math.floor(index/(mapWidth)) > 4 && Math.floor(index/(mapWidth)) < (world.height/32) - 5) {
 							createjs.Tween.get(mapContainer).to({y: mapContainer.y + mapScale*32}, 250);
 						}
@@ -185,4 +201,20 @@ function mainCharacterController() {
 			}
 		}
 	}
+}
+function toIndex() {
+	var indexArray = [];
+	//console.log(npcArray.length);
+	for (var i = 0; i < npcArray.length; i++) {
+		//console.log("Loading " + i);
+		indexArray.push(tu.getIndex(npcArray[i].x, npcArray[i].y, 32, 32, mapWidth));
+		//console.log(indexArray[i]);
+	}
+	return indexArray;
+}
+
+function mainCharacterIndex() {
+	var temp = [];
+	temp.push(tu.getIndex(mainCharacter.x, mainCharacter.y, 32, 32, mapWidth));
+	return temp;
 }

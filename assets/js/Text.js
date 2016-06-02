@@ -1,11 +1,3 @@
-window.addEventListener("keydown", function (e) {
-    e.preventDefault();
-    if(e.keyCode == 13){
-    	keyEnter = true;
-    }
-
-});
-
 function textHandler(inputText, inputSize){
   if(!isText){
     isText = true;
@@ -29,14 +21,13 @@ function textHandler(inputText, inputSize){
 }
 
 function waitForUser(){
-	if(keyEnter == false){
-		setTimeout(function(){waitForUser();}, 250);
+	if(talking){
+		setTimeout(function(){waitForUser();}, 100);
 	}
 	else{
 		fontContainer.removeChild(text);
 		stage.removeChild(TextBackground);
 		moving = true;
-		keyEnter = false;
-    isText = false;
+		isText = false;
 	}
 }
