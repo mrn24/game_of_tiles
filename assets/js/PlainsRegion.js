@@ -3,11 +3,13 @@ var plainsCollisions = [];
 var plainsEntranceChecking;
 var plainsMapWidth = 50;
 var plainsNpcArray = [];
+var plainsNpcRangeArray = [];
+var plainsNpcMessageArray = [];
 
 function FirstPlainsLoader(){
 	world = plains;
 	currentMap = plains;
-	previousMap = desert;
+	previousMap = plains;
   //Loading entrances
   var plainsMap = plains.getObject("CollisionLayer").data;
   //Loading Collisions
@@ -26,21 +28,32 @@ function FirstPlainsLoader(){
 	//function LoadNPC(index, range, fileLocation, numSprites) {
 	//LoadNPC(260, 4, './assets/Desert/Sprites/DesertWoman', 4);
 	npcArray = [];
+	npcRangeArray = [];
+	
 	var characterLayer = plains.getObject("CharacterLayer");
-	LoadNPC(314,6,"./assets/Characters/NPCs/Enemy", 4);
+	
+	LoadNPC(314,6,"./assets/Characters/NPCs/Enemy", 4, "I'm NPC 1");
 	plainsNpcArray.push(npcArray[0]);
+	plainsNpcRangeArray.push(npcRangeArray[0]);
+	plainsNpcMessageArray.push(npcMessageArray[0]);
 	characterLayer.addChild(plainsNpcArray[0]);
-	LoadNPC(1552,2,"./assets/Desert/Sprites/DesertWoman", 4);
+	LoadNPC(1552,2,"./assets/Desert/Sprites/DesertWoman", 4, "I'm NPC 2");
 	plainsNpcArray.push(npcArray[1]);
+	plainsNpcRangeArray.push(npcRangeArray[1]);
+	plainsNpcMessageArray.push(npcMessageArray[1]);
 	characterLayer.addChild(plainsNpcArray[1]);
-	LoadNPC(2006,8,"./assets/Characters/NPCs/Enemy", 4);
+	LoadNPC(2006,8,"./assets/Characters/NPCs/Enemy", 4, "I'm NPC 3");
 	plainsNpcArray.push(npcArray[2]);
+	plainsNpcRangeArray.push(npcRangeArray[2]);
+	plainsNpcMessageArray.push(npcMessageArray[2]);
 	characterLayer.addChild(plainsNpcArray[2]);
-	LoadNPC(2264,0,"./assets/Forest/img/elf", 1);
+	LoadNPC(2264,0,"./assets/Forest/img/elf", 1, "I'm NPC 1");
 	plainsNpcArray.push(npcArray[3]);
+	plainsNpcRangeArray.push(npcRangeArray[3]);
+	plainsNpcMessageArray.push(npcMessageArray[3]);
 	characterLayer.addChild(plainsNpcArray[3]);
-	  
-	  NPCMovement();
+	
+	NPCMovement();
   mapContainer.addChild(plainsContainer);
   plainsContainer.visible = false;
 }
@@ -58,6 +71,7 @@ function PlainsLoader(){
   collisionsIndex = plainsCollisions;
   mapWidth = plainsMapWidth;
   npcArray = plainsNpcArray;
+  npcRangeArray = plainsNpcRangeArray;
   if (previousMap == plains) {
 	  	startX = 592;
 		startY = 1159;

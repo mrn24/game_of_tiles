@@ -9,7 +9,8 @@
 //numSprites = the number of sprites for npc to make a movieClip of.
 //Example Function Call:
 //  LoadNPC(50, 2, "./assets/Characters/NPCs/Enemy", 4);
-function LoadNPC(index, range, fileLocation, numSprites) {
+var npcMessageArray = [];
+function LoadNPC(index, range, fileLocation, numSprites, message) {
 	//console.log("Loading Character");
 	var textureArray = [];
 	var npc;
@@ -30,6 +31,7 @@ function LoadNPC(index, range, fileLocation, numSprites) {
 	npcArray.push(npc);
 	npcStartArray.push(index);
 	npcRangeArray.push(range);
+	npcMessageArray.push(message);
 	//return npc;
 }
 
