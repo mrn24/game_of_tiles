@@ -9,6 +9,8 @@ var desertNpcRangeArray = [];
 var desertNpcMessageArray = [];
 
 function FirstDesertLoader(){
+
+  world = desert;
   var desertMap = desert.getObject("CollisionLayer").data;
   //Loading Collisions
   for (var i = 0; i < desertMap.length; i++) {
@@ -37,32 +39,44 @@ function FirstDesertLoader(){
   Fountain.play();
   desertContainer.addChild(Fountain);
 
+  mapWidth = desertMapWidth;
   npcArray = [];
   npcRangeArray = [];
+  npcStartArray = [];
+
+  var characterLayer = desert.getObject("CharacterLayer");
 
   LoadNPC(260, 4, './assets/Desert/Sprites/DesertWoman', 4, "Have you seen the oasis to the south east?  It's beautiful but it was recently taken over by bandits.");
-  desertContainer.addChild(npcArray[0]);
+  //desertContainer.addChild(npcArray[0]);
   desertNpcArray.push(npcArray[0]);
   desertNpcRangeArray.push(npcRangeArray[0]);
   desertNpcMessageArray.push(npcMessageArray[0]);
+  characterLayer.addChild(npcArray[0]);
 
   LoadNPC(340, 2, './assets/Desert/Sprites/DesertWoman', 4, "It's hot!");
-  desertContainer.addChild(npcArray[1]);
+  //desertContainer.addChild(npcArray[1]);
   desertNpcArray.push(npcArray[1]);
   desertNpcRangeArray.push(npcRangeArray[1]);
   desertNpcMessageArray.push(npcMessageArray[1]);
+  characterLayer.addChild(npcArray[1]);
 
   LoadNPC(180, 0, './assets/Desert/Sprites/DesertKing', 4, "Go do your quest.");
-  desertContainer.addChild(npcArray[2]);
+  //desertContainer.addChild(npcArray[2]);
   desertNpcArray.push(npcArray[2]);
   desertNpcRangeArray.push(npcRangeArray[2]);
   desertNpcMessageArray.push(npcMessageArray[2]);
+  characterLayer.addChild(npcArray[2]);
 
   LoadNPC(306, 1, './assets/Desert/Sprites/DesertMan', 4, "It's the desert!");
-  desertContainer.addChild(npcArray[3]);
+  //desertContainer.addChild(npcArray[3]);
   desertNpcArray.push(npcArray[3]);
   desertNpcRangeArray.push(npcRangeArray[3]);
   desertNpcMessageArray.push(npcMessageArray[3]);
+  characterLayer.addChild(npcArray[3]);
+
+  mapContainer.addChild(desertContainer);
+  desertContainer.visible = false;
+
 
   // LoadNPC(1037, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
   // desertContainer.addChild(npcArray[4]);
@@ -80,17 +94,28 @@ function FirstDesertLoader(){
   // desertContainer.addChild(npcArray[8]);
 
   //call loadnpc with map.
-  mapContainer.addChild(desertContainer);
-  desertContainer.visible = false;
+  
+  
 }
 
 function DesertLoader(){
+  mapWidth = desertMapWidth;
   desertContainer.visible = true;
   //////////////////////////////
   //Risk! collisionsIndex is a//
   //pointer to forestCollisions//
   //Never set collisionsIndex to []//
   ///////////////////////////////////
+  collisionsIndex = desertCollisions;
+  mapArray = desertMap;
+  npcArray = desertNpcArray;
+  npcRangeArray = desertNpcRangeArray;
+  //currentmap = desert;
+
+  
+  
+  world = desert;
+  
 
 
 
@@ -109,23 +134,14 @@ else if (previousMap == desertDungeon){
   startY = 871;
 }
 
-
-
- 
-  collisionsIndex = desertCollisions;
-  mapWidth = desertMapWidth;
-  world = desert;
-
   
 
-  NPCMovement();
-
-  mapArray = desertMap;
-  currentmap = desert;
-  var characterLayer = desert.getObject("CharacterLayer");
+  
+  characterLayer = desert.getObject("CharacterLayer");
   characterLayer.addChild(mainCharacter);
   SetCharacterPosition();
   SetPosition();
+  //NPCMovement();
 
 
 
