@@ -49,7 +49,7 @@ function NPCMovement() {
 			else {
 				//console.log("Collision Left");
 			}
-			npcArray[i].scale.x = npcCharacterScale;
+			npcArray[i].scale.x = -npcArray[i].scale.x;
 		}
 		else if (direction == 1) { //Up
 			index = tu.getIndex(npcArray[i].x, npcArray[i].y - 32, 32, 32, mapWidth);
@@ -78,7 +78,7 @@ function NPCMovement() {
 			else {
 				//console.log("Collision Right");
 			}
-			npcArray[i].scale.x = -npcCharacterScale;
+			npcArray[i].scale.x = -npcArray[i].scale.x;
 		}
 		else if (direction == 3) { //Down
 			var index = tu.getIndex(npcArray[i].x, npcArray[i].y + 32, 32, 32, mapWidth);

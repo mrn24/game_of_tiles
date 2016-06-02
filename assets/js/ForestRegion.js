@@ -1,10 +1,13 @@
 var forestEntrances = [];
 var forestCollisions = [];
+var forestNpcArray = [];
+var forestRangeArray = [];
 var forestEntranceChecking;
 var forestMapWidth = 30;
 var forestMap;
 
 function FirstForestLoader(){
+  world = forest;
   forestMap = forest.getObject("CollisionLayer").data;
   //Loading Collisions
   for (var i = 0; i < forestMap.length; i++) {
@@ -19,7 +22,28 @@ function FirstForestLoader(){
       forestEntrances.push(i);
     }
   }
-  //call loadnpc with map.
+  mapWidth = forestMapWidth;
+  npcArray = [];
+  npcRangeArray = [];
+  LoadNPC(172, 0, "./assets/Forest/img/hoegarth", 1);
+
+  var characterLayer = forest.getObject("CharacterLayer");
+  LoadNPC(385, 4, "./assets/Forest/img/elf1", 3);
+
+  LoadNPC(193, 4, "./assets/Forest/img/elf2", 3);
+
+  LoadNPC(439, 4, "./assets/Forest/img/elf3", 3);
+
+  forestRangeArray = npcRangeArray.slice(0, 4);
+  forestNpcArray = npcArray.slice(0, 4);
+  characterLayer.addChild(npcArray[0]);
+  characterLayer.addChild(npcArray[1]);
+  characterLayer.addChild(npcArray[2]);
+  characterLayer.addChild(npcArray[3]);
+
+  forestNpcArray[0].scale.x = .2;
+  forestNpcArray[0].scale.y = .2;
+
   mapContainer.addChild(forestContainer);
   forestContainer.visible = false;
 }
@@ -35,6 +59,8 @@ function ForestLoader(){
   ///////////////////////////////////
   collisionsIndex = forestCollisions;
   mapArray = forestMap;
+  npcArray = forestNpcArray;
+  npcRangeArray = forestRangeArray;
 
   if (previousMap == desert){
     startX = 144;
