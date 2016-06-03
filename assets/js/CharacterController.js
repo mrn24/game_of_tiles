@@ -145,7 +145,7 @@ function mainCharacterController() {
 		if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0) {
 			if (keyA && keyW && !keyD && !keyS) {
 				var index = tu.getIndex(mainCharacter.x - 32, mainCharacter.y - 32, 32, 32, mapWidth);
-				if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
+				if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, enemyToIndex())) {
 					if (index%mapWidth > 4 && index%mapWidth < mapWidth - 5) {
 						createjs.Tween.get(mapContainer).to({x: mapContainer.x + mapScale*32}, 250);
 					}
@@ -163,7 +163,7 @@ function mainCharacterController() {
 			}
 			else if (keyW && keyD && !keyA && !keyS) {
 				var index = tu.getIndex(mainCharacter.x + 32, mainCharacter.y - 32, 32, 32, mapWidth);
-				if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
+				if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, enemyToIndex())) {
 					if (Math.floor(index/(mapWidth)) > 4 && Math.floor(index/(mapWidth)) < (world.height/32) - 5) {
 						createjs.Tween.get(mapContainer).to({y: mapContainer.y + mapScale*32}, 250);
 					}
@@ -181,7 +181,7 @@ function mainCharacterController() {
 			}
 			else if (keyD && keyS && !keyA && !keyW) {
 				var index = tu.getIndex(mainCharacter.x + 32, mainCharacter.y + 32, 32, 32, mapWidth);
-				if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
+				if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, enemyToIndex())) {
 					if (index%mapWidth > 5 && index%mapWidth < mapWidth - 4) {
 						createjs.Tween.get(mapContainer).to({x: mapContainer.x - mapScale*32}, 250);
 					}
@@ -199,7 +199,7 @@ function mainCharacterController() {
 			}
 			else if (keyS && keyA && !keyW && !keyD) {
 				var index = tu.getIndex(mainCharacter.x - 32, mainCharacter.y + 32, 32, 32, mapWidth);
-				if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
+				if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, enemyToIndex())) {
 					if (Math.floor(index/(mapWidth)) > 5 && Math.floor(index/(mapWidth)) < (world.height/32) - 4) {
 						createjs.Tween.get(mapContainer).to({y: mapContainer.y - mapScale*32}, 250);
 					}
@@ -218,7 +218,7 @@ function mainCharacterController() {
 			else {
 				if (keyA) {
 					var index = tu.getIndex(mainCharacter.x - 32, mainCharacter.y, 32, 32, mapWidth);
-					if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
+					if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, enemyToIndex())) {
 						if (index%mapWidth > 4 && index%mapWidth < mapWidth - 5) {
 							createjs.Tween.get(mapContainer).to({x: mapContainer.x + mapScale*32}, 250);
 						}
@@ -232,7 +232,7 @@ function mainCharacterController() {
 				}
 				else if (keyD) {
 					var index = tu.getIndex(mainCharacter.x + 32, mainCharacter.y, 32, 32, mapWidth);
-					if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
+					if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, enemyToIndex())) {
 						if (index%mapWidth > 5 && index%mapWidth < mapWidth - 4) {
 							createjs.Tween.get(mapContainer).to({x: mapContainer.x - mapScale*32}, 250);
 						}
@@ -246,7 +246,7 @@ function mainCharacterController() {
 				}
 				else if (keyS) {
 					var index = tu.getIndex(mainCharacter.x, mainCharacter.y + 32, 32, 32, mapWidth);
-					if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
+					if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, enemyToIndex())) {
 						if (Math.floor(index/(mapWidth)) > 5 && Math.floor(index/(mapWidth)) < (world.height/32) - 4) {
 							createjs.Tween.get(mapContainer).to({y: mapContainer.y - mapScale*32}, 250);
 						}
@@ -258,7 +258,7 @@ function mainCharacterController() {
 				}
 				else if (keyW) {
 					var index = tu.getIndex(mainCharacter.x, mainCharacter.y - 32, 32, 32, mapWidth);
-					if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex())) {
+					if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, enemyToIndex())) {
 						if (Math.floor(index/(mapWidth)) > 4 && Math.floor(index/(mapWidth)) < (world.height/32) - 5) {
 							createjs.Tween.get(mapContainer).to({y: mapContainer.y + mapScale*32}, 250);
 						}
@@ -282,6 +282,18 @@ function toIndex() {
 	}
 	return indexArray;
 }
+
+function enemyToIndex() {
+	var indexArray = [];
+	//console.log(npcArray.length);
+	for (var i = 0; i < enemyArray.length; i++) {
+		//console.log("Loading " + i);
+		indexArray.push(tu.getIndex(enemyArray[i].x, enemyArray[i].y, 32, 32, mapWidth));
+		//console.log(indexArray[i]);
+	}
+	return indexArray;
+}
+
 
 function mainCharacterIndex() {
 	var temp = [];

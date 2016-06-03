@@ -97,6 +97,6 @@ var plainsDungeon;
 ///////////////////////////////////////
 // Globals for story progression    //
 ///////////////////////////////////////
-var hasSword = true;
-	hasShield = true;
-	hasAmulet = true;
+var hasSword = false;
+	hasShield = false;
+	hasPotato = false;
