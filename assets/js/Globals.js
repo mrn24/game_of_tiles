@@ -101,8 +101,8 @@ var plainsDungeon;
 
 
 var hasSword = false,
-	hasShield = true,
-	hasPotato = true,
+	hasShield = false,
+	hasPotato = false,
 	dead = false;
 
 // Sounds
