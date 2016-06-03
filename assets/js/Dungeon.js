@@ -1,5 +1,6 @@
 var characterLayer;
 var shieldSprite;
+var potatoSprite;
 
 
 
@@ -31,6 +32,20 @@ function FirstDesertDungeonLoader(){
       DesertDungeonEntrances.push(i);
     }
   }
+
+  //Spawning shield
+      var potato = new PIXI.Texture.fromImage("./assets/img/potato.png");
+      potatoSprite = new PIXI.Sprite(potato);
+      potatoSprite.anchor.x = 0.5;
+      potatoSprite.anchor.y = 0.5;
+      potatoSprite.position.x = 720;
+      potatoSprite.position.y = 615;
+      desertDungeonContainer.addChild(potatoSprite);
+
+
+
+
+
   //call loadnpc with map.
   mapContainer.addChild(desertDungeonContainer);
   desertDungeonContainer.visible = false;
@@ -63,12 +78,6 @@ function FirstDesertDungeonLoader(){
   desertDungeonEnemyStartArray.push(enemyStartArray[3]);
   desertDungeonEnemyRangeArray.push(enemyRangeArray[3]);
   characterLayer.addChild(enemyArray[3]);
-
-  LoadEnemy(592, 0, './assets/Dungeon/monsters/SandGolem/Roaming/SandGolem', 4);
-  desertDungeonEnemyArray.push(enemyArray[4]);
-  desertDungeonEnemyStartArray.push(enemyStartArray[4]);
-  desertDungeonEnemyRangeArray.push(enemyRangeArray[4]);
-  characterLayer.addChild(enemyArray[4]);
 
   //call loadnpc with map.
 
@@ -107,6 +116,16 @@ function desertDungeonLoader(){
 
 
 function desertDungeonEntranceChecker(){
+
+  if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 592 && !hasPotato){
+    console.log("Ate potato");
+    desertDungeonContainer.removeChild(potatoSprite);
+    hasPotato = true;
+    textHandler("You've eaten the" + "\noverpowered\npotato", 20);
+  }
+
+
+
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), DesertDungeonEntrances)){
       if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0){
     clearInterval(DesertDungeonEntranceChecking);
