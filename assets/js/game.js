@@ -12,26 +12,46 @@ var controlling;
 var colliders;
 
 PIXI.loader
-  .add('./assets/Font/myfont.fnt')
-  .add('Forest_json', './assets/Forest/img/forest.json')
-  .add('ForestTileset', './assets/Forest/img/forest_tileset.png')
-  .add('Desert_json', './assets/Desert/DesertMap.json')
-  .add('DesertTileset', './assets/Desert/DesertTileset.png')
-  .add('desertdungeon', './assets/Dungeon/desertdungeon.json')
-  .add('desertdungeontileset', './assets/Dungeon/desertdungeon.png')
-  .add('forestdungeon', './assets/Dungeon/forestdungeon.json')
-  .add('forestdungeontileset', './assets/Dungeon/forestdungeon.png')
-  .add('plainsdungeon', './assets/Dungeon/plainsdungeon.json')
-  .add('plainsdungeontileset', './assets/Dungeon/plainsdungeon.png')
-  .add('Plains_json', './assets/Plains/Map/Plains.json')
-  .add('PlainsTileset', './assets/Plains/Tileset/Plains.png')
-  .load(Ready);
+	.add('./assets/Font/myfont.fnt')
+	.add('Forest_json', './assets/Forest/img/forest.json')
+	.add('ForestTileset', './assets/Forest/img/forest_tileset.png')
+	.add('Desert_json', './assets/Desert/DesertMap.json')
+	.add('DesertTileset', './assets/Desert/DesertTileset.png')
+	.add('desertdungeon', './assets/Dungeon/desertdungeon.json')
+	.add('desertdungeontileset', './assets/Dungeon/desertdungeon.png')
+	.add('forestdungeon', './assets/Dungeon/forestdungeon.json')
+	.add('forestdungeontileset', './assets/Dungeon/forestdungeon.png')
+	.add('plainsdungeon', './assets/Dungeon/plainsdungeon.json')
+	.add('plainsdungeontileset', './assets/Dungeon/plainsdungeon.png')
+	.add('Plains_json', './assets/Plains/Map/Plains.json')
+	.add('PlainsTileset', './assets/Plains/Tileset/Plains.png')
+	.add("./assets/Sounds/GameOver.mp3")
+	.add("./assets/Sounds/HeroAttack.mp3")
+    .add("./assets/Sounds/HeroDie.mp3")
+    .add("./assets/Sounds/Intro.mp3")
+    .add("./assets/Sounds/KillKing.mp3")
+    .add("./assets/Sounds/LetKingLive.mp3")
+    .add("./assets/Sounds/MonsterAttack.mp3")
+    .add("./assets/Sounds/MonsterDie.mp3")
+    .add("./assets/Sounds/Uncle.mp3")
+	.load(Ready);
+
 function Ready() {
 	LoadCharacter();
 	stage.addChild(mapContainer);
 	mapContainer.scale.x = mapScale;
 	mapContainer.scale.y = mapScale;
 	tu = new TileUtilities(PIXI);
+
+	GameOverSound = PIXI.audioManager.getAudio("./assets/Sounds/GameOver.mp3");
+    HeroAttackSound = PIXI.audioManager.getAudio("./assets/Sounds/HeroAttack.mp3");
+    HeroDieSound = PIXI.audioManager.getAudio("./assets/Sounds/HeroDie.mp3");
+    IntroSound = PIXI.audioManager.getAudio("./assets/Sounds/Intro.mp3");
+    KillKingSound = PIXI.audioManager.getAudio("./assets/Sounds/KillKing.mp3");
+    LetKingLiveSound = PIXI.audioManager.getAudio("./assets/Sounds/LetKingLive.mp3");
+    MonsterAttackSound = PIXI.audioManager.getAudio("./assets/Sounds/MonsterAttack.mp3");
+    MonsterDieSound = PIXI.audioManager.getAudio("./assets/Sounds/MonsterDie.mp3");
+    UncleSound = PIXI.audioManager.getAudio("./assets/Sounds/Uncle.mp3");
 
 	forest = tu.makeTiledWorld("Forest_json", "./assets/Forest/img/forest_tileset.png");
 	desert = tu.makeTiledWorld("Desert_json", "./assets/Desert/DesertTileset.png");

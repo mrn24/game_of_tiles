@@ -104,3 +104,15 @@ var hasSword = false,
 	hasShield = false,
 	hasPotato = false,
 	dead = false;
+
+// Sounds
+
+var GameOverSound,
+	HeroAttackSound,
+	HeroDieSound,
+	IntroSound,
+	KillKingSound,
+	LetKingLiveSound,
+	MonsterAttackSound,
+	MonsterDieSound,
+	UncleSound;
