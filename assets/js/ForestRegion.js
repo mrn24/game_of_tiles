@@ -3,6 +3,7 @@ var forestCollisions = [];
 var forestNpcArray = [];
 var forestRangeArray = [];
 var forestMessageArray = [];
+var forestStartArray = [];
 var forestEntranceChecking;
 var forestMapWidth = 30;
 var forestMap;
@@ -27,21 +28,25 @@ function FirstForestLoader(){
   npcArray = [];
   npcRangeArray = [];
   npcMessageArray = [];
+  npcStartArray = [];
 
   var characterLayer = forest.getObject("CharacterLayer");
-  LoadNPC(172, 0, "./assets/Forest/img/hoegarth", 1, "There is a monster in\nthe Dungeon to the\nSouth! We need him gone\nbefore my elves can\ndrink their tea!");
-  LoadNPC(385, 4, "./assets/Forest/img/elf1", 3, "A chipper day we're\nhaving, eh?");
-  LoadNPC(193, 4, "./assets/Forest/img/elf2", 3, "Why are you in our\nforest?!");
-  LoadNPC(439, 4, "./assets/Forest/img/elf3", 3, "Why are you in our\nforest?!");
-
-  forestRangeArray = npcRangeArray.slice(0, 4);
-  forestNpcArray = npcArray.slice(0, 4);
-  forestMessageArray = npcMessageArray.slice(0, 4);
+  LoadNPC(172, 0, "./assets/Forest/img/hoegarth", 1, "There is a monster in the Dungeon to\nthe South! We need him gone before my\nelves can drink their tea! I heard\nthere might also be a mighty shield\nsomewhere down there!");
+  LoadNPC(385, 4, "./assets/Forest/img/elf1", 3, "I kind of hate you.");
+  LoadNPC(193, 4, "./assets/Forest/img/elf2", 3, "Why are you in our forest?!");
+  LoadNPC(439, 4, "./assets/Forest/img/elf3", 3, "We don't appreciate your kind here!");
 
   characterLayer.addChild(npcArray[0]);
   characterLayer.addChild(npcArray[1]);
   characterLayer.addChild(npcArray[2]);
   characterLayer.addChild(npcArray[3]);
+
+  forestRangeArray = npcRangeArray.slice(0, 4);
+  forestNpcArray = npcArray.slice(0, 4);
+  forestMessageArray = npcMessageArray.slice(0, 4);
+  forestStartArray = npcStartArray.slice(0, 4);
+
+
 
   forestNpcArray[0].scale.x = .2;
   forestNpcArray[0].scale.y = .2;
@@ -60,11 +65,18 @@ function ForestLoader(){
   //Never set collisionsIndex to []//
   ///////////////////////////////////
   collisionsIndex = forestCollisions;
+  mapArray = [];
+  npcArray = [];
+  npcRangeArray = [];
+  npcStartArray = [];
+
   mapArray = forestMap;
   npcArray = forestNpcArray;
   npcRangeArray = forestRangeArray;
+  npcStartArray = forestStartArray;
+
   if(hasShield){
-    forestMessageArray[0] = "Thank you so much for\nhandling that for us!\nYou're next destination\nis the desert to the\neast!";
+    forestMessageArray[0] = "Thank you so much for handling that\nfor us! Your next destination is the\ndesert to the east!";
     forestMessageArray[1] = "Yipee!!!";
     forestMessageArray[2] = "You have saved us all!";
     forestMessageArray[3] = "Thank you!";
