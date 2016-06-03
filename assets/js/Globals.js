@@ -60,6 +60,13 @@ var npcArray = [],
 	npcRangeArray = [];
 
 
+/////////////////////////////
+// Globals for LoadEnemy()   //
+/////////////////////////////
+var enemyArray = [],
+	enemyStartArray = [],
+	enemyRangeArray = [];
+
 
 /////////////////////////////
 // Globals for Text   //

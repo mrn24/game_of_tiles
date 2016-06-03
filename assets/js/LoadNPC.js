@@ -35,6 +35,95 @@ function LoadNPC(index, range, fileLocation, numSprites, message) {
 	//return npc;
 }
 
+function LoadEnemy(index, range, fileLocation, numSprites) {
+	//console.log("Loading Character");
+	var textureArray = [];
+	var enemy;
+	for (var i = 1; i < numSprites + 1; i++) {
+		texture = new PIXI.Texture.fromImage(fileLocation+i+".png");
+		textureArray.push(texture);
+	}
+	enemy = new PIXI.extras.MovieClip(textureArray);
+	enemy.anchor.x = 0.5;
+	enemy.anchor.y = 0.5;
+	var point = tu.getTile(index, mapArray, world);
+	enemy.position.x = point.centerX;
+	enemy.position.y = point.centerY - yOffset;
+	enemy.scale.x = mainCharacterScale;
+	enemy.scale.y = mainCharacterScale;
+	enemy.play();
+	enemy.animationSpeed = 0.075;
+	enemyArray.push(npc);
+	enemyStartArray.push(index);
+	enemyRangeArray.push(range);
+	//return enemy;
+}
+
+function EnemyMovement() {
+	for (var i = 0; i < enemyArray.length; i++) {
+		var direction = Math.floor(Math.random() * 4);
+		if (direction == 0) { //Left
+			var index = tu.getIndex(enemyArray[i].x - 32, enemyArray[i].y, 32, 32, mapWidth);
+			if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, mainCharacterIndex())){
+				if (Math.abs(enemyStartArray[i]%mapWidth - index%mapWidth) <= enemyRangeArray[i]){
+					createjs.Tween.get(enemyArray[i]).to({x: enemyArray[i].x - 32}, 250);
+				}
+				else {
+					//console.log("Hit left bounds");
+				}
+			}
+			else {
+				//console.log("Collision Left");
+			}
+			enemyArray[i].scale.x = -enemyArray[i].scale.x;
+		}
+		else if (direction == 1) { //Up
+			index = tu.getIndex(enemyArray[i].x, enemyArray[i].y - 32, 32, 32, mapWidth);
+			if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, mainCharacterIndex())) {
+				if (Math.abs(Math.floor(enemyStartArray[i]/mapWidth) - Math.floor(index/mapWidth)) <= enemyRangeArray[i]){
+					createjs.Tween.get(enemyArray[i]).to({y: enemyArray[i].y - 32}, 250);
+				}
+				else {
+					//console.log("Hit Up bounds");
+				}
+			}
+			else {
+				//console.log("Collision Up");
+			}
+		}
+		else if (direction == 2) { //Right
+		index = tu.getIndex(enemyArray[i].x + 32, enemyArray[i].y, 32, 32, mapWidth);
+			if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, mainCharacterIndex())) {
+				if (Math.abs(enemyStartArray[i]%mapWidth - index%mapWidth) <= enemyRangeArray[i]){
+					createjs.Tween.get(enemyArray[i]).to({x: enemyArray[i].x + 32}, 250);
+				}
+				else {
+					//console.log("Hit Right bounds");
+				}
+			}
+			else {
+				//console.log("Collision Right");
+			}
+			enemyArray[i].scale.x = -enemyArray[i].scale.x;
+		}
+		else if (direction == 3) { //Down
+			var index = tu.getIndex(enemyArray[i].x, enemyArray[i].y + 32, 32, 32, mapWidth);
+			if (!CollisionDetection(index, collisionsIndex) && !CollisionDetection(index, toIndex()) && !CollisionDetection(index, mainCharacterIndex())) {
+				if (Math.abs(Math.floor(enemyStartArray[i]/mapWidth) - Math.floor(index/mapWidth)) <= enemyRangeArray[i]){
+					createjs.Tween.get(enemyArray[i]).to({y: enemyArray[i].y + 32}, 250);
+				}
+				else {
+					//console.log("Hit Down bounds");
+				}
+			}
+			else {
+				//console.log("Collision Down");
+			}
+		}
+	}
+	setTimeout(EnemyMovement, 7000);
+}
+
 function NPCMovement() {
 	for (var i = 0; i < npcArray.length; i++) {
 		var direction = Math.floor(Math.random() * 4);
