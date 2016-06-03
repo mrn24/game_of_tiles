@@ -1,6 +1,5 @@
 var tempx;
 var tempy;
-var CharacterAttacking = false;
 
 function CharacterAttack (index) {
 	CharacterAttacking = true;

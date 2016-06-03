@@ -19,7 +19,8 @@ var mainCharacter = new PIXI.Container(),
 	yOffset = 7,
 	startX = xOffset + 32*4,
 	startY = yOffset + 32*4,
-	healthbar;
+	healthbar,
+	CharacterAttacking = false;
 ///////////////////////////////////////
 // Globals for CharacterController() //
 ///////////////////////////////////////
@@ -97,6 +98,8 @@ var plainsDungeon;
 // Globals for story progression    //
 ///////////////////////////////////////
 
-var hasSword = false;
-	hasShield = false;
+
+
+var hasSword = false,
+	hasShield = false,
 	hasPotato = false;
