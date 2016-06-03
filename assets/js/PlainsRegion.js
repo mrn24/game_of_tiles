@@ -32,9 +32,9 @@ function FirstPlainsLoader(){
 	npcRangeArray = [];
 	npcMessageArray = [];
 	npcStartArray = [];
-	
+
 	var characterLayer = plains.getObject("CharacterLayer");
-	
+
 	/*
 	LoadNPC(314,6,"./assets/Characters/NPCs/Enemy", 4, "I'm NPC one.");
 	plainsNpcArray.push(npcArray[0]);
@@ -72,7 +72,7 @@ function FirstPlainsLoader(){
 	plainsNpcMessageArray.push(npcMessageArray[3]);
 	characterLayer.addChild(plainsNpcArray[3]);
 	*/
-	
+
   mapContainer.addChild(plainsContainer);
   plainsContainer.visible = false;
 }
@@ -94,7 +94,7 @@ function PlainsLoader(){
   npcMessageArray = plainsNpcMessageArray;
   npcStartArray = plainsNpcStartArray;
 
-  
+
   if (previousMap == plains) {
 	  	startX = 592;
 		startY = 1159;
@@ -117,30 +117,54 @@ function PlainsLoader(){
 	SetPosition();
   //Use passed in parameter to load character in the right spot
   plainsEntranceChecking = setInterval(PlainsEntranceChecker, 100);
-  
+
 }
 
 function PlainsEntranceChecker(){
 	//console.log("Checking Entrance Collisions.");
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), plainsEntrances)){
 	if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0){
-	clearInterval(plainsEntranceChecking);
 	//console.log("Found Entrance!");
     //Which entrance?, send to transition function
 	if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 495) {
       //console.log("Going to Forest");
-	  MapTransition(forest);
+			if(hasSword){
+	  		MapTransition(forest);
+				plainsContainer.visible = false;
+				clearInterval(plainsEntranceChecking);
+			}else{
+				console.log("No forest possible!");
+				createjs.Tween.get(mainCharacter).to({x: mainCharacter.position.x - 32}, 250);
+				textHandler("You need to be able to protect yourself\nbefore going to the forest!", 10);
+			}
     }
 	else if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 92) {
 		//console.log("Going to Desert");
-		MapTransition(desert);
+		if(hasSword && hasShield){
+			MapTransition(desert);
+			plainsContainer.visible = false;
+			clearInterval(plainsEntranceChecking);
+		}else{
+			console.log("No desert possible!");
+			createjs.Tween.get(mainCharacter).to({y: mainCharacter.position.y + 32}, 250);
+			textHandler("You still have some things to do\nbefore entering the desert!", 10);
+		}
 	} else if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 176) {
 		//console.log("Going to Dungeon");
-		MapTransition(plainsDungeon);
-	} else {
+		if(hasSword){
+			MapTransition(plainsDungeon);
+			plainsContainer.visible = false;
+			clearInterval(plainsEntranceChecking);
+		}else{
+			console.log("No dungeon possible!");
+			createjs.Tween.get(mapContainer).to({x: mapContainer.x + mapScale*32}, 250);
+			createjs.Tween.get(mainCharacter).to({x: mainCharacter.position.x - 32}, 250);
+			textHandler("You need to be able to protect yourself\nbefore going to the dungeon!", 10);
+	}
+}else {
 		console.log("Dead");
 	}
-	plainsContainer.visible = false;
+
   }
   }
 }
