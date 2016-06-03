@@ -11,6 +11,7 @@ var forestMap;
 var forestEnemyArray = [];
 var forestEnemyRangeArray = [];
 var forestEnemyStartArray = [];
+var forestEnemyDyingArray = [];
 
 function FirstForestLoader(){
   world = forest;
@@ -91,6 +92,22 @@ function FirstForestLoader(){
   forestEnemyRangeArray.push(enemyRangeArray[4]);
   characterLayer.addChild(enemyArray[4]);
 
+  LoadDyingEnemy('./assets/Dungeon/monsters/Raider/Dying/raiderdying', 13);
+  forestEnemyDyingArray.push(enemyDyingArray[0]);
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/Raider/Dying/raiderdying', 13);
+  forestEnemyDyingArray.push(enemyDyingArray[1]);
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/Skeleton/Dying/skeletondying', 13);
+  forestEnemyDyingArray.push(enemyDyingArray[2]);
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/Skeleton/Dying/skeletondying', 13);
+  forestEnemyDyingArray.push(enemyDyingArray[3]);
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/SandGolem/Dying/sgdying', 13);
+  forestEnemyDyingArray.push(enemyDyingArray[4]);
+  //call loadnpc with map.
+
 
   mapContainer.addChild(forestContainer);
   forestContainer.visible = false;
@@ -100,6 +117,7 @@ function ForestLoader(){
   console.log("loading Forest!")
   mapWidth = forestMapWidth;
   forestContainer.visible = true;
+  world = forest;
   //////////////////////////////
   //Risk! collisionsIndex is a//
   //pointer to forestCollisions//
@@ -115,6 +133,11 @@ function ForestLoader(){
   npcArray = forestNpcArray;
   npcRangeArray = forestRangeArray;
   npcStartArray = forestStartArray;
+
+  enemyArray = forestEnemyArray;
+  enemyRangeArray = forestEnemyRangeArray;
+  enemyStartArray = forestEnemyStartArray;
+  enemyDyingArray = desertEnemyDyingArray;
 
   if(hasShield){
     forestMessageArray[0] = "Thank you so much for handling that\nfor us! Your next destination is the\ndesert to the east!";

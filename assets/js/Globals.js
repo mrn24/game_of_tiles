@@ -69,7 +69,8 @@ var npcArray = [],
 var enemyArray = [],
 	enemyStartArray = [],
 	enemyRangeArray = [],
-	enemyDyingArray = [];
+	enemyDyingArray = [],
+	enemyAttackingArray = [];
 
 
 /////////////////////////////
@@ -96,6 +97,6 @@ var plainsDungeon;
 ///////////////////////////////////////
 // Globals for story progression    //
 ///////////////////////////////////////
-var hasSword = false;
-	hasShield = false;
+var hasSword = true;
+	hasShield = true;
 	hasAmulet = true;

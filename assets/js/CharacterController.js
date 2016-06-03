@@ -3,6 +3,7 @@
 /////////////////////////////////////////////
 var keyEnterUp = true;
 var talking = false;
+var attacking = false;
 function checkKeyPressed(key) {
 	//console.log(key.keyCode);
 	//console.log(keyEnterUp);
@@ -28,6 +29,9 @@ function checkKeyPressed(key) {
 		keyEnter = true;
 		keyEnterUp = false;
 	}
+	if (key.keyCode == 32){
+		keySpace = true;
+	}
 }
 
 function checkKeyReleased(key) {
@@ -51,6 +55,9 @@ function checkKeyReleased(key) {
 		//console.log("Enter released");
 		keyEnter = false;
 		keyEnterUp = true;
+	}
+	if (key.keyCode ==32){
+		keySpace = false;
 	}
 }
 
