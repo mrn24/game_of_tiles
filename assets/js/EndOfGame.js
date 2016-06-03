@@ -38,5 +38,7 @@ function ChoiceLive(){
 }
 
 function WinChoiceLive(){
-  console.log("You win with the let him live screen!");
+  mapContainer.visible = false;
+  var winLive = new PIXI.Sprite.fromImage("./assets/img/letlive.png");
+  stage.addChild(winLive);
 }
