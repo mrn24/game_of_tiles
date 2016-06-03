@@ -8,6 +8,10 @@ var forestEntranceChecking;
 var forestMapWidth = 30;
 var forestMap;
 
+var forestEnemyArray = [];
+var forestEnemyRangeArray = [];
+var forestEnemyStartArray = [];
+
 function FirstForestLoader(){
   world = forest;
   forestMap = forest.getObject("CollisionLayer").data;
@@ -46,10 +50,47 @@ function FirstForestLoader(){
   forestMessageArray = npcMessageArray.slice(0, 4);
   forestStartArray = npcStartArray.slice(0, 4);
 
-
-
   forestNpcArray[0].scale.x = .2;
   forestNpcArray[0].scale.y = .2;
+
+
+  enemyArray = [];
+  enemyRangeArray = [];
+  enemyStartArray = [];
+
+  LoadEnemy(742, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
+  forestEnemyArray.push(enemyArray[0]);
+  forestEnemyStartArray.push(enemyStartArray[0]);
+  forestEnemyRangeArray.push(enemyRangeArray[0]);
+  characterLayer.addChild(enemyArray[0]);
+
+  LoadEnemy(803, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
+  forestEnemyArray.push(enemyArray[1]);
+  forestEnemyStartArray.push(enemyStartArray[1]);
+  forestEnemyRangeArray.push(enemyRangeArray[1]);
+  characterLayer.addChild(enemyArray[1]);
+
+  //good
+  LoadEnemy(525, 3, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
+  forestEnemyArray.push(enemyArray[2]);
+  forestEnemyStartArray.push(enemyStartArray[2]);
+  forestEnemyRangeArray.push(enemyRangeArray[2]);
+  characterLayer.addChild(enemyArray[2]);
+
+
+  //good
+  LoadEnemy(484, 2, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
+  forestEnemyArray.push(enemyArray[3]);
+  forestEnemyStartArray.push(enemyStartArray[3]);
+  forestEnemyRangeArray.push(enemyRangeArray[3]);
+  characterLayer.addChild(enemyArray[3]);
+
+  LoadEnemy(800, 0, './assets/Dungeon/monsters/SandGolem/Roaming/SandGolem', 4);
+  forestEnemyArray.push(enemyArray[4]);
+  forestEnemyStartArray.push(enemyStartArray[4]);
+  forestEnemyRangeArray.push(enemyRangeArray[4]);
+  characterLayer.addChild(enemyArray[4]);
+
 
   mapContainer.addChild(forestContainer);
   forestContainer.visible = false;
