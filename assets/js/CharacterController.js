@@ -84,7 +84,7 @@ function mainCharacterController() {
 					CharacterAttack(i);
 
 				} else if ((facing == 4) && currentPosition == tu.getIndex(enemyArray[i].x + 32, enemyArray[i].y, 32, 32, mapWidth)) {
-					talking = true;
+					attacking = true;
 					// CHARACTER ATTACK textHandler(enemyArray[i]);
 					CharacterAttack(i);
 				}
@@ -287,7 +287,6 @@ function mainCharacterController() {
 					}
 					mainCharacter.children[0].visible = true;
 					mainCharacter.children[1].visible = false;
-					facing = 3;
 				}
 				else if (keyW) {
 					var index = tu.getIndex(mainCharacter.x, mainCharacter.y - 32, 32, 32, mapWidth);
@@ -297,7 +296,6 @@ function mainCharacterController() {
 						}
 						createjs.Tween.get(mainCharacter).to({y: mainCharacter.y - 32}, 250);
 					}
-					facing = 1;
 					mainCharacter.children[0].visible = false;
 					mainCharacter.children[1].visible = true;
 				}

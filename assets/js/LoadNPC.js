@@ -88,7 +88,6 @@ function LoadAttackingEnemy(fileLocation, numSprites){
 	//enemyDying.play();
 	enemyAttacking.animationSpeed = 1.0;
 	enemyAttackingArray.push(enemyAttacking);
-
 }
 
 function EnemyMovement() {
