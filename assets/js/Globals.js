@@ -12,7 +12,7 @@ var tileHeight = 32,
 ///////////////////////////
 // Globals For Character() //
 ///////////////////////////
-var mainCharacter,
+var mainCharacter = new PIXI.Container(),
 	mainCharacterScale = 1.1,
 	npcCharacterScale = 1.1,
 	xOffset = 16,

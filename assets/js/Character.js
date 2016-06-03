@@ -2,21 +2,34 @@ function LoadCharacter() {
 	//console.log("Loading Character");
 	var textureArray = [];
 	for (var i = 1; i < 5; i++) {
-		texture = new PIXI.Texture.fromImage("./assets/Characters/MainCharacter/Character"+i+".png");
+		texture = new PIXI.Texture.fromImage("./assets/Character/Character"+i+".png");
 		textureArray.push(texture);
 	}
-
-	mainCharacter = new PIXI.extras.MovieClip(textureArray);
-	mainCharacter.anchor.x = 0.5;
-	mainCharacter.anchor.y = 0.5;
-	//var point = tu.getTile(index, mapArray, currentMap);
+	var movie = new PIXI.extras.MovieClip(textureArray);
+	mainCharacter.addChild(movie);
+	textureArray = [];
+	for (var i = 1; i < 5; i++) {
+		texture = new PIXI.Texture.fromImage("./assets/Character/CharacterBack"+i+".png");
+		textureArray.push(texture);
+	}
+	movie = new PIXI.extras.MovieClip(textureArray);
+	mainCharacter.addChild(movie);
 	mainCharacter.position.x = startX;
 	mainCharacter.position.y = startY;
 	mainCharacter.scale.x = mainCharacterScale;
 	mainCharacter.scale.y = mainCharacterScale;
-	mainCharacter.play();
-	mainCharacter.animationSpeed = 0.075;
-	//return mainCharacter;
+	mainCharacter.children[0].play();
+	mainCharacter.children[1].play();
+	mainCharacter.children[0].animationSpeed = 0.075;
+	mainCharacter.children[1].animationSpeed = 0.075;
+	mainCharacter.addChild(movie);
+	mainCharacter.children[1].visible = false;
+	mainCharacter.children[0].anchor.x = 0.5;
+	mainCharacter.children[0].anchor.y = 0.5;
+	mainCharacter.children[1].anchor.x = 0.5;
+	mainCharacter.children[1].anchor.y = 0.5;
+	
+	//mainCharacter.children[0].visible = false;
 }
 
 function LoadSwordShield() {

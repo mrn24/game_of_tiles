@@ -200,6 +200,8 @@ function mainCharacterController() {
 						}
 						createjs.Tween.get(mainCharacter).to({y: mainCharacter.y + 32}, 250);
 					}
+					mainCharacter.children[0].visible = true;
+					mainCharacter.children[1].visible = false;
 					facing = 3;
 				}
 				else if (keyW) {
@@ -211,6 +213,8 @@ function mainCharacterController() {
 						createjs.Tween.get(mainCharacter).to({y: mainCharacter.y - 32}, 250);
 					}
 					facing = 1;
+					mainCharacter.children[0].visible = false;
+					mainCharacter.children[1].visible = true;
 				}
 			}
 		}
