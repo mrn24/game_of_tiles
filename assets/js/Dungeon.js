@@ -191,31 +191,31 @@ function FirstForestDungeonLoader(){
   enemyStartArray = [];
 
   characterLayer = forestDungeon.getObject("CharacterLayer");
-  LoadEnemy(290, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
+  LoadEnemy(397, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
   forestDungeonEnemyArray.push(enemyArray[0]);
   forestDungeonEnemyStartArray.push(enemyStartArray[0]);
   forestDungeonEnemyRangeArray.push(enemyRangeArray[0]);
   characterLayer.addChild(enemyArray[0]);
 
-  LoadEnemy(461, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
+  LoadEnemy(198, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
   forestDungeonEnemyArray.push(enemyArray[1]);
   forestDungeonEnemyStartArray.push(enemyStartArray[1]);
   forestDungeonEnemyRangeArray.push(enemyRangeArray[1]);
   characterLayer.addChild(enemyArray[1]);
 
-  LoadEnemy(755, 3, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
+  LoadEnemy(619, 3, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
   forestDungeonEnemyArray.push(enemyArray[2]);
   forestDungeonEnemyStartArray.push(enemyStartArray[2]);
   forestDungeonEnemyRangeArray.push(enemyRangeArray[2]);
   characterLayer.addChild(enemyArray[2]);
 
-  LoadEnemy(764, 2, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
+  LoadEnemy(699, 2, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
   forestDungeonEnemyArray.push(enemyArray[3]);
   forestDungeonEnemyStartArray.push(enemyStartArray[3]);
   forestDungeonEnemyRangeArray.push(enemyRangeArray[3]);
   characterLayer.addChild(enemyArray[3]);
 
-  LoadEnemy(592, 0, './assets/Dungeon/monsters/SandGolem/Roaming/SandGolem', 4);
+  LoadEnemy(666, 0, './assets/Dungeon/monsters/SandGolem/Roaming/SandGolem', 4);
   forestDungeonEnemyArray.push(enemyArray[4]);
   forestDungeonEnemyStartArray.push(enemyStartArray[4]);
   forestDungeonEnemyRangeArray.push(enemyRangeArray[4]);
