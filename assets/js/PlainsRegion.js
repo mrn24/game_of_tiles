@@ -64,14 +64,14 @@ function FirstPlainsLoader(){
 	plainsNpcMessageArray.push(npcMessageArray[0]);
 	plainsNpcStartArray.push(npcStartArray[0]);
 	characterLayer.addChild(plainsNpcArray[0]);
-	
+
 	LoadNPC(1153,2,"./assets/Desert/Sprites/DesertWoman", 4, "Being triplets is fun!");
 	plainsNpcArray.push(npcArray[1]);
 	plainsNpcRangeArray.push(npcRangeArray[1]);
 	plainsNpcMessageArray.push(npcMessageArray[1]);
 	plainsNpcStartArray.push(npcStartArray[1]);
 	characterLayer.addChild(plainsNpcArray[1]);
-	
+
 	LoadNPC(1551,2,"./assets/Desert/Sprites/DesertWoman", 4, "My sisters are weird...");
 	plainsNpcArray.push(npcArray[2]);
 	plainsNpcRangeArray.push(npcRangeArray[2]);
@@ -87,7 +87,7 @@ function FirstPlainsLoader(){
 	plainsNpcStartArray.push(npcStartArray[3]);
 	characterLayer.addChild(plainsNpcArray[3]);
 
-	LoadNPC(114 ,0 ,"./assets/Plains/king", 1, "What are you looking at?");
+	LoadNPC(114 ,0 ,"./assets/Plains/King", 1, "What are you looking at?");
 	plainsNpcArray.push(npcArray[4]);
 	plainsNpcRangeArray.push(npcRangeArray[4]);
 	plainsNpcMessageArray.push(npcMessageArray[4]);
@@ -108,16 +108,16 @@ function FirstPlainsLoader(){
 	plainsNpcMessageArray.push(npcMessageArray[6]);
 	characterLayer.addChild(plainsNpcArray[6]);
 	plainsNpcStartArray.push(npcStartArray[6]);
-	
-	LoadNPC(2352,2,"./assets/Forest/img/elf1", 3, "I wish we had more visitors!\n" + 
+
+	LoadNPC(2352,2,"./assets/Forest/img/elf1", 3, "I wish we had more visitors!\n" +
 							"Our shop could do with some more\ncustomers.");
 	plainsNpcArray.push(npcArray[7]);
 	plainsNpcRangeArray.push(npcRangeArray[7]);
 	plainsNpcMessageArray.push(npcMessageArray[7]);
 	characterLayer.addChild(plainsNpcArray[7]);
 	plainsNpcStartArray.push(npcStartArray[7]);
-	
-	LoadNPC(2203,5,"./assets/Forest/img/elf2", 3, "My brother is the brains of the shop.\n" + 
+
+	LoadNPC(2203,5,"./assets/Forest/img/elf2", 3, "My brother is the brains of the shop.\n" +
 							"I just try to keep things clean\naround here.");
 	plainsNpcArray.push(npcArray[8]);
 	plainsNpcRangeArray.push(npcRangeArray[8]);
@@ -189,7 +189,7 @@ function PlainsEntranceChecker(){
 	plainsContainer.removeChild(swordSprite);
     textHandler("Father's sword...", 20);
   }
-	
+
 	if (hasSword && !hasShield) {
 		npcMessageArray[5] = "That's a nice sword you have there!\nI wish mine was as nice.";
 		npcMessageArray[6] = "Oh! You spoke to your uncle?\nYou might head into the forest now.\nI heard King Hoegarth of the elven \nkindgom needs help!";
@@ -197,9 +197,9 @@ function PlainsEntranceChecker(){
 	} else if (hasShield) {
 		npcMessageArray[6] = "Wow, great shield!\nKingsguard don't have them.";
 		npcMessageArray[5] = "You might go to the desert realm.\nTheir King needs help.";
-		npcMessageArray[0] = "Wow! You are turning into quite an adventurer.\nHead to the desert to help their king!";
+		npcMessageArray[0] = "Wow! You are turning into quite an\nadventurer. Head to the desert to help\ntheir king!";
 	}
-	
+
 	if(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 164 && hasPotato){
 		clearInterval(plainsEntranceChecking);
 		EndGame();
