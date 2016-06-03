@@ -3,7 +3,7 @@ var tempy;
 
 function CharacterAttack (index) {
 	CharacterAttacking = true;
-
+	MonsterDieSound.play();
 	// if (facing == 2){
 	// 	mainCharacter.children[3].scale = -mainCharacter.children[3].scale;
 	// 	setTimeout(function(){mainCharacter.children[3].scale = -mainCharacter.children[3].scale;}, 1000);
@@ -36,6 +36,7 @@ function MonsterAttack (index, scaleswitch) {
 		tempy = enemyArray[index].y;
 		characterLayer.removeChild(enemyArray[index]);
 
+		MonsterAttackSound.play();
 		//Decrement health
 		if (mainCharacter.getChildAt(2).currentFrame <  mainCharacter.getChildAt(2).totalFrames - 1) {
 			mainCharacter.getChildAt(2).gotoAndStop(mainCharacter.getChildAt(2).currentFrame + 1);
