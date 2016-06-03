@@ -87,7 +87,7 @@ function FirstPlainsLoader(){
 	plainsNpcStartArray.push(npcStartArray[3]);
 	characterLayer.addChild(plainsNpcArray[3]);
 
-	LoadNPC(114 ,0 ,"./assets/Plains/king", 1, "_____");
+	LoadNPC(114 ,0 ,"./assets/Plains/king", 1, "What are you looking at?");
 	plainsNpcArray.push(npcArray[4]);
 	plainsNpcRangeArray.push(npcRangeArray[4]);
 	plainsNpcMessageArray.push(npcMessageArray[4]);
@@ -187,10 +187,18 @@ function PlainsEntranceChecker(){
     hasSword = true;
 	plainsContainer.removeChild(swordSprite);
     textHandler("Father's sword...", 20);
-
-
   }
-
+	
+	if (hasSword && !hasShield) {
+		npcMessageArray[5] = "That's a nice sword you have there!\nI wish mine was as nice.";
+		npcMessageArray[6] = "Oh! You spoke to your uncle?\nYou might head into the forest now.\nI heard King Hoegarth of the elven \nkindgom needs help!";
+		npcMessageArray[0] = "The King of the Elves needs your help.\nHe may have a reward for your\nassistance.";
+	} else if (hasShield) {
+		npcMessageArray[6] = "Wow great shield! I wish I had one!";
+		npcMessageArray[5] = "You might go to the desert realm.\nTheir King needs help.";
+		npcMessageArray[0] = "Wow! You are turning into quite an adventurer.\nHead to the desert to help their king!";
+	}
+	
 	if(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 164 && hasPotato){
 		clearInterval(plainsEntranceChecking);
 		EndGame();
