@@ -55,7 +55,7 @@ function FirstDesertLoader(){
 
   var characterLayer = desert.getObject("CharacterLayer");
 
-  LoadNPC(260, 4, './assets/Desert/Sprites/DesertWoman', 4, "Have you seen the oasis to the south\n east?  It's beautiful but it \nwas recently taken over by bandits.");
+  LoadNPC(260, 4, './assets/Desert/Sprites/DesertWoman', 4, "Have you seen the oasis to the south\neast?  It's beautiful but it \nwas recently taken over by bandits.");
   //desertContainer.addChild(npcArray[0]);
   desertNpcArray.push(npcArray[0]);
   desertNpcStartArray.push(npcStartArray[0]);
@@ -71,7 +71,7 @@ function FirstDesertLoader(){
   desertNpcMessageArray.push(npcMessageArray[1]);
   characterLayer.addChild(npcArray[1]);
 
-  LoadNPC(180, 0, './assets/Desert/Sprites/DesertKing', 4, "Hello there.  I knew you father.\n He was a good man. Go get\n the legendary potato in the dungeon\n to the southwest so you can\n return home and face the king.");
+  LoadNPC(180, 0, './assets/Desert/Sprites/DesertKing', 4, "Hello there.  I knew your father.\nHe was a good man. Go get\nthe legendary potato in the dungeon\nto the southwest so you can\nreturn home and face the king.");
   //desertContainer.addChild(npcArray[2]);
   desertNpcArray.push(npcArray[2]);
   desertNpcStartArray.push(npcStartArray[2]);
