@@ -87,6 +87,7 @@ function Ready() {
 	//textHandler("hello world", 12);
 	controlling = setInterval(mainCharacterController, 30);
 	//ForestLoader();
+	IntroSound.play();
 	PlainsLoader();
 }
 
