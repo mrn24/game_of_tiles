@@ -9,6 +9,8 @@ var desertNpcRangeArray = [];
 var desertNpcMessageArray = [];
 var desertNpcStartArray = [];
 
+var desertEnemyDyingArray = [];
+
 var desertEnemyArray = [];
 var desertEnemyRangeArray = [];
 var desertEnemyStartArray = [];
@@ -124,6 +126,20 @@ function FirstDesertLoader(){
   desertEnemyRangeArray.push(enemyRangeArray[4]);
   characterLayer.addChild(enemyArray[4]);
 
+  LoadDyingEnemy('./assets/Dungeon/monsters/Raider/Dying/raiderdying', 13);
+  desertEnemyDyingArray.push(enemyDyingArray[0]);
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/Raider/Dying/raiderdying', 13);
+  desertEnemyDyingArray.push(enemyDyingArray[1]);
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/Skeleton/Dying/skeletondying', 13);
+  desertEnemyDyingArray.push(enemyDyingArray[2]);
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/Skeleton/Dying/skeletondying', 13);
+  desertEnemyDyingArray.push(enemyDyingArray[3]);
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/SandGolem/Dying/sgdying', 13);
+  desertEnemyDyingArray.push(enemyDyingArray[4]);
   //call loadnpc with map.
   
   
@@ -147,6 +163,8 @@ function DesertLoader(){
   enemyArray = desertEnemyArray;
   enemyRangeArray = desertEnemyRangeArray;
   enemyStartArray = desertEnemyStartArray;
+
+  enemyDyingArray = desertEnemyDyingArray;
 
   //currentmap = desert;
 

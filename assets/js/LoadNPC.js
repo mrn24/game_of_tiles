@@ -59,6 +59,22 @@ function LoadEnemy(index, range, fileLocation, numSprites) {
 	//return enemy;
 }
 
+function LoadDyingEnemy(fileLocation, numSprites){
+	var textureArray = [];
+	var enemyDying;
+	for (var i = 1; i < numSprites + 1; i++) {
+		texture = new PIXI.Texture.fromImage(fileLocation+i+".png");
+		textureArray.push(texture);
+	}
+	enemyDying = new PIXI.extras.MovieClip(textureArray);
+	enemyDying.anchor.x = 0.5;
+	enemyDying.anchor.y = 0.5;
+	//enemyDying.play();
+	enemyDying.animationSpeed = 0.075;
+	enemyDyingArray.push(enemyDying);
+
+}
+
 function EnemyMovement() {
 	for (var i = 0; i < enemyArray.length; i++) {
 		var direction = Math.floor(Math.random() * 4);
