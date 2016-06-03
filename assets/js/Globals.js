@@ -18,7 +18,8 @@ var mainCharacter = new PIXI.Container(),
 	xOffset = 16,
 	yOffset = 7,
 	startX = xOffset + 32*4,
-	startY = yOffset + 32*4;
+	startY = yOffset + 32*4,
+	healthbar;
 ///////////////////////////////////////
 // Globals for CharacterController() //
 ///////////////////////////////////////
