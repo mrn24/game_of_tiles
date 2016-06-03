@@ -29,7 +29,6 @@ PIXI.loader
 function Ready() {
 	LoadCharacter();
 	stage.addChild(mapContainer);
-	mainCharacter.width = 35.2;
 	mapContainer.scale.x = mapScale;
 	mapContainer.scale.y = mapScale;
 	tu = new TileUtilities(PIXI);

@@ -27,6 +27,7 @@ var keyA = false,
 	keyS = false,
 	keyW = false,
 	keyEnter = false,
+	keySpace = false,
 	moving = true, // set to false to stop character from moving
 	facing;  // 1 up, 2 right, 3 down, 4 left
 
