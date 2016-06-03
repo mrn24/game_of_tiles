@@ -198,7 +198,7 @@ function PlainsEntranceChecker(){
 		npcMessageArray[6] = "Wow, great shield!\nKingsguard don't have them.";
 		npcMessageArray[5] = "You might go to the desert realm.\nTheir King needs help.";
 		npcMessageArray[0] = "Wow! You are turning into quite an\nadventurer. Head to the desert to help\ntheir king!";
-	} else (hasPotato){
+	} else if (hasPotato){
 		npcMessageArray[0] = "You ate the overpowered potato!\nNow go confront the king!";
 	}
 
