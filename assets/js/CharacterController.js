@@ -62,26 +62,39 @@ function mainCharacterController() {
 		if(!talking) {
 			//console.log("Attempting Talking");
 			keyEnter = false;
-
 			//console.log("Attempt to talk");
 			//console.log("Number of NPCs " + npcArray.length);
 			var currentPosition = tu.getIndex(mainCharacter.x, mainCharacter.y, 32, 32, mapWidth);
 			//console.log("Current position: " + currentPosition);
+			//console.log("Facing " + facing);
 			for (var i = 0; i < npcArray.length; i++) {
 				//console.log(tu.getIndex(npcArray[i].x, npcArray[i].y, 32, 32, mapWidth));
-				if (currentPosition == tu.getIndex(npcArray[i].x - 32, npcArray[i].y, 32, 32, mapWidth)) {
+				if ((facing == 2) && currentPosition == tu.getIndex(npcArray[i].x - 32, npcArray[i].y, 32, 32, mapWidth)) {
 					//console.log("Started talking to the right.");
 					talking = true;
 					//console.log("Found an NPC");
 					//console.log("NPC message: " + npcMessageArray[i]);
 					textHandler(npcMessageArray[i], 12);
-				} else if (currentPosition == tu.getIndex(npcArray[i].x + 32, npcArray[i].y, 32, 32, mapWidth)) {
+				} else if ((facing == 4) && currentPosition == tu.getIndex(npcArray[i].x + 32, npcArray[i].y, 32, 32, mapWidth)) {
 					//console.log("Started talking to the left.");
 					//console.log("Found an NPC");
 					//console.log("NPC message: " + npcMessageArray[i]);
 					talking = true;
 					textHandler(npcMessageArray[i], 12);
-				} else {
+				} else if ((facing == 3) && currentPosition == tu.getIndex(npcArray[i].x, npcArray[i].y - 32, 32, 32, mapWidth)) {
+					//console.log("Started talking above.");
+					//console.log("Found an NPC");
+					//console.log("NPC message: " + npcMessageArray[i]);
+					talking = true;
+					textHandler(npcMessageArray[i], 12);
+				}
+				else if ((facing == 1) && currentPosition == tu.getIndex(npcArray[i].x, npcArray[i].y + 32, 32, 32, mapWidth)) {
+					//console.log("Started talking below.");
+					//console.log("Found an NPC");
+					//console.log("NPC message: " + npcMessageArray[i]);
+					talking = true;
+					textHandler(npcMessageArray[i], 12);
+				}else {
 					//console.log("No one to talk to here.");
 					//console.log("No Collision");
 					//console.log("Current: " + currentPosition + " NPC " + tu.getIndex(npcArray[i].x, npcArray[i].y, 32, 32, mapWidth));
@@ -107,9 +120,9 @@ function mainCharacterController() {
 					}
 					createjs.Tween.get(mainCharacter).to({x: mainCharacter.x - 32}, 250);
 					createjs.Tween.get(mainCharacter).to({y: mainCharacter.y - 32}, 250);
-					mainCharacter.scale.x = mainCharacterScale;
-					facing = 4;
 				}
+				mainCharacter.scale.x = mainCharacterScale;
+				facing = 4;
 			}
 			else if (keyW && keyD && !keyA && !keyS) {
 				var index = tu.getIndex(mainCharacter.x + 32, mainCharacter.y - 32, 32, 32, mapWidth);
@@ -122,9 +135,9 @@ function mainCharacterController() {
 					}
 					createjs.Tween.get(mainCharacter).to({x: mainCharacter.position.x + 32}, 250);
 					createjs.Tween.get(mainCharacter).to({y: mainCharacter.y - 32}, 250);
-					mainCharacter.scale.x = -mainCharacterScale;
-					facing = 2;
 				}
+				mainCharacter.scale.x = -mainCharacterScale;
+				facing = 2;
 			}
 			else if (keyD && keyS && !keyA && !keyW) {
 				var index = tu.getIndex(mainCharacter.x + 32, mainCharacter.y + 32, 32, 32, mapWidth);
@@ -137,9 +150,9 @@ function mainCharacterController() {
 					}
 					createjs.Tween.get(mainCharacter).to({x: mainCharacter.position.x + 32}, 250);
 					createjs.Tween.get(mainCharacter).to({y: mainCharacter.y + 32}, 250);
-					mainCharacter.scale.x = -mainCharacterScale;
-					facing = 2;
 				}
+				mainCharacter.scale.x = -mainCharacterScale;
+				facing = 2;
 			}
 			else if (keyS && keyA && !keyW && !keyD) {
 				var index = tu.getIndex(mainCharacter.x - 32, mainCharacter.y + 32, 32, 32, mapWidth);
@@ -152,9 +165,9 @@ function mainCharacterController() {
 					}
 					createjs.Tween.get(mainCharacter).to({x: mainCharacter.x - 32}, 250);
 					createjs.Tween.get(mainCharacter).to({y: mainCharacter.y + 32}, 250);
-					mainCharacter.scale.x = mainCharacterScale;
-					facing = 4;
 				}
+				mainCharacter.scale.x = mainCharacterScale;
+				facing = 4;
 			}
 			else {
 				if (keyA) {
@@ -164,10 +177,9 @@ function mainCharacterController() {
 							createjs.Tween.get(mapContainer).to({x: mapContainer.x + mapScale*32}, 250);
 						}
 						createjs.Tween.get(mainCharacter).to({x: mainCharacter.x - 32}, 250);
-						mainCharacter.scale.x = mainCharacterScale;
-						facing = 4;
 					}
-
+					mainCharacter.scale.x = mainCharacterScale;
+					facing = 4;
 				}
 				else if (keyD) {
 					var index = tu.getIndex(mainCharacter.x + 32, mainCharacter.y, 32, 32, mapWidth);
@@ -176,9 +188,9 @@ function mainCharacterController() {
 							createjs.Tween.get(mapContainer).to({x: mapContainer.x - mapScale*32}, 250);
 						}
 						createjs.Tween.get(mainCharacter).to({x: mainCharacter.position.x + 32}, 250);
-						mainCharacter.scale.x = -mainCharacterScale;
-						facing = 2;
 					}
+					facing = 2;
+					mainCharacter.scale.x = -mainCharacterScale;
 				}
 				else if (keyS) {
 					var index = tu.getIndex(mainCharacter.x, mainCharacter.y + 32, 32, 32, mapWidth);
@@ -187,8 +199,8 @@ function mainCharacterController() {
 							createjs.Tween.get(mapContainer).to({y: mapContainer.y - mapScale*32}, 250);
 						}
 						createjs.Tween.get(mainCharacter).to({y: mainCharacter.y + 32}, 250);
-						facing = 3;
 					}
+					facing = 3;
 				}
 				else if (keyW) {
 					var index = tu.getIndex(mainCharacter.x, mainCharacter.y - 32, 32, 32, mapWidth);
@@ -197,8 +209,8 @@ function mainCharacterController() {
 							createjs.Tween.get(mapContainer).to({y: mapContainer.y + mapScale*32}, 250);
 						}
 						createjs.Tween.get(mainCharacter).to({y: mainCharacter.y - 32}, 250);
-						facing = 1;
 					}
+					facing = 1;
 				}
 			}
 		}
