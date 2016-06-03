@@ -31,7 +31,7 @@ function FirstForestLoader(){
   npcStartArray = [];
 
   var characterLayer = forest.getObject("CharacterLayer");
-  LoadNPC(172, 0, "./assets/Forest/img/hoegarth", 1, "There is a monster in the Dungeon to\nthe South! We need him gone before my\nelves can drink their tea! I heard\nthere might also be a mighty shield\nsomewhere down there!");
+  LoadNPC(172, 0, "./assets/Forest/img/hoegarth", 1, "There are monsters in the Dungeon to\nthe South! We need him gone before my\nelves can drink their tea! I heard\nthere might also be a mighty shield\nsomewhere down there!");
   LoadNPC(385, 4, "./assets/Forest/img/elf1", 3, "I kind of hate you.");
   LoadNPC(193, 4, "./assets/Forest/img/elf2", 3, "Why are you in our forest?!");
   LoadNPC(439, 4, "./assets/Forest/img/elf3", 3, "We don't appreciate your kind here!");

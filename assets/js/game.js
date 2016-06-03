@@ -55,6 +55,8 @@ function Ready() {
 	FirstPlainsDungeonLoader();
 
 
+  npcMoving = setInterval(NPCMovement, npcSpeed);
+
 
 	mapContainer.position.x = -20;
 	mapContainer.position.y = -20;

@@ -1,5 +1,6 @@
 function textHandler(inputText, inputSize){
   if(!isText){
+    clearInterval(npcMoving);
     isText = true;
   	moving = false;
     talking = true;
@@ -30,5 +31,6 @@ function waitForUser(){
 		stage.removeChild(TextBackground);
 		moving = true;
 		isText = false;
+    npcMoving = setInterval(NPCMovement, npcSpeed);
 	}
 }

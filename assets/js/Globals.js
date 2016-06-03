@@ -57,7 +57,9 @@ var stage = new PIXI.Container(),
 /////////////////////////////
 var npcArray = [],
 	npcStartArray = [],
-	npcRangeArray = [];
+	npcRangeArray = [],
+	npcMoving,
+	npcSpeed = 4000;
 
 
 /////////////////////////////

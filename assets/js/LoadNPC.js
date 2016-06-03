@@ -186,5 +186,5 @@ function NPCMovement() {
 			}
 		}
 	}
-	setTimeout(NPCMovement, 7000);
+	//setTimeout(NPCMovement, 7000);
 }
