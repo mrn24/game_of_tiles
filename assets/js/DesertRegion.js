@@ -7,6 +7,7 @@ var Fountain;
 var desertNpcArray = [];
 var desertNpcRangeArray = [];
 var desertNpcMessageArray = [];
+var desertNpcStartArray = [];
 
 function FirstDesertLoader(){
 
@@ -50,13 +51,15 @@ function FirstDesertLoader(){
   LoadNPC(260, 4, './assets/Desert/Sprites/DesertWoman', 4, "Have you seen the oasis to the south\n east?  It's beautiful but it \nwas recently taken over by bandits.");
   //desertContainer.addChild(npcArray[0]);
   desertNpcArray.push(npcArray[0]);
+  desertNpcStartArray.push(npcStartArray[0]);
   desertNpcRangeArray.push(npcRangeArray[0]);
   desertNpcMessageArray.push(npcMessageArray[0]);
   characterLayer.addChild(npcArray[0]);
 
-  LoadNPC(340, 2, './assets/Desert/Sprites/DesertWoman', 4, "It's hot!");
+  LoadNPC(338, 2, './assets/Desert/Sprites/DesertWoman', 4, "It's hot!");
   //desertContainer.addChild(npcArray[1]);
   desertNpcArray.push(npcArray[1]);
+  desertNpcStartArray.push(npcStartArray[1]);
   desertNpcRangeArray.push(npcRangeArray[1]);
   desertNpcMessageArray.push(npcMessageArray[1]);
   characterLayer.addChild(npcArray[1]);
@@ -64,17 +67,20 @@ function FirstDesertLoader(){
   LoadNPC(180, 0, './assets/Desert/Sprites/DesertKing', 4, "Go do your quest.");
   //desertContainer.addChild(npcArray[2]);
   desertNpcArray.push(npcArray[2]);
+  desertNpcStartArray.push(npcStartArray[2]);
   desertNpcRangeArray.push(npcRangeArray[2]);
   desertNpcMessageArray.push(npcMessageArray[2]);
   characterLayer.addChild(npcArray[2]);
 
-  LoadNPC(306, 1, './assets/Desert/Sprites/DesertMan', 4, "It's the desert!");
+  LoadNPC(346, 1, './assets/Desert/Sprites/DesertMan', 4, "It's the desert!");
   //desertContainer.addChild(npcArray[3]);
   desertNpcArray.push(npcArray[3]);
+  desertNpcStartArray.push(npcStartArray[3]);
   desertNpcRangeArray.push(npcRangeArray[3]);
   desertNpcMessageArray.push(npcMessageArray[3]);
   characterLayer.addChild(npcArray[3]);
 
+  NPCMovement();
   mapContainer.addChild(desertContainer);
   desertContainer.visible = false;
 
@@ -112,6 +118,7 @@ function DesertLoader(){
   npcArray = desertNpcArray;
   npcRangeArray = desertNpcRangeArray;
   npcMessageArray = desertNpcMessageArray;
+  npcStartArray = desertNpcStartArray;
   //currentmap = desert;
 
   
@@ -123,17 +130,17 @@ function DesertLoader(){
 
 if (previousMap == plains){
   startX = 688;
-  startY = 903;
+  startY = 839;
 
 }
-else if (previousMap == plains){
-  startX = 1232;
+else if (previousMap == forest){
+  startX = 1104;
   startY = 487;
 
 }
 else if (previousMap == desertDungeon){
-  startX = 80;
-  startY = 871;
+  startX = 240;
+  startY = 743;
 }
 
   
@@ -154,25 +161,26 @@ else if (previousMap == desertDungeon){
 
 function DesertEntranceChecker(){
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), desertEntrances)){
-    clearInterval(desertEntranceChecking);
-    console.log("found entrance in desert");
+    if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0){
+      clearInterval(desertEntranceChecking);
+      console.log("found entrance in desert");
 
-    if (mainCharacter.x == 1264){
-      console.log("going to forest");
-      MapTransition(forest);
-      desertContainer.visible = false;
-    }
+      if (mainCharacter.x == 1232){
+        console.log("going to forest");
+        MapTransition(forest);
+        desertContainer.visible = false;
+      }
 
-    else if (mainCharacter.x == 688){
-      console.log("going to plains");
-      MapTransition(plains);
-      desertContainer.visible = false;
-    }
+      else if (mainCharacter.x == 688){
+        console.log("going to plains");
+        MapTransition(plains);
+        desertContainer.visible = false;
+      }
 
-    else if (mainCharacter.x == 80){
-      MapTransition(desertDungeon)
-      desertContainer.visible = false;
-    } 
-
+      else if (mainCharacter.x == 80){
+        MapTransition(desertDungeon)
+        desertContainer.visible = false;
+      } 
+  }
   }
 }

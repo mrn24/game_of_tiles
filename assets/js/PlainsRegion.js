@@ -72,7 +72,7 @@ function FirstPlainsLoader(){
 	plainsNpcMessageArray.push(npcMessageArray[3]);
 	characterLayer.addChild(plainsNpcArray[3]);
 	*/
-	NPCMovement();
+	
   mapContainer.addChild(plainsContainer);
   plainsContainer.visible = false;
 }
@@ -93,6 +93,7 @@ function PlainsLoader(){
   npcRangeArray = plainsNpcRangeArray;
   npcMessageArray = plainsNpcMessageArray;
   npcStartArray = plainsNpcStartArray;
+
   
   if (previousMap == plains) {
 	  	startX = 592;
