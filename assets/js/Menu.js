@@ -242,6 +242,7 @@ blazerFaceSprite.position.y = 79;
 function onblazerDown(e){
   if(this == blazerFaceSprite){
     stage.removeChild(creditsScreenContainer);
+    HiBlazerSound.play();
     stage.addChild(personalBlazerContainer);
   }
 }
@@ -261,6 +262,7 @@ curtisFaceSprite.position.y = 79;
 function oncurtisDown(e){
   if(this == curtisFaceSprite){
     stage.removeChild(creditsScreenContainer);
+    HiCurtisSound.play();
     stage.addChild(personalCurtisContainer);
   }
 }
@@ -280,6 +282,7 @@ mattFaceSprite.position.y = 400;
 function onmattDown(e){
   if(this == mattFaceSprite){
     stage.removeChild(creditsScreenContainer);
+    HiMattSound.play();
     stage.addChild(personalMattContainer);
   }
 }
@@ -299,6 +302,7 @@ johnFaceSprite.position.y = 385;
 function onjohnDown(e){
   if(this == johnFaceSprite){
     stage.removeChild(creditsScreenContainer);
+    HiJohnSound.play();
     stage.addChild(personalJohnContainer);
   }
 }

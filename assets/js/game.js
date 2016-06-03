@@ -34,6 +34,10 @@ PIXI.loader
     .add("./assets/Sounds/MonsterAttack.mp3")
     .add("./assets/Sounds/MonsterDie.mp3")
     .add("./assets/Sounds/Uncle.mp3")
+    .add("./assets/Sounds/HiBlazer.mp3")
+    .add("./assets/Sounds/HiCurtis.mp3")
+    .add("./assets/Sounds/HiMatt.mp3")
+    .add("./assets/Sounds/HiJohn.mp3")
     .add("./assets/Sounds/Slash.mp3")
 	.load(Ready);
 
@@ -54,6 +58,10 @@ function Ready() {
     MonsterDieSound = PIXI.audioManager.getAudio("./assets/Sounds/MonsterDie.mp3");
     UncleSound = PIXI.audioManager.getAudio("./assets/Sounds/Uncle.mp3");
     SlashSound = PIXI.audioManager.getAudio("./assets/Sounds/Slash.mp3");
+    HiCuritsSound = PIXI.audioManager.getAudio("./assets/Sounds/HiCurtis.mp3");
+    HiBlazerSound = PIXI.audioManager.getAudio("./assets/Sounds/HiBlazer.mp3");
+    HiMattSound = PIXI.audioManager.getAudio("./assets/Sounds/HiMatt.mp3");
+    HiJohnSound = PIXI.audioManager.getAudio("./assets/Sounds/HiJohn.mp3");
 
 	forest = tu.makeTiledWorld("Forest_json", "./assets/Forest/img/forest_tileset.png");
 	desert = tu.makeTiledWorld("Desert_json", "./assets/Desert/DesertTileset.png");
