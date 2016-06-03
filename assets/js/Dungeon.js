@@ -15,6 +15,9 @@ var desertDungeonEnemyArray = [];
 var desertDungeonEnemyRangeArray = [];
 var desertDungeonEnemyStartArray = [];
 
+var desertDungeonEnemyDyingArray = [];
+var desertDungeonEnemyAttackingArray = []
+
 
 function FirstDesertDungeonLoader(){
   world = desertDungeon;
@@ -79,6 +82,33 @@ function FirstDesertDungeonLoader(){
   desertDungeonEnemyRangeArray.push(enemyRangeArray[3]);
   characterLayer.addChild(enemyArray[3]);
 
+  LoadDyingEnemy('./assets/Dungeon/monsters/Raider/Dying/raiderdying', 13);
+  desertDungeonEnemyDyingArray.push(enemyDyingArray[0]);
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/Raider/Dying/raiderdying', 13);
+  desertDungeonEnemyDyingArray.push(enemyDyingArray[1]);
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/Skeleton/Dying/skeletondying', 13);
+  desertDungeonEnemyDyingArray.push(enemyDyingArray[2]);
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/Skeleton/Dying/skeletondying', 13);
+  desertDungeonEnemyDyingArray.push(enemyDyingArray[3]);
+
+  LoadAttackingEnemy('./assets/Dungeon/monsters/Raider/Attacking/raiderattack', 17);
+  desertDungeonEnemyAttackingArray.push(enemyAttackingArray[0]);
+
+  LoadAttackingEnemy('./assets/Dungeon/monsters/Raider/Attacking/raiderattack', 17);
+  desertDungeonEnemyAttackingArray.push(enemyAttackingArray[1]);
+
+  LoadAttackingEnemy('./assets/Dungeon/monsters/Skeleton/Attacking/skeletonattack', 12);
+  desertDungeonEnemyAttackingArray.push(enemyAttackingArray[2]);
+
+  LoadAttackingEnemy('./assets/Dungeon/monsters/Skeleton/Attacking/skeletonattack', 12);
+  desertDungeonEnemyAttackingArray.push(enemyAttackingArray[3]);
+
+
+
+
   //call loadnpc with map.
 
 
@@ -109,6 +139,9 @@ function desertDungeonLoader(){
     enemyArray = desertDungeonEnemyArray;
     enemyRangeArray = desertDungeonEnemyRangeArray;
     enemyStartArray = desertDungeonEnemyStartArray;
+
+    enemyDyingArray = desertDungeonEnemyDyingArray;
+    enemyAttackingArray = desertDungeonEnemyAttackingArray;
 
 
 
@@ -151,9 +184,14 @@ var ForestDungeonMapWidth = 30;
 var ForestDungeonMap;
 
 
-var forestDungeonEnemyArray = [];
+
+
 var forestDungeonEnemyRangeArray = [];
 var forestDungeonEnemyStartArray = [];
+
+var forestDungeonEnemyDyingArray = [];
+var forestDungeonEnemyArray = [];
+var forestDungeonEnemyAttackingArray = []
 
 function FirstForestDungeonLoader(){
   world = forestDungeon;
@@ -221,6 +259,39 @@ function FirstForestDungeonLoader(){
   forestDungeonEnemyRangeArray.push(enemyRangeArray[4]);
   characterLayer.addChild(enemyArray[4]);
 
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/Raider/Dying/raiderdying', 13);
+  forestDungeonEnemyDyingArray.push(enemyDyingArray[0]);
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/Raider/Dying/raiderdying', 13);
+  forestDungeonEnemyDyingArray.push(enemyDyingArray[1]);
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/Skeleton/Dying/skeletondying', 13);
+  forestDungeonEnemyDyingArray.push(enemyDyingArray[2]);
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/Skeleton/Dying/skeletondying', 13);
+  forestDungeonEnemyDyingArray.push(enemyDyingArray[3]);
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/SandGolem/Dying/sgdying', 13);
+  forestDungeonEnemyDyingArray.push(enemyDyingArray[4]);
+
+  LoadAttackingEnemy('./assets/Dungeon/monsters/Raider/Attacking/raiderattack', 17);
+  forestDungeonEnemyAttackingArray.push(enemyAttackingArray[0]);
+
+  LoadAttackingEnemy('./assets/Dungeon/monsters/Raider/Attacking/raiderattack', 17);
+  forestDungeonEnemyAttackingArray.push(enemyAttackingArray[1]);
+
+  LoadAttackingEnemy('./assets/Dungeon/monsters/Skeleton/Attacking/skeletonattack', 12);
+  forestDungeonEnemyAttackingArray.push(enemyAttackingArray[2]);
+
+  LoadAttackingEnemy('./assets/Dungeon/monsters/Skeleton/Attacking/skeletonattack', 12);
+  forestDungeonEnemyAttackingArray.push(enemyAttackingArray[3]);
+
+  LoadAttackingEnemy('./assets/Dungeon/monsters/SandGolem/Attacking/sgattack', 13);
+  forestDungeonEnemyAttackingArray.push(enemyAttackingArray[4]);
+
+
+
   //call loadnpc with map.
 
 }
@@ -251,6 +322,9 @@ function forestDungeonLoader(){
   enemyArray = forestDungeonEnemyArray;
   enemyRangeArray = forestDungeonEnemyRangeArray;
   enemyStartArray = forestDungeonEnemyStartArray;
+
+  enemyDyingArray = forestDungeonEnemyDyingArray;
+  enemyAttackingArray = forestDungeonEnemyAttackingArray;
 
   //
   // var textureArray2 = [];
@@ -305,6 +379,10 @@ var plainsDungeonEnemyArray = [];
 var plainsDungeonEnemyRangeArray = [];
 var plainsDungeonEnemyStartArray = [];
 
+var plainsDungeonEnemyDyingArray = [];
+var plainsDungeonEnemyArray = [];
+var plainsDungeonEnemyAttackingArray = []
+
 function FirstPlainsDungeonLoader(){
   world = plainsDungeon;
   PlainsDungeonMap = plainsDungeon.getObject("CollisionLayer").data;
@@ -336,6 +414,15 @@ function FirstPlainsDungeonLoader(){
   plainsDungeonEnemyRangeArray.push(enemyRangeArray[0]);
   characterLayer.addChild(enemyArray[0]);
 
+
+  LoadDyingEnemy('./assets/Dungeon/monsters/Raider/Dying/raiderdying', 13);
+  plainsDungeonEnemyDyingArray.push(enemyDyingArray[0]);
+
+  LoadAttackingEnemy('./assets/Dungeon/monsters/Raider/Attacking/raiderattack', 17);
+  plainsDungeonEnemyAttackingArray.push(enemyAttackingArray[0]);
+
+
+
 }
 
 function plainsDungeonLoader(){
@@ -363,6 +450,9 @@ function plainsDungeonLoader(){
   enemyArray = plainsDungeonEnemyArray;
   enemyRangeArray = plainsDungeonEnemyRangeArray;
   enemyStartArray = plainsDungeonEnemyStartArray;
+
+  enemyDyingArray = plainsDungeonEnemyDyingArray;
+  enemyAttackingArray = plainsDungeonEnemyAttackingArray;
 }
 
 function plainsDungeonEntranceChecker(){
