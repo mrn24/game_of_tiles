@@ -228,16 +228,16 @@ function DesertEntranceChecker(){
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), desertEntrances)){
     if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0){
       clearInterval(desertEntranceChecking);
-      console.log("found entrance in desert");
+      //console.log("found entrance in desert");
 
       if (mainCharacter.x == 1232){
-        console.log("going to forest");
+        //console.log("going to forest");
         MapTransition(forest);
         desertContainer.visible = false;
       }
 
       else if (mainCharacter.x == 688){
-        console.log("going to plains");
+        //console.log("going to plains");
         MapTransition(plains);
         desertContainer.visible = false;
       }

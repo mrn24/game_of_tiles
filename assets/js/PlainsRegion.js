@@ -183,7 +183,7 @@ function PlainsEntranceChecker(){
 
 	//Grab sword
   if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 2166 && !hasSword){
-    console.log("Grabbed sword");
+    //console.log("Grabbed sword");
     LoadSword();
     hasSword = true;
 	plainsContainer.removeChild(swordSprite);
@@ -195,7 +195,7 @@ function PlainsEntranceChecker(){
 		npcMessageArray[6] = "Oh! You spoke to your uncle?\nYou might head into the forest now.\nI heard King Hoegarth of the elven \nkindgom needs help!";
 		npcMessageArray[0] = "The King of the Elves needs your help.\nHe may have a reward for your\nassistance.";
 	} else if (hasShield) {
-		npcMessageArray[6] = "Wow great shield! I wish I had one!";
+		npcMessageArray[6] = "Wow, great shield!\nKingsguard don't have them.";
 		npcMessageArray[5] = "You might go to the desert realm.\nTheir King needs help.";
 		npcMessageArray[0] = "Wow! You are turning into quite an adventurer.\nHead to the desert to help their king!";
 	}
@@ -217,7 +217,7 @@ function PlainsEntranceChecker(){
 				plainsContainer.visible = false;
 				clearInterval(plainsEntranceChecking);
 			}else{
-				console.log("No forest possible!");
+				//console.log("No forest possible!");
 				createjs.Tween.get(mainCharacter).to({x: mainCharacter.position.x - 32}, 250);
 				textHandler("You need to be able to protect yourself\nbefore going to the forest!", 10);
 			}
@@ -229,7 +229,7 @@ function PlainsEntranceChecker(){
 			plainsContainer.visible = false;
 			clearInterval(plainsEntranceChecking);
 		}else{
-			console.log("No desert possible!");
+			//console.log("No desert possible!");
 			createjs.Tween.get(mainCharacter).to({y: mainCharacter.position.y + 32}, 250);
 			textHandler("You still have some things to do\nbefore entering the desert!", 10);
 		}
@@ -240,13 +240,13 @@ function PlainsEntranceChecker(){
 			plainsContainer.visible = false;
 			clearInterval(plainsEntranceChecking);
 		}else{
-			console.log("No dungeon possible!");
+			//console.log("No dungeon possible!");
 			createjs.Tween.get(mapContainer).to({x: mapContainer.x + mapScale*32}, 250);
 			createjs.Tween.get(mainCharacter).to({x: mainCharacter.position.x - 32}, 250);
 			textHandler("You need to be able to protect yourself\nbefore going to the dungeon!", 10);
 	}
 }else {
-		console.log("Dead");
+		//console.log("Dead");
 	}
 
   }

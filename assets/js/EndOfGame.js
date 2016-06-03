@@ -21,7 +21,7 @@ function EndGame(){
 }
 
 function ChoiceKill(){
-  console.log("You choose to kill!");
+  //console.log("You choose to kill!");
   //Attack Animation,
   //Killed him win.
   SlashSound.play();
@@ -29,7 +29,7 @@ function ChoiceKill(){
 }
 
 function ChoiceLive(){
-  console.log("You chose to let him live!");
+  //console.log("You chose to let him live!");
   //Tween away.
   //Didn't kill him win animation.
   fontContainer.removeChildren();

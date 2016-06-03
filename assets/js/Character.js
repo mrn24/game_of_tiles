@@ -93,7 +93,7 @@ function LoadSwordShield() {
 	mainCharacter.children[1].visible = false;
 	mainCharacter.children[1].scale.x = mainCharacterScale;
 	mainCharacter.children[1].scale.y = mainCharacterScale;
-	console.log("MORE HEALTH!");
+	//console.log("MORE HEALTH!");
 
 	textureArray = [];
 	textureArray = [];

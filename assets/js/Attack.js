@@ -10,7 +10,7 @@ function CharacterAttack (index) {
 	// }
 
 	var characterLayer = world.getObject("CharacterLayer");
-	console.log("trying to attack");
+	//console.log("trying to attack");
 	tempx = enemyArray[index].x;
 	tempy = enemyArray[index].y;
 	//enemyArray[0].destroy();
@@ -27,8 +27,8 @@ function CharacterAttack (index) {
 }
 
 function MonsterAttack (index, scaleswitch) {
-	console.log(enemyArray[index].visible);
-	console.log(enemyAttackingArray[index].visible);
+	//console.log(enemyArray[index].visible);
+	//console.log(enemyAttackingArray[index].visible);
 	if (!enemyArray[index].visible) {
 		enemyAttackingArray[index].visible = false;
 	}
@@ -59,7 +59,7 @@ function MonsterAttack (index, scaleswitch) {
 			enemyAttackingArray[index].x = tempx;
 			enemyAttackingArray[index].y = tempy;
 			characterLayer.addChild(enemyAttackingArray[index]);
-			console.log("trying to add enemy attacking animation");
+			//console.log("trying to add enemy attacking animation");
 
 
 			enemyAttackingArray[index].gotoAndPlay(0);

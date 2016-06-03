@@ -117,7 +117,7 @@ function FirstDesertDungeonLoader(){
 
 function desertDungeonLoader(){
   world = desertDungeon;
-  console.log("loading desertDungeon!")
+  //console.log("loading desertDungeon!")
   mapWidth = DesertDungeonMapWidth;
   desertDungeonContainer.visible = true;
   //////////////////////////////
@@ -152,7 +152,7 @@ function desertDungeonLoader(){
 function desertDungeonEntranceChecker(){
 
   if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 592 && !hasPotato){
-    console.log("Ate potato");
+    //console.log("Ate potato");
     desertDungeonContainer.removeChild(potatoSprite);
     hasPotato = true;
     textHandler("You've eaten the" + "\noverpowered\npotato", 20);
@@ -164,7 +164,7 @@ function desertDungeonEntranceChecker(){
       if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0){
     clearInterval(DesertDungeonEntranceChecking);
     MapTransition(desert);
-    console.log("Found Entrance!");
+    //console.log("Found Entrance!");
 
     desertDungeonContainer.visible = false;
   }
@@ -300,7 +300,7 @@ function FirstForestDungeonLoader(){
 
 function forestDungeonLoader(){
   world = forestDungeon;
-  console.log("loading desertDungeon!")
+  //console.log("loading desertDungeon!")
   mapWidth = ForestDungeonMapWidth;
   forestDungeonContainer.visible = true;
   //////////////////////////////
@@ -346,7 +346,7 @@ function forestDungeonEntranceChecker(){
 
   //Grab shield
   if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 803 && !hasShield){
-    console.log("Grabbed shield");
+    //console.log("Grabbed shield");
     characterLayer.removeChild(mainCharacter);
     LoadSwordShield();
     characterLayer = forestDungeon.getObject("CharacterLayer");
@@ -363,7 +363,7 @@ function forestDungeonEntranceChecker(){
       if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0){
     clearInterval(ForestDungeonEntranceChecking);
     MapTransition(forest);
-    console.log("Found Entrance!")
+    //console.log("Found Entrance!")
 
     forestDungeonContainer.visible = false;
   }
@@ -431,7 +431,7 @@ function FirstPlainsDungeonLoader(){
 
 function plainsDungeonLoader(){
   world = plainsDungeon;
-  console.log("loading desertDungeon!")
+  //console.log("loading desertDungeon!")
   mapWidth = PlainsDungeonMapWidth;
   plainsDungeonContainer.visible = true;
   //////////////////////////////
@@ -464,7 +464,7 @@ function plainsDungeonEntranceChecker(){
       if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0){
     clearInterval(PlainsDungeonEntranceChecking);
     MapTransition(plains);
-    console.log("Found Entrance!")
+    //console.log("Found Entrance!")
 
     plainsDungeonContainer.visible = false;
   }

@@ -129,7 +129,7 @@ function FirstForestLoader(){
 }
 
 function ForestLoader(){
-  console.log("loading Forest!")
+  //console.log("loading Forest!")
   mapWidth = forestMapWidth;
   forestContainer.visible = true;
   world = forest;
@@ -156,7 +156,7 @@ function ForestLoader(){
   enemyAttackingArray = forestEnemyAttackingArray;
 
   if(hasShield){
-    forestMessageArray[0] = "Thank you so much for handling that\nfor us! Your next destination is the\ndesert to the east!";
+    forestMessageArray[0] = "Thank you so much for handling that\nfor us! Your next destination is the\ndesert to the west!";
     forestMessageArray[1] = "Yipee!!!";
     forestMessageArray[2] = "You have saved us all!";
     forestMessageArray[3] = "Thank you!";
@@ -173,7 +173,7 @@ function ForestLoader(){
     startX = 656;
     startY = 839;
   }else{
-    console.log("broken");
+    //console.log("broken");
   }
   var characterLayer = forest.getObject("CharacterLayer");
   characterLayer.addChild(mainCharacter);
@@ -186,7 +186,7 @@ function ForestLoader(){
 function ForestEntranceChecker(){
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), forestEntrances)){
     if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0){
-      console.log("Found Entrance!");
+      //console.log("Found Entrance!");
       //Which entrance?, send to transition function
       //Plains leave 855
       //Forest dungeon 770
@@ -194,28 +194,28 @@ function ForestEntranceChecker(){
       if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 361) {
 
           if(hasShield){
-            console.log("Going to Desert");
+            //console.log("Going to Desert");
     	       MapTransition(desert);
              clearInterval(forestEntranceChecking);
              forestContainer.visible = false;
            }else{
-             console.log("No desert possible!");
+             //console.log("No desert possible!");
              createjs.Tween.get(mainCharacter).to({x: mainCharacter.position.x + 32}, 250);
              textHandler("You still need something from the Forest!", 10);
            }
         }
     	else if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 855) {
-    		console.log("Going to Plains");
+    		//console.log("Going to Plains");
     		MapTransition(plains);
         clearInterval(forestEntranceChecking);
         forestContainer.visible = false;
     	} else if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 770) {
-    		console.log("Going to Dungeon");
+    		//console.log("Going to Dungeon");
     		MapTransition(forestDungeon);
         clearInterval(forestEntranceChecking);
         forestContainer.visible = false;
     	} else {
-    		console.log("Dead");
+    		//console.log("Dead");
     	}
 
     }

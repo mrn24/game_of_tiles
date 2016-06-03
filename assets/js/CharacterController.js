@@ -112,26 +112,26 @@ function mainCharacterController() {
 			//console.log("Facing " + facing);
 			for (var i = 0; i < npcArray.length; i++) {
 				//console.log(tu.getIndex(npcArray[i].x, npcArray[i].y, 32, 32, mapWidth));
-				if ((facing == 2) && currentPosition == tu.getIndex(npcArray[i].x - 32, npcArray[i].y, 32, 32, mapWidth)) {
+				if ((facingTalking == 2) && currentPosition == tu.getIndex(npcArray[i].x - 32, npcArray[i].y, 32, 32, mapWidth)) {
 					//console.log("Started talking to the right.");
 					talking = true;
 					//console.log("Found an NPC");
 					//console.log("NPC message: " + npcMessageArray[i]);
 					textHandler(npcMessageArray[i], 12);
-				} else if ((facing == 4) && currentPosition == tu.getIndex(npcArray[i].x + 32, npcArray[i].y, 32, 32, mapWidth)) {
+				} else if ((facingTalking == 4) && currentPosition == tu.getIndex(npcArray[i].x + 32, npcArray[i].y, 32, 32, mapWidth)) {
 					//console.log("Started talking to the left.");
 					//console.log("Found an NPC");
 					//console.log("NPC message: " + npcMessageArray[i]);
 					talking = true;
 					textHandler(npcMessageArray[i], 12);
-				} else if ((facing == 3) && currentPosition == tu.getIndex(npcArray[i].x, npcArray[i].y - 32, 32, 32, mapWidth)) {
+				} else if ((facingTalking == 3) && currentPosition == tu.getIndex(npcArray[i].x, npcArray[i].y - 32, 32, 32, mapWidth)) {
 					//console.log("Started talking above.");
 					//console.log("Found an NPC");
 					//console.log("NPC message: " + npcMessageArray[i]);
 					talking = true;
 					textHandler(npcMessageArray[i], 12);
 				}
-				else if ((facing == 1) && currentPosition == tu.getIndex(npcArray[i].x, npcArray[i].y + 32, 32, 32, mapWidth)) {
+				else if ((facingTalking == 1) && currentPosition == tu.getIndex(npcArray[i].x, npcArray[i].y + 32, 32, 32, mapWidth)) {
 					//console.log("Started talking below.");
 					//console.log("Found an NPC");
 					//console.log("NPC message: " + npcMessageArray[i]);
@@ -171,7 +171,7 @@ function mainCharacterController() {
 				if(hasSword){
 					mainCharacter.children[3].scale.x = mainCharacterScale;
 				}
-				
+				facingTalking = 4;
 				facing = 4;
 			}
 			else if (keyW && keyD && !keyA && !keyS) {
@@ -193,7 +193,7 @@ function mainCharacterController() {
 				if(hasSword){
 					mainCharacter.children[3].scale.x = -mainCharacterScale;
 				}
-				
+				facingTalking = 2;
 				facing = 2;
 			}
 			else if (keyD && keyS && !keyA && !keyW) {
@@ -215,7 +215,7 @@ function mainCharacterController() {
 				if(hasSword){
 					mainCharacter.children[3].scale.x = -mainCharacterScale;
 				}
-				
+				facingTalking = 2;
 				facing = 2;
 			}
 			else if (keyS && keyA && !keyW && !keyD) {
@@ -237,7 +237,7 @@ function mainCharacterController() {
 				if(hasSword){
 					mainCharacter.children[3].scale.x = mainCharacterScale;
 				}
-				
+				facingTalking = 4;
 				facing = 4;
 			}
 			else {
@@ -256,7 +256,7 @@ function mainCharacterController() {
 					if(hasSword){
 						mainCharacter.children[3].scale.x = mainCharacterScale;
 					}
-					
+					facingTalking = 4;
 					facing = 4;
 				}
 				else if (keyD) {
@@ -267,6 +267,7 @@ function mainCharacterController() {
 						}
 						createjs.Tween.get(mainCharacter).to({x: mainCharacter.position.x + 32}, 250);
 					}
+					facingTalking = 2;
 					facing = 2;
 					mainCharacter.children[0].visible = true;
 					mainCharacter.children[1].visible = false;
@@ -287,6 +288,7 @@ function mainCharacterController() {
 					}
 					mainCharacter.children[0].visible = true;
 					mainCharacter.children[1].visible = false;
+					facingTalking = 3;
 				}
 				else if (keyW) {
 					var index = tu.getIndex(mainCharacter.x, mainCharacter.y - 32, 32, 32, mapWidth);
@@ -298,6 +300,7 @@ function mainCharacterController() {
 					}
 					mainCharacter.children[0].visible = false;
 					mainCharacter.children[1].visible = true;
+					facingTalking = 1;
 				}
 			}
 		}
