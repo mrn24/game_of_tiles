@@ -46,6 +46,7 @@ function FirstPlainsLoader(){
 	plainsNpcMessageArray.push(npcMessageArray[0]);
 	characterLayer.addChild(plainsNpcArray[0]);
 	*/
+
 	LoadNPC(1552,2,"./assets/Desert/Sprites/DesertWoman", 4, "I'm NPC two.");
 	plainsNpcArray.push(npcArray[0]);
 	plainsNpcRangeArray.push(npcRangeArray[0]);
@@ -64,6 +65,26 @@ function FirstPlainsLoader(){
 	plainsNpcMessageArray.push(npcMessageArray[2]);
 	plainsNpcStartArray.push(npcStartArray[2]);
 	characterLayer.addChild(plainsNpcArray[2]);
+
+
+	LoadNPC(1663,2,"./assets/Character/Uncle", 4, "\nNow that you've grown."
+	+ "\nI must tell you, your mother and"
+	+ "\nfather were killed by our King."
+	+ "\nThis was your father's. Take this and"
+	+ "\nfind the answers that haunt our town.");
+	plainsNpcArray.push(npcArray[3]);
+	plainsNpcRangeArray.push(npcRangeArray[3]);
+	plainsNpcMessageArray.push(npcMessageArray[3]);
+	plainsNpcStartArray.push(npcStartArray[3]);
+	characterLayer.addChild(plainsNpcArray[3]);
+
+
+
+
+
+
+
+
 	/*
 	LoadNPC(2006,8,"./assets/Characters/NPCs/Enemy", 4, "I'm NPC three.");
 	plainsNpcArray.push(npcArray[2]);

@@ -192,7 +192,7 @@ function onbackDown(e){
   if(this == swordbackSprite){
     stage.addChild(menuScreenContainer);
     stage.removeChild(creditsScreenContainer);
-    stage.removeChild(personalBlazerContainernContainer);
+    stage.removeChild(personalBlazerContainer);
     stage.removeChild(personalCurtisContainer);
     stage.removeChild(personalMattContainer);
     stage.removeChild(personalJohnContainer);
