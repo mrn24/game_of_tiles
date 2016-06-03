@@ -148,7 +148,6 @@ function DesertLoader(){
   enemyRangeArray = desertEnemyRangeArray;
   enemyStartArray = desertEnemyStartArray;
 
-  enemyArray = 
   //currentmap = desert;
 
   

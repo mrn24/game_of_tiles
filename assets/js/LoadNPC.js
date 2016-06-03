@@ -121,7 +121,7 @@ function EnemyMovement() {
 			}
 		}
 	}
-	setTimeout(EnemyMovement, 7000);
+	setTimeout(EnemyMovement, 1000);
 }
 
 function NPCMovement() {
