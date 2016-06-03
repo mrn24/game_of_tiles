@@ -54,12 +54,14 @@ function desertDungeonLoader(){
 
 function desertDungeonEntranceChecker(){
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), DesertDungeonEntrances)){
+      if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0){
     clearInterval(DesertDungeonEntranceChecking);
     MapTransition(desert);
     console.log("Found Entrance!");
 
     desertDungeonContainer.visible = false;
   }
+}
 }
 
 
@@ -93,6 +95,8 @@ function FirstForestDungeonLoader(){
   //Spawning shield
   var shield = new PIXI.Texture.fromImage("./assets/Dungeon/MainChar/Shield/shield1.png");
   shieldSprite = new PIXI.Sprite(shield);
+  shieldSprite.anchor.x = 0.5;
+  shieldSprite.anchor.y = 0.5;
   shieldSprite.position.x = 752;
   shieldSprite.position.y = 839;
 
@@ -157,12 +161,14 @@ function forestDungeonEntranceChecker(){
 
 
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), ForestDungeonEntrances)){
+      if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0){
     clearInterval(ForestDungeonEntranceChecking);
     MapTransition(forest);
     console.log("Found Entrance!")
 
     forestDungeonContainer.visible = false;
   }
+}
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -217,10 +223,12 @@ function plainsDungeonLoader(){
 
 function plainsDungeonEntranceChecker(){
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), PlainsDungeonEntrances)){
+      if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0){
     clearInterval(PlainsDungeonEntranceChecking);
     MapTransition(plains);
     console.log("Found Entrance!")
 
     plainsDungeonContainer.visible = false;
   }
+}
 }

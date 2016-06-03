@@ -55,6 +55,7 @@ function checkKeyReleased(key) {
 }
 
 function mainCharacterController() {
+
 	if (keyEnter) {
 		toIndex();
 		//console.log("Attempting talking/Exiting");

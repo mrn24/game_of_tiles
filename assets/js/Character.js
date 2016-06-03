@@ -6,13 +6,6 @@ function LoadCharacter() {
 		textureArray.push(texture);
 	}
 
-	var textureArray2 = [];
-	for (var i = 1; i < 5; i++) {
-		texture2 = new PIXI.Texture.fromImage("./assets/Dungeon/MainChar/CharSwordShield/CharacterSwordShield"+i+".png");
-		textureArray2.push(texture2);
-	}
-
-
 	mainCharacter = new PIXI.extras.MovieClip(textureArray);
 	mainCharacter.anchor.x = 0.5;
 	mainCharacter.anchor.y = 0.5;
