@@ -4,6 +4,11 @@ var tempy;
 function CharacterAttack (index) {
 	CharacterAttacking = true;
 	
+	// if (facing == 2){
+	// 	mainCharacter.children[3].scale = -mainCharacter.children[3].scale;
+	// 	setTimeout(function(){mainCharacter.children[3].scale = -mainCharacter.children[3].scale;}, 1000);
+	// }
+	
 	var characterLayer = world.getObject("CharacterLayer");
 	console.log("trying to attack");
 	tempx = enemyArray[index].x;
@@ -16,7 +21,8 @@ function CharacterAttack (index) {
 	characterLayer.addChild(enemyDyingArray[index]);
 	enemyDyingArray[index].gotoAndPlay(0);
 	setTimeout(function(){characterLayer.removeChild(enemyDyingArray[index]);}, 2700);
-	setTimeout(function(){CharacterAttacking = false;}, 2700);
+	setTimeout(function(){CharacterAttacking = false;}, 1000);
+	
 
 
 

@@ -65,6 +65,14 @@ function mainCharacterController() {
 	if (keySpace){
 		//toIndex();
 		if(!attacking) {
+			if (hasSword){
+				mainCharacter.children[0].visible = false;
+				mainCharacter.children[1].visible = false;
+				mainCharacter.children[3].visible = true;
+				setTimeout(function(){mainCharacter.children[3].visible = false;}, 1000);
+				setTimeout(function(){mainCharacter.children[0].visible = true;}, 1000);
+			}
+			
 			keySpace = false;
 			var currentPosition = tu.getIndex(mainCharacter.x, mainCharacter.y, 32, 32, mapWidth);
 
@@ -159,6 +167,10 @@ function mainCharacterController() {
 				mainCharacter.children[1].visible = true;
 				mainCharacter.children[0].scale.x = mainCharacterScale;
 				mainCharacter.children[1].scale.x = mainCharacterScale;
+				if(hasSword){
+					mainCharacter.children[3].scale.x = mainCharacterScale;
+				}
+				
 				facing = 4;
 			}
 			else if (keyW && keyD && !keyA && !keyS) {
@@ -177,6 +189,10 @@ function mainCharacterController() {
 				mainCharacter.children[1].visible = true;
 				mainCharacter.children[0].scale.x = -mainCharacterScale;
 				mainCharacter.children[1].scale.x = -mainCharacterScale;
+				if(hasSword){
+					mainCharacter.children[3].scale.x = -mainCharacterScale;
+				}
+				
 				facing = 2;
 			}
 			else if (keyD && keyS && !keyA && !keyW) {
@@ -195,6 +211,10 @@ function mainCharacterController() {
 				mainCharacter.children[1].visible = false;
 				mainCharacter.children[0].scale.x = -mainCharacterScale;
 				mainCharacter.children[1].scale.x = -mainCharacterScale;
+				if(hasSword){
+					mainCharacter.children[3].scale.x = -mainCharacterScale;
+				}
+				
 				facing = 2;
 			}
 			else if (keyS && keyA && !keyW && !keyD) {
@@ -213,6 +233,10 @@ function mainCharacterController() {
 				mainCharacter.children[1].visible = false;
 				mainCharacter.children[0].scale.x = mainCharacterScale;
 				mainCharacter.children[1].scale.x = mainCharacterScale;
+				if(hasSword){
+					mainCharacter.children[3].scale.x = mainCharacterScale;
+				}
+				
 				facing = 4;
 			}
 			else {
@@ -228,6 +252,10 @@ function mainCharacterController() {
 					mainCharacter.children[1].visible = false;
 					mainCharacter.children[0].scale.x = mainCharacterScale;
 					mainCharacter.children[1].scale.x = mainCharacterScale;
+					if(hasSword){
+						mainCharacter.children[3].scale.x = mainCharacterScale;
+					}
+					
 					facing = 4;
 				}
 				else if (keyD) {
@@ -243,6 +271,10 @@ function mainCharacterController() {
 					mainCharacter.children[1].visible = false;
 					mainCharacter.children[0].scale.x = -mainCharacterScale;
 					mainCharacter.children[1].scale.x = -mainCharacterScale;
+					if(hasSword){
+						mainCharacter.children[3].scale.x = -mainCharacterScale;
+					}
+					
 				}
 				else if (keyS) {
 					var index = tu.getIndex(mainCharacter.x, mainCharacter.y + 32, 32, 32, mapWidth);

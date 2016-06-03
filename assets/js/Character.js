@@ -56,6 +56,9 @@ function LoadCharacter() {
 	mainCharacter.children[2].y -= 5;
 	
 	//mainCharacter.children[0].visible = false;
+
+
+
 }
 
 function LoadSwordShield() {
@@ -105,6 +108,23 @@ function LoadSwordShield() {
 	mainCharacter.children[2].anchor.y = 0.5;
 	mainCharacter.children[2].y -= 5;
 	//return mainCharacter;
+
+	textureArray = [];
+	for (var i = 1; i <= 15; i++) {
+		texture = new PIXI.Texture.fromImage("./assets/Dungeon/MainChar/FullAttack/charshieldattack"+i+".png");
+		textureArray.push(texture);
+	}	
+	mainCharacter.removeChildAt(3);
+	movie = new PIXI.extras.MovieClip(textureArray);
+	mainCharacter.addChild(movie);
+	mainCharacter.children[3].animationSpeed = 1.2;
+	mainCharacter.children[3].anchor.x = 0.5;
+	mainCharacter.children[3].anchor.y = 0.5;
+	mainCharacter.children[3].play();
+	mainCharacter.children[3].scale.x = mainCharacterScale;
+	mainCharacter.children[3].scale.y = mainCharacterScale;
+	mainCharacter.children[3].visible = false;
+
 }
 
 function LoadSword() {
@@ -138,6 +158,21 @@ function LoadSword() {
 	mainCharacter.children[1].scale.x = mainCharacterScale;
 	mainCharacter.children[1].scale.y = mainCharacterScale;
 	mainCharacter.children[1].visible = false;
+
+	textureArray = [];
+	for (var i = 1; i <= 15; i++) {
+		texture = new PIXI.Texture.fromImage("./assets/Dungeon/MainChar/SwordAttack/characterattack"+i+".png");
+		textureArray.push(texture);
+	}	
+	movie = new PIXI.extras.MovieClip(textureArray);
+	mainCharacter.addChild(movie);
+	mainCharacter.children[3].animationSpeed = 1.2;
+	mainCharacter.children[3].anchor.x = 0.5;
+	mainCharacter.children[3].anchor.y = 0.5;
+	mainCharacter.children[3].play();
+	mainCharacter.children[3].scale.x = mainCharacterScale;
+	mainCharacter.children[3].scale.y = mainCharacterScale;
+	mainCharacter.children[3].visible = false;
 }
 
 function SetCharacterPosition(){
