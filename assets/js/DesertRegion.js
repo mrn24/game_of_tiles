@@ -9,6 +9,10 @@ var desertNpcRangeArray = [];
 var desertNpcMessageArray = [];
 var desertNpcStartArray = [];
 
+var desertEnemyArray = [];
+var desertEnemyRangeArray = [];
+var desertEnemyStartArray = [];
+
 function FirstDesertLoader(){
 
   world = desert;
@@ -81,24 +85,44 @@ function FirstDesertLoader(){
   characterLayer.addChild(npcArray[3]);
 
   NPCMovement();
+  EnemyMovement();
   mapContainer.addChild(desertContainer);
   desertContainer.visible = false;
 
+  enemyArray = [];
+  enemyRangeArray = [];
+  enemyStartArray = [];
 
-  // LoadNPC(1037, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
-  // desertContainer.addChild(npcArray[4]);
 
-  // LoadNPC(1113, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
-  // desertContainer.addChild(npcArray[5]);
+  LoadEnemy(1037, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
+  desertEnemyArray.push(enemyArray[0]);
+  desertEnemyStartArray.push(enemyStartArray[0]);
+  desertEnemyRangeArray.push(enemyRangeArray[0]);
+  characterLayer.addChild(enemyArray[0]);
 
-  // LoadNPC(525, 3, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
-  // desertContainer.addChild(npcArray[6]);
+  LoadEnemy(1113, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
+  desertEnemyArray.push(enemyArray[1]);
+  desertEnemyStartArray.push(enemyStartArray[1]);
+  desertEnemyRangeArray.push(enemyRangeArray[1]);
+  characterLayer.addChild(enemyArray[1]);
 
-  // LoadNPC(484, 2, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
-  // desertContainer.addChild(npcArray[7]);
+  LoadEnemy(525, 3, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
+  desertEnemyArray.push(enemyArray[2]);
+  desertEnemyStartArray.push(enemyStartArray[2]);
+  desertEnemyRangeArray.push(enemyRangeArray[2]);
+  characterLayer.addChild(enemyArray[2]);
 
-  // LoadNPC(1082, 0, './assets/Dungeon/monsters/SandGolem/Roaming/SandGolem', 4);
-  // desertContainer.addChild(npcArray[8]);
+  LoadEnemy(484, 2, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
+  desertEnemyArray.push(enemyArray[3]);
+  desertEnemyStartArray.push(enemyStartArray[3]);
+  desertEnemyRangeArray.push(enemyRangeArray[3]);
+  characterLayer.addChild(enemyArray[3]);
+
+  LoadEnemy(1082, 0, './assets/Dungeon/monsters/SandGolem/Roaming/SandGolem', 4);
+  desertEnemyArray.push(enemyArray[4]);
+  desertEnemyStartArray.push(enemyStartArray[4]);
+  desertEnemyRangeArray.push(enemyRangeArray[4]);
+  characterLayer.addChild(enemyArray[4]);
 
   //call loadnpc with map.
   
@@ -119,6 +143,12 @@ function DesertLoader(){
   npcRangeArray = desertNpcRangeArray;
   npcMessageArray = desertNpcMessageArray;
   npcStartArray = desertNpcStartArray;
+
+  enemyArray = desertEnemyArray;
+  enemyRangeArray = desertEnemyRangeArray;
+  enemyStartArray = desertEnemyStartArray;
+
+  enemyArray = 
   //currentmap = desert;
 
   

@@ -53,7 +53,7 @@ function LoadEnemy(index, range, fileLocation, numSprites) {
 	enemy.scale.y = mainCharacterScale;
 	enemy.play();
 	enemy.animationSpeed = 0.075;
-	enemyArray.push(npc);
+	enemyArray.push(enemy);
 	enemyStartArray.push(index);
 	enemyRangeArray.push(range);
 	//return enemy;
