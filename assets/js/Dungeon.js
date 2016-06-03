@@ -351,7 +351,8 @@ function forestDungeonEntranceChecker(){
     characterLayer.addChild(mainCharacter);
     forestDungeonContainer.removeChild(shieldSprite);
     hasShield = true;
-    textHandler("You've grabbed the\nshield", 20);
+    textHandler("You've grabbed the\nshield."
+    + "\nYou feel more powerful.", 20);
   }
 
 
