@@ -69,7 +69,8 @@ var npcArray = [],
 var enemyArray = [],
 	enemyStartArray = [],
 	enemyRangeArray = [],
-	enemyDyingArray = [];
+	enemyDyingArray = [],
+	enemyAttackingArray = [];
 
 
 /////////////////////////////
