@@ -68,40 +68,14 @@ function Ready() {
 	PlainsLoader();
 }
 
-/*
-function MapStuff() {
-	stage.addChild(mapContainer);
-	mapArray = world.getObject("Environment").data;
-	colliders = world.getObject("Mountains").data;
-	//Creating collisionsIndex array
-	for (var i = 0; i < colliders.length; i++) {
-		if (colliders[i] != 0) {
-			collisionsIndex.push(i);
-		}
-	}
-	mapContainer.scale.x = mapScale;
-	mapContainer.scale.y = mapScale;
-	LoadNPC(50, 2, "./assets/Characters/NPCs/Enemy", 4);
-	mapContainer.addChild(npcArray[0]);
-	NPCMovement();
-}
-*/
-/////////////////////////////////////////////
-// Display Game Screen                     //
-/////////////////////////////////////////////
-/*
-function DisplayGameScreen() {
-	//MapStuff();
-	gameScreenContainer.visible = true;
-	stage.addChild(gameScreenContainer);
-}
-*/
-
 function CharacterDead(){
   mapContainer.visible = false;
-  textHandler("You have died a most unfortunate death.\nThe king continued to rule your\nrightful kingdom. Uncle Benjin also\ngot Dementia.", 12);
-  var background = PIXI.Sprite.fromImage("Background.jpg");
-  stage.addchild(background);
+  
+  var background = PIXI.Sprite.fromImage("./assets/Character/Dead.png");
+  background.scale.x = 4.8;
+  background.scale.y = 4.8;
+  stage.addChild(background);
+  textHandler("You have died a most unfortunate death\nThe king continued to rule your\nrightful kingdom.\nUncle Benjin also got Dementia.", 12);
 }
 
 function animate() {

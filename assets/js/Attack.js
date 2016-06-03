@@ -39,7 +39,8 @@ function MonsterAttack (index, scaleswitch) {
 		//Decrement health
 		if (mainCharacter.getChildAt(2).currentFrame <  mainCharacter.getChildAt(2).totalFrames - 1) {
 			mainCharacter.getChildAt(2).gotoAndStop(mainCharacter.getChildAt(2).currentFrame + 1);
-		} else {
+		} else if (!dead){
+			dead = true;
 			CharacterDead();
 		}
 

@@ -102,4 +102,5 @@ var plainsDungeon;
 
 var hasSword = false,
 	hasShield = false,
-	hasPotato = false;
+	hasPotato = false,
+	dead = false;
