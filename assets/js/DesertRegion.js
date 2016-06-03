@@ -71,7 +71,7 @@ function FirstDesertLoader(){
   desertNpcMessageArray.push(npcMessageArray[1]);
   characterLayer.addChild(npcArray[1]);
 
-  LoadNPC(180, 0, './assets/Desert/Sprites/DesertKing', 4, "Go do your quest.");
+  LoadNPC(180, 0, './assets/Desert/Sprites/DesertKing', 4, "Hello there.  I knew you father.\n He was a good man. Go get\n the legendary potato in the dungeon\n to the southwest so you can\n return home and face the king.");
   //desertContainer.addChild(npcArray[2]);
   desertNpcArray.push(npcArray[2]);
   desertNpcStartArray.push(npcStartArray[2]);
@@ -79,7 +79,7 @@ function FirstDesertLoader(){
   desertNpcMessageArray.push(npcMessageArray[2]);
   characterLayer.addChild(npcArray[2]);
 
-  LoadNPC(346, 1, './assets/Desert/Sprites/DesertMan', 4, "It's the desert!");
+  LoadNPC(346, 1, './assets/Desert/Sprites/DesertMan', 4, "We have a good and just king.");
   //desertContainer.addChild(npcArray[3]);
   desertNpcArray.push(npcArray[3]);
   desertNpcStartArray.push(npcStartArray[3]);
