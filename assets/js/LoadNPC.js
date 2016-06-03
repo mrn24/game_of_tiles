@@ -75,8 +75,50 @@ function LoadDyingEnemy(fileLocation, numSprites){
 
 }
 
+function LoadAttackingEnemy(fileLocation, numSprites){
+	var textureArray = [];
+	var enemyAttacking;
+	for (var i = 1; i < numSprites + 1; i++) {
+		texture = new PIXI.Texture.fromImage(fileLocation+i+".png");
+		textureArray.push(texture);
+	}
+	enemyAttacking = new PIXI.extras.MovieClip(textureArray);
+	enemyAttacking.anchor.x = 0.5;
+	enemyAttacking.anchor.y = 0.5;
+	//enemyDying.play();
+	enemyAttacking.animationSpeed = 1.0;
+	enemyAttackingArray.push(enemyAttacking);
+
+}
+
 function EnemyMovement() {
+	//var characterLayer = world.getObject('CharacterLayer').data;
 	for (var i = 0; i < enemyArray.length; i++) {
+
+		var ind1 = tu.getIndex(enemyArray[i].x - 32, enemyArray[i].y, 32, 32, mapWidth);
+		var ind2 = tu.getIndex(enemyArray[i].x, enemyArray[i].y - 32, 32, 32, mapWidth);
+		var ind3 = tu.getIndex(enemyArray[i].x + 32, enemyArray[i].y, 32, 32, mapWidth);
+		var ind4  = tu.getIndex(enemyArray[i].x, enemyArray[i].y + 32, 32, 32, mapWidth);
+
+		if (CollisionDetection(ind1, mainCharacterIndex())){
+			MonsterAttack(i);
+			
+		}
+		if (CollisionDetection(ind2, mainCharacterIndex())){
+			MonsterAttack(i);
+		}
+		if (CollisionDetection(ind3, mainCharacterIndex())){
+			MonsterAttack(i);
+		}
+		if (CollisionDetection(ind4, mainCharacterIndex())){
+			MonsterAttack(i);
+		}
+
+
+
+
+
+
 		var direction = Math.floor(Math.random() * 4);
 		if (direction == 0) { //Left
 			var index = tu.getIndex(enemyArray[i].x - 32, enemyArray[i].y, 32, 32, mapWidth);
