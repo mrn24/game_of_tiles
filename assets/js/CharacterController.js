@@ -73,13 +73,13 @@ function mainCharacterController() {
 					talking = true;
 					//console.log("Found an NPC");
 					//console.log("NPC message: " + npcMessageArray[i]);
-					textHandler(npcMessageArray[i], 20);
+					textHandler(npcMessageArray[i], 12);
 				} else if (currentPosition == tu.getIndex(npcArray[i].x + 32, npcArray[i].y, 32, 32, mapWidth)) {
 					//console.log("Started talking to the left.");
 					//console.log("Found an NPC");
 					//console.log("NPC message: " + npcMessageArray[i]);
 					talking = true;
-					textHandler(npcMessageArray[i], 20);
+					textHandler(npcMessageArray[i], 12);
 				} else {
 					//console.log("No one to talk to here.");
 					//console.log("No Collision");
