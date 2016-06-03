@@ -20,13 +20,18 @@ function CharacterAttack (index) {
 
 }
 
-function MonsterAttack (index) {
+function MonsterAttack (index, scaleswitch) {
 
 	var characterLayer = world.getObject("CharacterLayer");
 	tempx = enemyArray[index].x;
 	tempy = enemyArray[index].y;
 	characterLayer.removeChild(enemyArray[index]);
 
+	if (scaleswitch == -1){
+		enemyAttackingArray[index].scale.x = -enemyAttackingArray[index].scale.x;
+		setTimeout(function(){enemyAttackingArray[index].scale.x = -enemyAttackingArray[index].scale.x;}, 1000);
+	}
+	
 	enemyAttackingArray[index].x = tempx;
 	enemyAttackingArray[index].y = tempy;
 	characterLayer.addChild(enemyAttackingArray[index]);

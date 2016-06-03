@@ -101,17 +101,17 @@ function EnemyMovement() {
 		var ind4  = tu.getIndex(enemyArray[i].x, enemyArray[i].y + 32, 32, 32, mapWidth);
 
 		if (CollisionDetection(ind1, mainCharacterIndex())){
-			MonsterAttack(i);
+			MonsterAttack(i, 1);
 			
 		}
 		if (CollisionDetection(ind2, mainCharacterIndex())){
-			MonsterAttack(i);
+			MonsterAttack(i, 1);
 		}
 		if (CollisionDetection(ind3, mainCharacterIndex())){
-			MonsterAttack(i);
+			MonsterAttack(i, -1);
 		}
 		if (CollisionDetection(ind4, mainCharacterIndex())){
-			MonsterAttack(i);
+			MonsterAttack(i, 1);
 		}
 
 
