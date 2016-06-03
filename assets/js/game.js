@@ -97,6 +97,13 @@ function DisplayGameScreen() {
 }
 */
 
+function CharacterDead(){
+  mapContainer.visible = false;
+  textHandler("You have died a most unfortunate death.\nThe king continued to rule your\nrightful kingdom. Uncle Benjin also\ngot Dementia.", 12);
+  var background = PIXI.Sprite.fromImage("Background.jpg");
+  stage.addchild(background);
+}
+
 function animate() {
   requestAnimationFrame(animate);
   renderer.render(stage);
