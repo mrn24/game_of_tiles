@@ -1,4 +1,5 @@
 var plainsCharacterLayer;
+var swordSprite;
 
 
 
@@ -23,12 +24,23 @@ function FirstPlainsLoader(){
 			plainsCollisions.push(i);
 		}
 	}
+
 	var entrances = plains.getObject("EntranceLayer").data;
     for (var i = 0; i < entrances.length; i++) {
 		if (entrances[i] != 0){
 		  plainsEntrances.push(i);
 		}
 	}
+	var sword = PIXI.Texture.fromImage("./assets/Dungeon/MainChar/Sword/sword.png");
+	swordSprite = new PIXI.Sprite(sword);
+	swordSprite.anchor.x = 0.5;
+	swordSprite.anchor.y = 0.5;
+	swordSprite.position.x = 528;
+	swordSprite.position.y = 1383;
+	plainsContainer.addChild(swordSprite);
+
+
+
 	//call loadnpc with map.
 	//function LoadNPC(index, range, fileLocation, numSprites) {
 	//LoadNPC(260, 4, './assets/Desert/Sprites/DesertWoman', 4);
@@ -67,10 +79,13 @@ function FirstPlainsLoader(){
 	characterLayer.addChild(plainsNpcArray[2]);
 
 
-	LoadNPC(1663,2,"./assets/Character/Uncle", 4, "\nNow that you've grown."
+	LoadNPC(1663,2,"./assets/Character/Uncle", 4, "Uncle Benjin:"
+	+ "\nNow that you've grown."
 	+ "\nI must tell you, your mother and"
 	+ "\nfather were killed by our King."
-	+ "\nThis was your father's. Take this and"
+	+ "\nGo to your old home(South)"
+	+ "\nand inside on the floor, you will see"
+	+ "\nyour father's sword. Take it and"
 	+ "\nfind the answers that haunt our town.");
 	plainsNpcArray.push(npcArray[3]);
 	plainsNpcRangeArray.push(npcRangeArray[3]);
@@ -148,14 +163,17 @@ function PlainsLoader(){
 function PlainsEntranceChecker(){
 
 	//Grab sword
-  if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 1614 && !hasSword){
+  if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 2166 && !hasSword){
     console.log("Grabbed sword");
     plainsCharacterLayer.removeChild(mainCharacter);
     LoadSword();
     plainsCharacterLayer = plains.getObject("CharacterLayer");
     plainsCharacterLayer.addChild(mainCharacter);
     hasSword = true;
-    textHandler("You've grabbed the\nsword", 20);
+		plainsContainer.removeChild(swordSprite);
+    textHandler("Father's sword...", 20);
+
+
   }
 
 

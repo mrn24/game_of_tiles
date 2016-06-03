@@ -59,8 +59,8 @@ function LoadSword() {
 	mainCharacter.anchor.x = 0.5;
 	mainCharacter.anchor.y = 0.5;
 	//var point = tu.getTile(index, mapArray, currentMap);
-	mainCharacter.position.x = 464;
-	mainCharacter.position.y = 1031;
+	mainCharacter.position.x = 528;
+	mainCharacter.position.y = 1383;
 	mainCharacter.scale.x = mainCharacterScale;
 	mainCharacter.scale.y = mainCharacterScale;
 	mainCharacter.play();
