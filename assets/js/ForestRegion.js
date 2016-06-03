@@ -12,6 +12,7 @@ var forestEnemyArray = [];
 var forestEnemyRangeArray = [];
 var forestEnemyStartArray = [];
 var forestEnemyDyingArray = [];
+var forestEnemyAttackingArray = [];
 
 function FirstForestLoader(){
   world = forest;
@@ -59,13 +60,13 @@ function FirstForestLoader(){
   enemyRangeArray = [];
   enemyStartArray = [];
 
-  LoadEnemy(742, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
+  LoadEnemy(625, 6, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
   forestEnemyArray.push(enemyArray[0]);
   forestEnemyStartArray.push(enemyStartArray[0]);
   forestEnemyRangeArray.push(enemyRangeArray[0]);
   characterLayer.addChild(enemyArray[0]);
 
-  LoadEnemy(803, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
+  LoadEnemy(685, 6, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
   forestEnemyArray.push(enemyArray[1]);
   forestEnemyStartArray.push(enemyStartArray[1]);
   forestEnemyRangeArray.push(enemyRangeArray[1]);
@@ -107,6 +108,20 @@ function FirstForestLoader(){
   LoadDyingEnemy('./assets/Dungeon/monsters/SandGolem/Dying/sgdying', 13);
   forestEnemyDyingArray.push(enemyDyingArray[4]);
   //call loadnpc with map.
+  LoadAttackingEnemy('./assets/Dungeon/monsters/Raider/Attacking/raiderattack', 17);
+  forestEnemyAttackingArray.push(enemyAttackingArray[0]);
+
+  LoadAttackingEnemy('./assets/Dungeon/monsters/Raider/Attacking/raiderattack', 17);
+  forestEnemyAttackingArray.push(enemyAttackingArray[1]);
+
+  LoadAttackingEnemy('./assets/Dungeon/monsters/Skeleton/Attacking/skeletonattack', 12);
+  forestEnemyAttackingArray.push(enemyAttackingArray[2]);
+
+  LoadAttackingEnemy('./assets/Dungeon/monsters/Skeleton/Attacking/skeletonattack', 12);
+  forestEnemyAttackingArray.push(enemyAttackingArray[3]);
+
+  LoadAttackingEnemy('./assets/Dungeon/monsters/SandGolem/Attacking/sgattack', 13);
+  forestEnemyAttackingArray.push(enemyAttackingArray[4]);
 
 
   mapContainer.addChild(forestContainer);
@@ -137,7 +152,8 @@ function ForestLoader(){
   enemyArray = forestEnemyArray;
   enemyRangeArray = forestEnemyRangeArray;
   enemyStartArray = forestEnemyStartArray;
-  enemyDyingArray = desertEnemyDyingArray;
+  enemyDyingArray = forestEnemyDyingArray;
+  enemyAttackingArray = forestEnemyAttackingArray;
 
   if(hasShield){
     forestMessageArray[0] = "Thank you so much for handling that\nfor us! Your next destination is the\ndesert to the east!";

@@ -93,7 +93,13 @@ function FirstPlainsLoader(){
 	plainsNpcStartArray.push(npcStartArray[3]);
 	characterLayer.addChild(plainsNpcArray[3]);
 
-
+	LoadNPC(114 ,0 ,"./assets/Plains/king", 1, "_____");
+	plainsNpcArray.push(npcArray[4]);
+	plainsNpcRangeArray.push(npcRangeArray[4]);
+	plainsNpcMessageArray.push(npcMessageArray[4]);
+	plainsNpcStartArray.push(npcStartArray[4]);
+	characterLayer.addChild(plainsNpcArray[4]);
+	plainsNpcArray[4].visible = false;
 
 
 
@@ -127,6 +133,10 @@ function PlainsLoader(){
   //pointer to plainsCollisions//
   //Never set collisionsIndex to []//
   ///////////////////////////////////
+	if(hasPotato){
+		plainsNpcArray[4].visible = true;
+	}
+
   collisionsIndex = plainsCollisions;
   mapWidth = plainsMapWidth;
   npcArray = plainsNpcArray;
@@ -151,8 +161,10 @@ function PlainsLoader(){
 		startY = 103;
   }
 
-  plainsCharacterLayer = plains.getObject("CharacterLayer");
+	plainsCharacterLayer = plains.getObject("CharacterLayer");
 	plainsCharacterLayer.addChild(mainCharacter);
+
+
 	SetCharacterPosition();
 	SetPosition();
   //Use passed in parameter to load character in the right spot
@@ -173,7 +185,9 @@ function PlainsEntranceChecker(){
 
   }
 
-
+	if(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 164 && hasPotato){
+		EndGame();
+	}
 
 	//console.log("Checking Entrance Collisions.");
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), plainsEntrances)){

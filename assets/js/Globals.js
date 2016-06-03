@@ -97,12 +97,12 @@ var plainsDungeon;
 ///////////////////////////////////////
 // Globals for story progression    //
 ///////////////////////////////////////
-<<<<<<< HEAD
+//<<<<<<< HEAD
 var hasSword = true;
 	hasShield = true;
 	hasPotato = true;
-=======
-var hasSword = false;
-	hasShield = false;
-	hasPotato = false;
->>>>>>> origin
+// =======
+// var hasSword = false;
+// 	hasShield = false;
+// 	hasPotato = false;
+// >>>>>>> origin
