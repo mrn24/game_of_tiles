@@ -1,5 +1,6 @@
 function CharacterAttack (index) {
-
+	
+	var characterLayer = world.getObject("CharacterLayer");
 	console.log("trying to attack");
 	var tempx = enemyArray[index].x;
 	var tempy = enemyArray[index].y;
