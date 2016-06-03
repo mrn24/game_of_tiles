@@ -165,12 +165,9 @@ function PlainsEntranceChecker(){
 	//Grab sword
   if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 2166 && !hasSword){
     console.log("Grabbed sword");
-    plainsCharacterLayer.removeChild(mainCharacter);
     LoadSword();
-    plainsCharacterLayer = plains.getObject("CharacterLayer");
-    plainsCharacterLayer.addChild(mainCharacter);
     hasSword = true;
-		plainsContainer.removeChild(swordSprite);
+	plainsContainer.removeChild(swordSprite);
     textHandler("Father's sword...", 20);
 
 

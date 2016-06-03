@@ -55,9 +55,7 @@ function checkKeyReleased(key) {
 }
 
 function mainCharacterController() {
-
 	if (keySpace){
-
 		//toIndex();
 		if(!attacking) {
 			keySpace = false;
@@ -150,7 +148,10 @@ function mainCharacterController() {
 					createjs.Tween.get(mainCharacter).to({x: mainCharacter.x - 32}, 250);
 					createjs.Tween.get(mainCharacter).to({y: mainCharacter.y - 32}, 250);
 				}
-				mainCharacter.scale.x = mainCharacterScale;
+				mainCharacter.children[0].visible = false;
+				mainCharacter.children[1].visible = true;
+				mainCharacter.children[0].scale.x = mainCharacterScale;
+				mainCharacter.children[1].scale.x = mainCharacterScale;
 				facing = 4;
 			}
 			else if (keyW && keyD && !keyA && !keyS) {
@@ -165,7 +166,10 @@ function mainCharacterController() {
 					createjs.Tween.get(mainCharacter).to({x: mainCharacter.position.x + 32}, 250);
 					createjs.Tween.get(mainCharacter).to({y: mainCharacter.y - 32}, 250);
 				}
-				mainCharacter.scale.x = -mainCharacterScale;
+				mainCharacter.children[0].visible = false;
+				mainCharacter.children[1].visible = true;
+				mainCharacter.children[0].scale.x = -mainCharacterScale;
+				mainCharacter.children[1].scale.x = -mainCharacterScale;
 				facing = 2;
 			}
 			else if (keyD && keyS && !keyA && !keyW) {
@@ -180,7 +184,10 @@ function mainCharacterController() {
 					createjs.Tween.get(mainCharacter).to({x: mainCharacter.position.x + 32}, 250);
 					createjs.Tween.get(mainCharacter).to({y: mainCharacter.y + 32}, 250);
 				}
-				mainCharacter.scale.x = -mainCharacterScale;
+				mainCharacter.children[0].visible = true;
+				mainCharacter.children[1].visible = false;
+				mainCharacter.children[0].scale.x = -mainCharacterScale;
+				mainCharacter.children[1].scale.x = -mainCharacterScale;
 				facing = 2;
 			}
 			else if (keyS && keyA && !keyW && !keyD) {
@@ -195,7 +202,10 @@ function mainCharacterController() {
 					createjs.Tween.get(mainCharacter).to({x: mainCharacter.x - 32}, 250);
 					createjs.Tween.get(mainCharacter).to({y: mainCharacter.y + 32}, 250);
 				}
-				mainCharacter.scale.x = mainCharacterScale;
+				mainCharacter.children[0].visible = true;
+				mainCharacter.children[1].visible = false;
+				mainCharacter.children[0].scale.x = mainCharacterScale;
+				mainCharacter.children[1].scale.x = mainCharacterScale;
 				facing = 4;
 			}
 			else {
@@ -207,7 +217,10 @@ function mainCharacterController() {
 						}
 						createjs.Tween.get(mainCharacter).to({x: mainCharacter.x - 32}, 250);
 					}
-					mainCharacter.scale.x = mainCharacterScale;
+					mainCharacter.children[0].visible = true;
+					mainCharacter.children[1].visible = false;
+					mainCharacter.children[0].scale.x = mainCharacterScale;
+					mainCharacter.children[1].scale.x = mainCharacterScale;
 					facing = 4;
 				}
 				else if (keyD) {
@@ -219,7 +232,10 @@ function mainCharacterController() {
 						createjs.Tween.get(mainCharacter).to({x: mainCharacter.position.x + 32}, 250);
 					}
 					facing = 2;
-					mainCharacter.scale.x = -mainCharacterScale;
+					mainCharacter.children[0].visible = true;
+					mainCharacter.children[1].visible = false;
+					mainCharacter.children[0].scale.x = -mainCharacterScale;
+					mainCharacter.children[1].scale.x = -mainCharacterScale;
 				}
 				else if (keyS) {
 					var index = tu.getIndex(mainCharacter.x, mainCharacter.y + 32, 32, 32, mapWidth);
