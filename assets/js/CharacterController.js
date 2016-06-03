@@ -321,7 +321,9 @@ function enemyToIndex() {
 	//console.log(npcArray.length);
 	for (var i = 0; i < enemyArray.length; i++) {
 		//console.log("Loading " + i);
-		indexArray.push(tu.getIndex(enemyArray[i].x, enemyArray[i].y, 32, 32, mapWidth));
+		if (enemyArray[i].visible) {
+			indexArray.push(tu.getIndex(enemyArray[i].x, enemyArray[i].y, 32, 32, mapWidth));
+		}
 		//console.log(indexArray[i]);
 	}
 	return indexArray;

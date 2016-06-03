@@ -149,6 +149,7 @@ function PlainsLoader(){
   npcRangeArray = plainsNpcRangeArray;
   npcMessageArray = plainsNpcMessageArray;
   npcStartArray = plainsNpcStartArray;
+  enemyArray = [];
 
 
   if (previousMap == plains) {

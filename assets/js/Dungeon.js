@@ -53,6 +53,7 @@ function FirstDesertDungeonLoader(){
   mapContainer.addChild(desertDungeonContainer);
   desertDungeonContainer.visible = false;
 
+  enemyAttackArray = [];
   enemyArray = [];
   enemyRangeArray = [];
   enemyStartArray = [];
@@ -223,7 +224,8 @@ function FirstForestDungeonLoader(){
   //call loadnpc with map.
   mapContainer.addChild(forestDungeonContainer);
   forestDungeonContainer.visible = false;
-
+  
+  enemyAttackArray = [];
   enemyArray = [];
   enemyRangeArray = [];
   enemyStartArray = [];
@@ -404,6 +406,7 @@ function FirstPlainsDungeonLoader(){
   mapContainer.addChild(plainsDungeonContainer);
   plainsDungeonContainer.visible = false;
 
+  enemyAttackArray = [];
   enemyArray = [];
   enemyRangeArray = [];
   enemyStartArray = [];
