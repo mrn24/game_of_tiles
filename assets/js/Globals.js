@@ -93,10 +93,10 @@ var plains;
 var desertDungeon;
 var forestDungeon;
 var plainsDungeon;
-
 ///////////////////////////////////////
 // Globals for story progression    //
 ///////////////////////////////////////
+<<<<<<< HEAD
 //<<<<<<< HEAD
 var hasSword = true;
 	hasShield = true;
@@ -106,3 +106,14 @@ var hasSword = true;
 // 	hasShield = false;
 // 	hasPotato = false;
 // >>>>>>> origin
+=======
+
+var hasSword = true;
+	hasShield = true;
+	hasPotato = true;
+
+var hasSword = false;
+	hasShield = false;
+	hasPotato = false;
+
+>>>>>>> refs/remotes/origin/master

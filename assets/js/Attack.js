@@ -26,10 +26,17 @@ function CharacterAttack (index) {
 function MonsterAttack (index, scaleswitch) {
 	var characterLayer = world.getObject("CharacterLayer");
 	if ((CharacterAttacking == false) && (enemyArray[index].parent === characterLayer) ){
-		
+		mainCharacter.getChildAt(2)
 		tempx = enemyArray[index].x;
 		tempy = enemyArray[index].y;
 		characterLayer.removeChild(enemyArray[index]);
+		
+		//Decrement health
+		if (mainCharacter.getChildAt(2).currentFrame <  mainCharacter.getChildAt(2).totalFrames - 1) {
+			mainCharacter.getChildAt(2).gotoAndStop(mainCharacter.getChildAt(2).currentFrame + 1);
+		} else {
+			console.log("You Died...");
+		}
 
 		if (scaleswitch == -1){
 			enemyAttackingArray[index].scale.x = -enemyAttackingArray[index].scale.x;
