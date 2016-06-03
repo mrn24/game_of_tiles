@@ -116,7 +116,7 @@ var GameOverSound,
 	MonsterAttackSound,
 	MonsterDieSound,
 	UncleSound,
-	SlashSound
+	SlashSound,
 	HiBlazerSound,
 	HiCurtisSound,
 	HiMattSound,
