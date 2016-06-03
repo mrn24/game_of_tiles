@@ -24,6 +24,8 @@ function ChoiceKill(){
   console.log("You choose to kill!");
   //Attack Animation,
   //Killed him win.
+  SlashSound.play();
+  setTimeout(WinChoiceKill, 1750);
 }
 
 function ChoiceLive(){
@@ -39,6 +41,14 @@ function ChoiceLive(){
 
 function WinChoiceLive(){
   mapContainer.visible = false;
+  LetKingLiveSound.play();
   var winLive = new PIXI.Sprite.fromImage("./assets/img/letlive.png");
   stage.addChild(winLive);
+}
+
+function WinChoiceKill(){
+  mapContainer.visible = false;
+  KillKingSound.play();
+  var winKill = new PIXI.Sprite.fromImage("./assets/img/killking.png");
+  stage.addChild(winKill);
 }
