@@ -1,7 +1,9 @@
 var tempx;
 var tempy;
+var CharacterAttacking = false;
 
 function CharacterAttack (index) {
+	CharacterAttacking = true;
 	
 	var characterLayer = world.getObject("CharacterLayer");
 	console.log("trying to attack");
@@ -15,33 +17,38 @@ function CharacterAttack (index) {
 	characterLayer.addChild(enemyDyingArray[index]);
 	enemyDyingArray[index].gotoAndPlay(0);
 	setTimeout(function(){characterLayer.removeChild(enemyDyingArray[index]);}, 2700);
+	setTimeout(function(){CharacterAttacking = false;}, 2700);
 
 
 
 }
 
 function MonsterAttack (index, scaleswitch) {
-
 	var characterLayer = world.getObject("CharacterLayer");
-	tempx = enemyArray[index].x;
-	tempy = enemyArray[index].y;
-	characterLayer.removeChild(enemyArray[index]);
+	if ((CharacterAttacking == false) && (enemyArray[index].parent === characterLayer) ){
+		
+		tempx = enemyArray[index].x;
+		tempy = enemyArray[index].y;
+		characterLayer.removeChild(enemyArray[index]);
 
-	if (scaleswitch == -1){
-		enemyAttackingArray[index].scale.x = -enemyAttackingArray[index].scale.x;
-		setTimeout(function(){enemyAttackingArray[index].scale.x = -enemyAttackingArray[index].scale.x;}, 1000);
+		if (scaleswitch == -1){
+			enemyAttackingArray[index].scale.x = -enemyAttackingArray[index].scale.x;
+			setTimeout(function(){enemyAttackingArray[index].scale.x = -enemyAttackingArray[index].scale.x;}, 1000);
+		}
+		
+		enemyAttackingArray[index].x = tempx;
+		enemyAttackingArray[index].y = tempy;
+		characterLayer.addChild(enemyAttackingArray[index]);
+		console.log("trying to add enemy attacking animation");
+
+
+		enemyAttackingArray[index].gotoAndPlay(0);
+
+		setTimeout(function(){enemyArray[index].x = tempx;}, 1000);
+		setTimeout(function(){enemyArray[index].y = tempy;}, 1000);
+		setTimeout(function(){characterLayer.removeChild(enemyAttackingArray[index]);}, 1000);
+		setTimeout(function(){characterLayer.addChild(enemyArray[index]);}, 1000);
 	}
 	
-	enemyAttackingArray[index].x = tempx;
-	enemyAttackingArray[index].y = tempy;
-	characterLayer.addChild(enemyAttackingArray[index]);
-	console.log("trying to add enemy attacking animation");
-
-
-	enemyAttackingArray[index].gotoAndPlay(0);
-
-	setTimeout(function(){enemyArray[index].x = tempx;}, 1000);
-	setTimeout(function(){enemyArray[index].y = tempy;}, 1000);
-	setTimeout(function(){characterLayer.removeChild(enemyAttackingArray[index]);}, 1000);
-	setTimeout(function(){characterLayer.addChild(enemyArray[index]);}, 1000);
 }
+
