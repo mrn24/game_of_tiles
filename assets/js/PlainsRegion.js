@@ -51,13 +51,6 @@ function FirstPlainsLoader(){
 
 	var characterLayer = plains.getObject("CharacterLayer");
 
-	/*
-	LoadNPC(314,6,"./assets/Characters/NPCs/Enemy", 4, "I'm NPC one.");
-	plainsNpcArray.push(npcArray[0]);
-	plainsNpcRangeArray.push(npcRangeArray[0]);
-	plainsNpcMessageArray.push(npcMessageArray[0]);
-	characterLayer.addChild(plainsNpcArray[0]);
-	*/
 	LoadNPC(1663,2,"./assets/Character/Uncle", 4, "Uncle Benjin:"
 	+ "\nNow that you've grown."
 	+ "\nI must tell you, your mother and"
@@ -71,13 +64,15 @@ function FirstPlainsLoader(){
 	plainsNpcMessageArray.push(npcMessageArray[0]);
 	plainsNpcStartArray.push(npcStartArray[0]);
 	characterLayer.addChild(plainsNpcArray[0]);
-	LoadNPC(1553,2,"./assets/Desert/Sprites/DesertWoman", 4, "I'm NPC three.");
+	
+	LoadNPC(1553,2,"./assets/Desert/Sprites/DesertWoman", 4, "Being triplets is fun!");
 	plainsNpcArray.push(npcArray[1]);
 	plainsNpcRangeArray.push(npcRangeArray[1]);
 	plainsNpcMessageArray.push(npcMessageArray[1]);
 	plainsNpcStartArray.push(npcStartArray[1]);
 	characterLayer.addChild(plainsNpcArray[1]);
-	LoadNPC(1551,2,"./assets/Desert/Sprites/DesertWoman", 4, "I'm NPC four.");
+	
+	LoadNPC(1551,2,"./assets/Desert/Sprites/DesertWoman", 4, "My sisters are weird...");
 	plainsNpcArray.push(npcArray[2]);
 	plainsNpcRangeArray.push(npcRangeArray[2]);
 	plainsNpcMessageArray.push(npcMessageArray[2]);
@@ -85,7 +80,7 @@ function FirstPlainsLoader(){
 	characterLayer.addChild(plainsNpcArray[2]);
 
 
-	LoadNPC(1552,2,"./assets/Desert/Sprites/DesertWoman", 4, "I'm NPC two.");
+	LoadNPC(1552,2,"./assets/Desert/Sprites/DesertWoman", 4, "What are we going to do today?");
 	plainsNpcArray.push(npcArray[3]);
 	plainsNpcRangeArray.push(npcRangeArray[3]);
 	plainsNpcMessageArray.push(npcMessageArray[3]);
@@ -100,23 +95,31 @@ function FirstPlainsLoader(){
 	characterLayer.addChild(plainsNpcArray[4]);
 	plainsNpcArray[4].visible = false;
 
+	LoadNPC(314,6,"./assets/Characters/NPCs/Enemy", 4, "Guarding this town is hard work.");
+	plainsNpcArray.push(npcArray[5]);
+	plainsNpcRangeArray.push(npcRangeArray[5]);
+	plainsNpcMessageArray.push(npcMessageArray[5]);
+	characterLayer.addChild(plainsNpcArray[5]);
 
-
-
-
-
-	/*
-	LoadNPC(2006,8,"./assets/Characters/NPCs/Enemy", 4, "I'm NPC three.");
+	LoadNPC(2006,8,"./assets/Characters/NPCs/Enemy", 4, "Nothing interesting ever happens here.");
 	plainsNpcArray.push(npcArray[2]);
 	plainsNpcRangeArray.push(npcRangeArray[2]);
 	plainsNpcMessageArray.push(npcMessageArray[2]);
 	characterLayer.addChild(plainsNpcArray[2]);
-	LoadNPC(2264,0,"./assets/Forest/img/elf", 1, "I'm NPC four.");
+	
+	LoadNPC(2264,0,"./assets/Forest/img/elf1", 3, "I wish we had more visitors!\n" + 
+							"Our shop could do with some more customers.");
 	plainsNpcArray.push(npcArray[3]);
 	plainsNpcRangeArray.push(npcRangeArray[3]);
 	plainsNpcMessageArray.push(npcMessageArray[3]);
 	characterLayer.addChild(plainsNpcArray[3]);
-	*/
+	
+	LoadNPC(2264,0,"./assets/Forest/img/elf2", 3, "My brother is the brains of the shop.\n" + 
+							"I just try to keep things clean around here.");
+	plainsNpcArray.push(npcArray[3]);
+	plainsNpcRangeArray.push(npcRangeArray[3]);
+	plainsNpcMessageArray.push(npcMessageArray[3]);
+	characterLayer.addChild(plainsNpcArray[3]);
 
   mapContainer.addChild(plainsContainer);
   plainsContainer.visible = false;
