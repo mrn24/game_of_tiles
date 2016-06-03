@@ -58,8 +58,14 @@ function FirstPlainsLoader(){
 	plainsNpcMessageArray.push(npcMessageArray[0]);
 	characterLayer.addChild(plainsNpcArray[0]);
 	*/
-
-	LoadNPC(1552,2,"./assets/Desert/Sprites/DesertWoman", 4, "I'm NPC two.");
+	LoadNPC(1663,2,"./assets/Character/Uncle", 4, "Uncle Benjin:"
+	+ "\nNow that you've grown."
+	+ "\nI must tell you, your mother and"
+	+ "\nfather were killed by our King."
+	+ "\nGo to your old home(South)"
+	+ "\nand inside on the floor, you will see"
+	+ "\nyour father's sword. Take it and"
+	+ "\nfind the answers that haunt our town.");
 	plainsNpcArray.push(npcArray[0]);
 	plainsNpcRangeArray.push(npcRangeArray[0]);
 	plainsNpcMessageArray.push(npcMessageArray[0]);
@@ -79,14 +85,7 @@ function FirstPlainsLoader(){
 	characterLayer.addChild(plainsNpcArray[2]);
 
 
-	LoadNPC(1663,2,"./assets/Character/Uncle", 4, "Uncle Benjin:"
-	+ "\nNow that you've grown."
-	+ "\nI must tell you, your mother and"
-	+ "\nfather were killed by our King."
-	+ "\nGo to your old home(South)"
-	+ "\nand inside on the floor, you will see"
-	+ "\nyour father's sword. Take it and"
-	+ "\nfind the answers that haunt our town.");
+	LoadNPC(1552,2,"./assets/Desert/Sprites/DesertWoman", 4, "I'm NPC two.");
 	plainsNpcArray.push(npcArray[3]);
 	plainsNpcRangeArray.push(npcRangeArray[3]);
 	plainsNpcMessageArray.push(npcMessageArray[3]);
@@ -186,6 +185,7 @@ function PlainsEntranceChecker(){
   }
 
 	if(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 164 && hasPotato){
+		clearInterval(plainsEntranceChecking);
 		EndGame();
 	}
 

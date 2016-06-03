@@ -100,6 +100,6 @@ var plainsDungeon;
 
 
 
-var hasSword = false,
-	hasShield = false,
-	hasPotato = false;
+var hasSword = true,
+	hasShield = true,
+	hasPotato = true;

@@ -22,8 +22,21 @@ function EndGame(){
 
 function ChoiceKill(){
   console.log("You choose to kill!");
+  //Attack Animation,
+  //Killed him win.
 }
 
 function ChoiceLive(){
   console.log("You chose to let him live!");
+  //Tween away.
+  //Didn't kill him win animation.
+  fontContainer.removeChildren();
+  stage.removeChild(TextBackground);
+  mainCharacter.children[0].visible = true;
+  mainCharacter.children[1].visible = false;
+  createjs.Tween.get(mainCharacter).to({y: mainCharacter.y + 224}, 1750).wait(1750).call(WinChoiceLive);
+}
+
+function WinChoiceLive(){
+  console.log("You win with the let him live screen!");
 }
