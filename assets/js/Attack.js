@@ -42,6 +42,8 @@ function MonsterAttack (index, scaleswitch) {
 			mainCharacter.getChildAt(2).gotoAndStop(mainCharacter.getChildAt(2).currentFrame + 1);
 		} else if (!dead){
 			dead = true;
+			HeroDieSound.play();
+			setTimeout(function(){GameOverSound.play();}, 1500);
 			CharacterDead();
 		}
 
