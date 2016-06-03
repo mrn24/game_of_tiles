@@ -194,10 +194,12 @@ function PlainsEntranceChecker(){
 		npcMessageArray[5] = "That's a nice sword you have there!\nI wish mine was as nice.";
 		npcMessageArray[6] = "Oh! You spoke to your uncle?\nYou might head into the forest now.\nI heard King Hoegarth of the elven \nkindgom needs help!";
 		npcMessageArray[0] = "The King of the Elves needs your help.\nHe may have a reward for your\nassistance.";
-	} else if (hasShield) {
+	} else if (hasShield && !hasPotato) {
 		npcMessageArray[6] = "Wow, great shield!\nKingsguard don't have them.";
 		npcMessageArray[5] = "You might go to the desert realm.\nTheir King needs help.";
 		npcMessageArray[0] = "Wow! You are turning into quite an\nadventurer. Head to the desert to help\ntheir king!";
+	} else {
+		npcMessageArray[0] = "You ate the overpowered potato!\nNow go confront the king!";
 	}
 
 	if(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 164 && hasPotato){
