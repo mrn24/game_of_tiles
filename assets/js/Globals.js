@@ -115,4 +115,5 @@ var GameOverSound,
 	LetKingLiveSound,
 	MonsterAttackSound,
 	MonsterDieSound,
-	UncleSound;
+	UncleSound,
+	SlashSound;
