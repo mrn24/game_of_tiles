@@ -56,6 +56,35 @@ function checkKeyReleased(key) {
 
 function mainCharacterController() {
 
+	if (keySpace){
+
+		//toIndex();
+		if(!attacking) {
+			keySpace = false;
+			var currentPosition = tu.getIndex(mainCharacter.x, mainCharacter.y, 32, 32, mapWidth);
+
+			for (var i = 0; i < enemyArray.length; i++) {
+				if ((facing == 2) && currentPosition == tu.getIndex(enemyArray[i].x - 32, enemyArray[i].y, 32, 32, mapWidth)) {
+					attacking = true;
+					//  CHARACTER ATTACK CharacterAttack(i);
+					CharacterAttack(i);
+
+				} else if ((facing == 4) && currentPosition == tu.getIndex(enemyArray[i].x + 32, enemyArray[i].y, 32, 32, mapWidth)) {
+					talking = true;
+					// CHARACTER ATTACK textHandler(enemyArray[i]);
+					CharacterAttack(i);
+				}
+				else {
+
+				}
+			}
+		} else if(attacking) {
+			keySpace = false;
+			attacking = false;
+		}
+
+	}
+
 	if (keyEnter) {
 		toIndex();
 		//console.log("Attempting talking/Exiting");
