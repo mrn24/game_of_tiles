@@ -44,6 +44,32 @@ function LoadSwordShield() {
 }
 
 
+function LoadSword() {
+
+	//mainCharacter.visible = false;
+
+	var textureArray3 = [];
+	for (var i = 1; i < 5; i++) {
+		texture3 = new PIXI.Texture.fromImage("./assets/Dungeon/MainChar/CharSword/CharacterSword"+i+".png");
+		textureArray3.push(texture3);
+	}
+
+
+	mainCharacter = new PIXI.extras.MovieClip(textureArray3);
+	mainCharacter.anchor.x = 0.5;
+	mainCharacter.anchor.y = 0.5;
+	//var point = tu.getTile(index, mapArray, currentMap);
+	mainCharacter.position.x = 464;
+	mainCharacter.position.y = 1031;
+	mainCharacter.scale.x = mainCharacterScale;
+	mainCharacter.scale.y = mainCharacterScale;
+	mainCharacter.play();
+	mainCharacter.animationSpeed = 0.075;
+	//return mainCharacter;
+}
+
+
+
 
 
 

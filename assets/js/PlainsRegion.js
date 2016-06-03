@@ -1,3 +1,7 @@
+var plainsCharacterLayer;
+
+
+
 var plainsEntrances = [];
 var plainsCollisions = [];
 var plainsEntranceChecking;
@@ -111,8 +115,8 @@ function PlainsLoader(){
 		startY = 103;
   }
 
-	var characterLayer = plains.getObject("CharacterLayer");
-	characterLayer.addChild(mainCharacter);
+  plainsCharacterLayer = plains.getObject("CharacterLayer");
+	plainsCharacterLayer.addChild(mainCharacter);
 	SetCharacterPosition();
 	SetPosition();
   //Use passed in parameter to load character in the right spot
@@ -121,6 +125,20 @@ function PlainsLoader(){
 }
 
 function PlainsEntranceChecker(){
+
+	//Grab sword
+  if (tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth) == 1614 && !hasSword){
+    console.log("Grabbed sword");
+    plainsCharacterLayer.removeChild(mainCharacter);
+    LoadSword();
+    plainsCharacterLayer = plains.getObject("CharacterLayer");
+    plainsCharacterLayer.addChild(mainCharacter);
+    hasSword = true;
+    textHandler("You've grabbed the\nsword", 20);
+  }
+
+
+
 	//console.log("Checking Entrance Collisions.");
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), plainsEntrances)){
 	if ((mainCharacter.position.x - startX) % 32 == 0 && (mainCharacter.position.y - startY) % 32 == 0){
