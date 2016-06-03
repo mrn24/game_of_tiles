@@ -99,4 +99,4 @@ var plainsDungeon;
 ///////////////////////////////////////
 var hasSword = true;
 	hasShield = true;
-	hasAmulet = true;
+	hasPotato = true;

@@ -10,7 +10,13 @@ var DesertDungeonEntranceChecking;
 var DesertDungeonMapWidth = 30;
 var DesertDungeonMap;
 
+var desertDungeonEnemyArray = [];
+var desertDungeonEnemyRangeArray = [];
+var desertDungeonEnemyStartArray = [];
+
+
 function FirstDesertDungeonLoader(){
+  world = desertDungeon;
   DesertDungeonMap = desertDungeon.getObject("CollisionLayer").data;
   //Loading Collisions
   for (var i = 0; i < DesertDungeonMap.length; i++) {
@@ -28,9 +34,49 @@ function FirstDesertDungeonLoader(){
   //call loadnpc with map.
   mapContainer.addChild(desertDungeonContainer);
   desertDungeonContainer.visible = false;
+
+  enemyArray = [];
+  enemyRangeArray = [];
+  enemyStartArray = [];
+
+  characterLayer = desertDungeon.getObject("CharacterLayer");
+  LoadEnemy(290, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
+  desertDungeonEnemyArray.push(enemyArray[0]);
+  desertDungeonEnemyStartArray.push(enemyStartArray[0]);
+  desertDungeonEnemyRangeArray.push(enemyRangeArray[0]);
+  characterLayer.addChild(enemyArray[0]);
+
+  LoadEnemy(461, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
+  desertDungeonEnemyArray.push(enemyArray[1]);
+  desertDungeonEnemyStartArray.push(enemyStartArray[1]);
+  desertDungeonEnemyRangeArray.push(enemyRangeArray[1]);
+  characterLayer.addChild(enemyArray[1]);
+
+  LoadEnemy(755, 3, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
+  desertDungeonEnemyArray.push(enemyArray[2]);
+  desertDungeonEnemyStartArray.push(enemyStartArray[2]);
+  desertDungeonEnemyRangeArray.push(enemyRangeArray[2]);
+  characterLayer.addChild(enemyArray[2]);
+
+  LoadEnemy(764, 2, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
+  desertDungeonEnemyArray.push(enemyArray[3]);
+  desertDungeonEnemyStartArray.push(enemyStartArray[3]);
+  desertDungeonEnemyRangeArray.push(enemyRangeArray[3]);
+  characterLayer.addChild(enemyArray[3]);
+
+  LoadEnemy(592, 0, './assets/Dungeon/monsters/SandGolem/Roaming/SandGolem', 4);
+  desertDungeonEnemyArray.push(enemyArray[4]);
+  desertDungeonEnemyStartArray.push(enemyStartArray[4]);
+  desertDungeonEnemyRangeArray.push(enemyRangeArray[4]);
+  characterLayer.addChild(enemyArray[4]);
+
+  //call loadnpc with map.
+
+
 }
 
 function desertDungeonLoader(){
+  world = desertDungeon;
   console.log("loading desertDungeon!")
   mapWidth = DesertDungeonMapWidth;
   desertDungeonContainer.visible = true;
@@ -50,7 +96,15 @@ function desertDungeonLoader(){
   SetPosition();
   //Use passed in parameter to load character in the right spot
   DesertDungeonEntranceChecking = setInterval(desertDungeonEntranceChecker, 500);
+
+    enemyArray = desertDungeonEnemyArray;
+    enemyRangeArray = desertDungeonEnemyRangeArray;
+    enemyStartArray = desertDungeonEnemyStartArray;
+
+
+
 }
+
 
 function desertDungeonEntranceChecker(){
   if(CollisionDetection(tu.getIndex(mainCharacter.x, mainCharacter.y, tileWidth, tileHeight, mapWidth), DesertDungeonEntrances)){
@@ -77,7 +131,13 @@ var ForestDungeonEntranceChecking;
 var ForestDungeonMapWidth = 30;
 var ForestDungeonMap;
 
+
+var forestDungeonEnemyArray = [];
+var forestDungeonEnemyRangeArray = [];
+var forestDungeonEnemyStartArray = [];
+
 function FirstForestDungeonLoader(){
+  world = forestDungeon;
   ForestDungeonMap = forestDungeon.getObject("CollisionLayer").data;
   //Loading Collisions
   for (var i = 0; i < ForestDungeonMap.length; i++) {
@@ -106,9 +166,48 @@ function FirstForestDungeonLoader(){
   //call loadnpc with map.
   mapContainer.addChild(forestDungeonContainer);
   forestDungeonContainer.visible = false;
+
+  enemyArray = [];
+  enemyRangeArray = [];
+  enemyStartArray = [];
+
+  characterLayer = forestDungeon.getObject("CharacterLayer");
+  LoadEnemy(290, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
+  forestDungeonEnemyArray.push(enemyArray[0]);
+  forestDungeonEnemyStartArray.push(enemyStartArray[0]);
+  forestDungeonEnemyRangeArray.push(enemyRangeArray[0]);
+  characterLayer.addChild(enemyArray[0]);
+
+  LoadEnemy(461, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
+  forestDungeonEnemyArray.push(enemyArray[1]);
+  forestDungeonEnemyStartArray.push(enemyStartArray[1]);
+  forestDungeonEnemyRangeArray.push(enemyRangeArray[1]);
+  characterLayer.addChild(enemyArray[1]);
+
+  LoadEnemy(755, 3, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
+  forestDungeonEnemyArray.push(enemyArray[2]);
+  forestDungeonEnemyStartArray.push(enemyStartArray[2]);
+  forestDungeonEnemyRangeArray.push(enemyRangeArray[2]);
+  characterLayer.addChild(enemyArray[2]);
+
+  LoadEnemy(764, 2, './assets/Dungeon/monsters/Skeleton/Roaming/Skeleton', 4);
+  forestDungeonEnemyArray.push(enemyArray[3]);
+  forestDungeonEnemyStartArray.push(enemyStartArray[3]);
+  forestDungeonEnemyRangeArray.push(enemyRangeArray[3]);
+  characterLayer.addChild(enemyArray[3]);
+
+  LoadEnemy(592, 0, './assets/Dungeon/monsters/SandGolem/Roaming/SandGolem', 4);
+  forestDungeonEnemyArray.push(enemyArray[4]);
+  forestDungeonEnemyStartArray.push(enemyStartArray[4]);
+  forestDungeonEnemyRangeArray.push(enemyRangeArray[4]);
+  characterLayer.addChild(enemyArray[4]);
+
+  //call loadnpc with map.
+
 }
 
 function forestDungeonLoader(){
+  world = forestDungeon;
   console.log("loading desertDungeon!")
   mapWidth = ForestDungeonMapWidth;
   forestDungeonContainer.visible = true;
@@ -129,6 +228,10 @@ function forestDungeonLoader(){
   SetPosition();
   //Use passed in parameter to load character in the right spot
   ForestDungeonEntranceChecking = setInterval(forestDungeonEntranceChecker, 500);
+
+  enemyArray = forestDungeonEnemyArray;
+  enemyRangeArray = forestDungeonEnemyRangeArray;
+  enemyStartArray = forestDungeonEnemyStartArray;
 
   //
   // var textureArray2 = [];
@@ -179,7 +282,12 @@ var PlainsDungeonEntranceChecking;
 var PlainsDungeonMapWidth = 18;
 var PlainsDungeonMap;
 
+var plainsDungeonEnemyArray = [];
+var plainsDungeonEnemyRangeArray = [];
+var plainsDungeonEnemyStartArray = [];
+
 function FirstPlainsDungeonLoader(){
+  world = plainsDungeon;
   PlainsDungeonMap = plainsDungeon.getObject("CollisionLayer").data;
   //Loading Collisions
   for (var i = 0; i < PlainsDungeonMap.length; i++) {
@@ -197,9 +305,22 @@ function FirstPlainsDungeonLoader(){
   //call loadnpc with map.
   mapContainer.addChild(plainsDungeonContainer);
   plainsDungeonContainer.visible = false;
+
+  enemyArray = [];
+  enemyRangeArray = [];
+  enemyStartArray = [];
+
+  characterLayer = plainsDungeon.getObject("CharacterLayer");
+  LoadEnemy(188, 1, './assets/Dungeon/monsters/Raider/Roaming/raider', 4);
+  plainsDungeonEnemyArray.push(enemyArray[0]);
+  plainsDungeonEnemyStartArray.push(enemyStartArray[0]);
+  plainsDungeonEnemyRangeArray.push(enemyRangeArray[0]);
+  characterLayer.addChild(enemyArray[0]);
+
 }
 
 function plainsDungeonLoader(){
+  world = plainsDungeon;
   console.log("loading desertDungeon!")
   mapWidth = PlainsDungeonMapWidth;
   plainsDungeonContainer.visible = true;
@@ -219,6 +340,10 @@ function plainsDungeonLoader(){
   SetPosition();
   //Use passed in parameter to load character in the right spot
   PlainsDungeonEntranceChecking = setInterval(plainsDungeonEntranceChecker, 500);
+
+  enemyArray = plainsDungeonEnemyArray;
+  enemyRangeArray = plainsDungeonEnemyRangeArray;
+  enemyStartArray = plainsDungeonEnemyStartArray;
 }
 
 function plainsDungeonEntranceChecker(){
