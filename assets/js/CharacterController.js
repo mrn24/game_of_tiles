@@ -64,6 +64,7 @@ function checkKeyReleased(key) {
 function mainCharacterController() {
 	if (keySpace){
 		//toIndex();
+		HeroAttackSound.play();
 		if(!attacking) {
 			if (hasSword){
 				mainCharacter.children[0].visible = false;
