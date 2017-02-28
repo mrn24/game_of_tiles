@@ -1,20 +1,5 @@
-# CS413-Boilerplate
-Boilerplate code for CS413 Virtual Worlds
+# Game of Tiles
 
-Sorry, can't help you for windows, but should be similar to below.
+Role Playing Game.
 
-Usage (OSX Terminal)
----
-
-```bash
-git clone https://github.com/jakereps/CS413-Boilerplate.git YourProjectFolderNameGoesHere
-cd YourProjectFolderNameGoesHere
-rm -rf .git
-git init
-git remote add origin https://github.com/YOURUSERNAME/YOURCREATEDREPOSITORY.git
-git add -A
-git commit -m "Initial commit."
-git push --set-upstream origin master
-```
-
-#Done!
+Take the adventure through multiple stages looking for the equipment and knowledge necessary to fight evil.
